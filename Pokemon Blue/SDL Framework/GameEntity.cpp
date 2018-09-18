@@ -52,7 +52,7 @@ void GameEntity::Scale(Vector2 scale) {
 }
 
 Vector2 GameEntity::Scale(SPACE space) {
-	if (space == LOCAL || mParent) {
+	if (space == LOCAL || mParent == nullptr) {
 		return mScale;
 	}
 

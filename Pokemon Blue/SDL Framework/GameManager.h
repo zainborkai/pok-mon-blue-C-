@@ -6,6 +6,7 @@
 #include "Timer.h"
 #include "Texture.h"
 #include "PalletTown.h"
+#include "Player.h"
 
 
 class GameManager {
@@ -23,6 +24,7 @@ private:
 
 	Timer* mTimer;
 	PalletTown* mPalletTown;
+	Player* mPlayer;
 
 	SDL_Event mEvents;
 

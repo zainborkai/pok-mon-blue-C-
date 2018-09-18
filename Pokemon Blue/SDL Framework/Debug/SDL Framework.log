@@ -1,1 +1,5 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.15063.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution".
+﻿  Player.cpp
+c:\_projects\pokemon blue\sdl framework\player.cpp(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\pokemon blue\sdl framework\player.cpp(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  SDL Framework.vcxproj -> C:\_Projects\Pokemon Blue\Debug\SDL Framework.exe
+  SDL Framework.vcxproj -> C:\_Projects\Pokemon Blue\Debug\SDL Framework.pdb (Partial PDB)
