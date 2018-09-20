@@ -13,6 +13,8 @@ Texture::Texture(std::string filename) {
 
 	mRenderRect.w = mWidth;
 	mRenderRect.h = mHeight;
+
+	centering = Vector2(0.5f, 0.5f);
 	
 }
 
@@ -34,6 +36,8 @@ Texture::Texture(std::string filename, int x, int y, int w, int h) {
 	mClipRect.w = mWidth;
 	mClipRect.h = mHeight;
 
+	centering = Vector2(0.5f, 0.5f);
+
 }
 
 Texture::Texture(std::string text, std::string fontPath, int size, SDL_Color colour) {
@@ -46,6 +50,8 @@ Texture::Texture(std::string text, std::string fontPath, int size, SDL_Color col
 
 	mRenderRect.w = mWidth;
 	mRenderRect.h = mHeight;
+
+	centering = Vector2(0.5f, 0.5f);
 }
 
 Texture::~Texture() {
@@ -58,12 +64,12 @@ void Texture::Render() {
 	Vector2 scale = Scale(WORLD);
 
 	// Centers the texture on the texture's world position so that its position is not the top left
-	mRenderRect.x = (int)(pos.x - mWidth * scale.x * 0.5f);
-	mRenderRect.y = (int)(pos.y - mWidth * scale.y * 0.5f);
+	mRenderRect.x = (int)(pos.x - mWidth * scale.x * centering.x);
+	mRenderRect.y = (int)(pos.y - mWidth * scale.y * centering.y);
 
 	// Scales the width and height according to the scale of the GameEntity
-	mRenderRect.w - (int)(mWidth * scale.x);
-	mRenderRect.h - (int)(mHeight * scale.y);
+	mRenderRect.w = (int)(mWidth * scale.x);
+	mRenderRect.h = (int)(mHeight * scale.y);
 
 	mGraphics->DrawTexture(mTex, (mClipped) ? &mClipRect : NULL, &mRenderRect, Rotation(WORLD));
 

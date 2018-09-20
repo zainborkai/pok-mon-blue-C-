@@ -1,5 +1,3 @@
 ﻿  Player.cpp
-c:\_projects\pokemon blue\sdl framework\player.cpp(40): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\_projects\pokemon blue\sdl framework\player.cpp(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   SDL Framework.vcxproj -> C:\_Projects\Pokemon Blue\Debug\SDL Framework.exe
   SDL Framework.vcxproj -> C:\_Projects\Pokemon Blue\Debug\SDL Framework.pdb (Partial PDB)

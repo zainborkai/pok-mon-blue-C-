@@ -45,6 +45,8 @@ public:
 
 	// Called to render the texture to screen
 	virtual void Render();
+
+	Vector2 centering;
 };
 
 

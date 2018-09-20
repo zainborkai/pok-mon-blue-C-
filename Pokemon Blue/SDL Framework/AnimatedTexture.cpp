@@ -8,7 +8,7 @@ Texture(filename, x, y, w, h){
 	mStartX = x;
 	mStartY = y;
 
-	mFrameCount - frameCount;
+	mFrameCount = frameCount;
 	mAnimationSpeed = animationSpeed;
 	mTimePerFrame = mAnimationSpeed / mFrameCount;
 	mAnimationTimer = 0.0f;
@@ -40,11 +40,14 @@ void AnimatedTexture::Update() {
 			}
 		}
 
+		
+		
+
 		if (mAnimationDirection == HORIZONTAL) {
 			mClipRect.x = mStartX + (int)(mAnimationTimer / mTimePerFrame) * mWidth;
 		}
 		else {
-			mClipRect.y - mStartY + (int)(mAnimationTimer / mTimePerFrame) * mHeight;
+			mClipRect.y = mStartY + (int)(mAnimationTimer / mTimePerFrame) * mHeight;
 		}
 	}
 }

@@ -2,69 +2,58 @@
 
 
 Player::Player() :
-	AnimatedTexture("PlayerSpriteSheet.png", 0, 0, 32, 32, 2, .5f, HORIZONTAL) {
-	Pos(Vector2(100, 100));
+	AnimatedTexture("pokemon_player_spritesheet.png", 0, 0, 16, 16, 3, .5f, HORIZONTAL) {
+	centering = Vector2(0, 0);
 	playerInput = InputManager::Instance();
+
+	X = 63;
+	Y = 186;
 	
 }
 
 void Player::Update() {
 	//Translate(Vector2(-.1f, -.1f));
 	AnimatedTexture::Update();
-	if (!mAnimationDone) {
-		mAnimationTimer += mTimer->DeltaTime();
-		if (mAnimationTimer >= mAnimationSpeed) {
-			//Only loop if the wrap mode is LOOP
-			if (mWrapMode == LOOP) {
-				mAnimationTimer -= mAnimationSpeed;
-			}
-			else {
-				mAnimationDone = true;
-				mAnimationTimer = mAnimationSpeed - mTimePerFrame;
-			}
-		}
-		// Change mStart to make cuts
-		if (mAnimationDirection == HORIZONTAL) {
-			mClipRect.x = mStartX + (int)(mAnimationTimer / mTimePerFrame) * mWidth;
-		}
-		else {
-			mClipRect.y = mStartY + (int)(mAnimationTimer / mTimePerFrame) * mHeight;
-		}
-	}
 }
 
-void Player::Render() {
-	Vector2 pos = Pos(WORLD);
-	Vector2 scale = Scale(WORLD);
-
-	mRenderRect.x = pos.x;
-	mRenderRect.y = pos.y;
-
-	//mRenderRect.x = (int)(pos.x - mWidth * scale.x * 0.5f);
-	//mRenderRect.y = (int)(pos.y - mWidth * scale.y * 0.5f);
-
-	// Scales the width and height according to the scale of the GameEntity
-	//mRenderRect.w - (int)(mWidth * scale.x);
-	//mRenderRect.h - (int)(mHeight * scale.y);
-
-	mGraphics->DrawTexture(mTex, (mClipped) ? &mClipRect : NULL, &mRenderRect, Rotation(WORLD));
-}
-
-void Player::Move() {
-
+int Player::Move() {
+	int output = 0;
 	if (playerInput->KeyDown(SDL_SCANCODE_W)) {
 		// Move up..
+		mStartY = 48;
 		std::cout << "Moving up" << std::endl;
+
+		output = 1;
 	}
 	else if (playerInput->KeyDown(SDL_SCANCODE_S)) {
 		// Move down..
+		mStartY = 0;
+		std::cout << "Moving down" << std::endl;
+
+		output = 2;
 	}
 	else if (playerInput->KeyDown(SDL_SCANCODE_A)) {
 		// Move left..
+		mStartY = 16;
+		std::cout << "Moving left" << std::endl;
+
+		output = 3;
 	}
 	else if (playerInput->KeyDown(SDL_SCANCODE_D)) {
 		// Move right..
+		mStartY = 32;
+		std::cout << "Moving right" << std::endl;
+
+		output = 4;
 	}
+	//
+	mClipRect.y = mStartY;
+	if (output == 0) {
+		mAnimationTimer = 0;
+	}
+	//
+	return output;
 }
+
 
 Player::~Player() {}

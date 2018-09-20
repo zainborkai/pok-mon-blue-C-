@@ -6,15 +6,19 @@
 #include <iostream>
 
 
-class Player : AnimatedTexture {
+class Player : public AnimatedTexture {
 public:
-	void Move();
+	int Move();
 
 	void Update();
-	void Render();
+	// void Render();
 
 	Player();
 	~Player();
+
+	int X = 0;
+	int Y = 0;
+
 
 	InputManager* playerInput;
 

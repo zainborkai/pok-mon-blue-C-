@@ -5,7 +5,7 @@
 #include "AudioManager.h"
 #include "Timer.h"
 #include "Texture.h"
-#include "PalletTown.h"
+#include "Map.h"
 #include "Player.h"
 
 
@@ -23,7 +23,7 @@ private:
 	AudioManager* mAudioMgr;
 
 	Timer* mTimer;
-	PalletTown* mPalletTown;
+	Map* mMap;
 	Player* mPlayer;
 
 	SDL_Event mEvents;

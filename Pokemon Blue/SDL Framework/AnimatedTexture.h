@@ -10,7 +10,6 @@ public:
 	enum WRAP_MODE { ONCE = 0, LOOP = 1 };
 	enum ANIM_DIR { HORIZONTAL = 0, VERTICAL = 1};
 
-protected:
 	Timer* mTimer;
 	int mStartX;
 	int mStartY;
