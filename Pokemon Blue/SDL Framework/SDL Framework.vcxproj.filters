@@ -101,5 +101,13 @@
     <ClCompile Include="Map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PalletTown.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ViridianCity.cpp">
+      <Filter>Source Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

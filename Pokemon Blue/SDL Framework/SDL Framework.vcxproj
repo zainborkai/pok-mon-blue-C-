@@ -173,6 +173,7 @@
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="PalletTown.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SDLFramework.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -183,6 +184,9 @@
     </ClCompile>
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ViridianCity.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
