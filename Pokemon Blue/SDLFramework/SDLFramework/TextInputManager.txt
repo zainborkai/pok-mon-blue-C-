@@ -1,0 +1,148 @@
+<<Name select input>>
+
+--NAME--
+NEW NAME
+BLUE
+GARY
+JOHN
+
+YOUR NAME?
+_ _ _ _ _ _ _
+A B C D E F G H I
+J K L M N O P Q R
+S T U V W X Y Z
+x ( ) : ; [ ] pk mn
+_ ? ! male female / . , ed
+  lower case
+
+<<Rival name select input>>
+
+--NAME--
+NEW NAME
+RED
+ASH
+JACK
+
+RIVAL'S NAME?
+_ _ _ _ _ _ _
+A B C D E F G H I
+J K L M N O P Q R
+S T U V W X Y Z
+x ( ) : ; [ ] pk mn
+_ ? ! male female / . , ed
+  lower case
+
+<<Picking your pokemon>>
+
+CHARMANDER  No.004
+LIZARD
+HT 2'00"
+WT 19.0lb
+
+Obviously prefers
+hot places. When
+it rains, steam
+
+is said to spout
+from the tip of
+its tail.
+
+So! You want the 
+fire POKeMON,
+CHARMANDER?
+YES
+NO
+
+SQUIRTLE  No.007
+TINYTURTLE
+HT 1'08"
+WT 20.0lb
+
+After birth, its
+back swells and
+hardens into a
+
+shell. Powerfully
+sprays foam from
+its mouth.
+
+So! You want the 
+water POKeMON,
+SQUIRTLE?
+YES
+NO
+
+BULBASAUR  No.001
+SEED
+HT 2'04"
+WT 15.0lb
+
+A strange seed was
+planted on its
+back at birth.
+
+The plant sprouts
+and grows with
+this POKeMON.
+
+So! You want the 
+plant POKeMON,
+BULBASAUR?
+YES
+NO
+
+<<Name your pokemon>>
+
+Do you want to 
+give a nickname
+to <POKeMON>?
+YES
+NO
+
+<<Yes/No inputs>>
+YES
+NO
+
+<<Selecting a blackboard heading>>
+SLP   BRN
+PSN   FRZ
+PAR   QUIT
+
+<<Pokemart shopping screen VIRIDIAN CITY>>
+
+BUY
+SELL
+QUIT
+
+--BUY--
+Take your time.
+
+POKe BALL $200
+ANTIDOTE $100
+PARLYZ HEAL $200
+BURN HEAL $250
+CANCEL
+
+--QUIT--
+Thank you!
+
+<<Pokemart shopping screen PEWTER CITY>>
+
+BUY
+SELL
+QUIT
+
+--BUY--
+Take your time.
+
+POKe BALL $200
+POTION $300
+ESCAPE ROPE $550
+ANTIDOTE $100
+BURN HEAL $250
+AWAKENING $200
+PARLYZ HEAL $200
+CANCEL
+
+--QUIT--
+Thank you!

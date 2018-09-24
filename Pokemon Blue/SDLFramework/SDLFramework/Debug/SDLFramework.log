@@ -1,0 +1,14 @@
+﻿  Text.cpp
+c:\_projects\gamedev\c++\pokemon stuff - working\sdlframework\sdlframework\texture.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\c++\pokemon stuff - working\sdlframework\sdlframework\texture.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\c++\pokemon stuff - working\sdlframework\sdlframework\text.cpp(84): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\c++\pokemon stuff - working\sdlframework\sdlframework\text.cpp(87): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\c++\pokemon stuff - working\sdlframework\sdlframework\text.cpp(115): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\c++\pokemon stuff - working\sdlframework\sdlframework\text.cpp(119): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\c++\pokemon stuff - working\sdlframework\sdlframework\text.cpp(158): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\c++\pokemon stuff - working\sdlframework\sdlframework\text.cpp(207): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\c++\pokemon stuff - working\sdlframework\sdlframework\text.cpp(208): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\c++\pokemon stuff - working\sdlframework\sdlframework\text.cpp(214): warning C4018: '>=': signed/unsigned mismatch
+c:\_projects\gamedev\c++\pokemon stuff - working\sdlframework\sdlframework\text.cpp(218): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\c++\pokemon stuff - working\sdlframework\sdlframework\text.cpp(219): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  SDLFramework.vcxproj -> C:\_Projects\GameDev\C++\Pokemon Stuff - working\SDLFramework\Debug\SDLFramework.exe
