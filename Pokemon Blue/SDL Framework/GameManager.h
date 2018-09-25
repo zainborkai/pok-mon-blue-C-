@@ -5,7 +5,7 @@
 #include "AudioManager.h"
 #include "Timer.h"
 #include "Texture.h"
-#include "PalletTown.h"
+
 
 
 class GameManager {
@@ -22,7 +22,7 @@ private:
 	AudioManager* mAudioMgr;
 
 	Timer* mTimer;
-	PalletTown* mPalletTown;
+
 
 	SDL_Event mEvents;
 

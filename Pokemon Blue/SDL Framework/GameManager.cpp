@@ -27,7 +27,7 @@ GameManager::GameManager() {
 	mInputMgr = InputManager::Instance();
 	mAudioMgr = AudioManager::Instance();
 	mTimer = Timer::Instance();
-	mPalletTown = new PalletTown();
+
 }
 
 GameManager::~GameManager() {
@@ -41,19 +41,18 @@ GameManager::~GameManager() {
 	mInputMgr = nullptr;
 	Timer::Release();
 	mTimer = nullptr;
-	delete mPalletTown;
-	mPalletTown = nullptr;
+
 }
 
 void GameManager::EarlyUpdate() {
 	// Updating the input state before any other updates are run
-
+//
 
 }
 
 void GameManager::Update() {
 	// GameEntity updates should happen here
-	mPalletTown->Update();
+	
 }
 
 void GameManager::LateUpdate() {
@@ -69,8 +68,6 @@ void GameManager::Render() {
 
 	// All other rendering is to happen here
 
-	// mPlayer->Render();
-	mPalletTown->Render();
 	// Renders the current frame
 	mGraphics->Render();
 }

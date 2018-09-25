@@ -1,1 +1,20 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.15063.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution".
+﻿  stdafx.cpp
+  AnimatedTexture.cpp
+c:\school\_projects\gamedev\c++\pokemon blue\pok-mon-blue-c-\pokemon blue\sdl framework\animatedtexture.cpp(11): warning C4552: '-': result of expression not used
+c:\school\_projects\gamedev\c++\pokemon blue\pok-mon-blue-c-\pokemon blue\sdl framework\animatedtexture.cpp(47): warning C4552: '+': result of expression not used
+  AssetManager.cpp
+  AudioManager.cpp
+  GameEntity.cpp
+c:\school\_projects\gamedev\c++\pokemon blue\pok-mon-blue-c-\pokemon blue\sdl framework\gameentity.cpp(37): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  GameManager.cpp
+  Graphics.cpp
+  InputManager.cpp
+  PokemonBattle.cpp
+  SDLFramework.cpp
+  Texture.cpp
+c:\school\_projects\gamedev\c++\pokemon blue\pok-mon-blue-c-\pokemon blue\sdl framework\texture.cpp(65): warning C4552: '-': result of expression not used
+c:\school\_projects\gamedev\c++\pokemon blue\pok-mon-blue-c-\pokemon blue\sdl framework\texture.cpp(66): warning C4552: '-': result of expression not used
+  Timer.cpp
+  Generating Code...
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol _main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\School\_Projects\GameDev\C++\Pokemon Blue\pok-mon-blue-C-\Pokemon Blue\Debug\SDL Framework.exe : fatal error LNK1120: 1 unresolved externals
