@@ -8,11 +8,54 @@ My name is OAK!
 People call me
 the POKeMON PROF!
 
+This world is 
+inhabited by
+creatures called
+POKeMON!
+
+For some people, 
+POKeMON are
+pets. Others use
+them for fights.
+
+Myself...
+
+I study POKeMON
+as a profession.
+
+First, what is 
+your name?
+
+<<Name select input>>
+
+Right! So your 
+name is <NAME>!
+
+This is my grand-
+son. He's been 
+your rival since
+you were a baby.
+
+...Erm, what is
+his name again?
+
+<<Rival name select input>>
+
+That's right! I
+remember now! His
+name is <RIVAL>!
+
 <NAME>!
+
+Your very own
+POKeMON legend is 
+about to unfold!
+
+A world of dreams
+and adventures
+with POKeMON
+awaits! Let's go!
+
 ***ROOM
 
-You have nothing
-to deposit.
 
-What do you want
-to toss away?

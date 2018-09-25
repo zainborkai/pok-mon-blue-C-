@@ -1,7 +1,7 @@
 #ifndef TEXT_H
 #define TEXT_H
 
-#include "Texture.h"
+#include "AnimatedTexture.h"
 #include "InputManager.h"
 #include <vector>
 #include <string>
@@ -50,6 +50,11 @@ public:
 
 	int currentParagraph = 0;
 	std::string currentArea;
+	//
+	// Getter and Setter for the accessText variable that will allow each NPC or event to access 
+	// its own part of the text file
+	void SetAccessText(std::string textPart) { accessText = textPart; }
+	std::string GetAccessText() { return accessText; }
 
 private:
 	static Text* sInstance;
@@ -62,8 +67,8 @@ private:
 	std::map<std::string, std::vector<std::vector<std::string>*>*> textFile;
 	//
 	//Setting constants for parts of the textfile
-	const std::string playerName = "ASH";
-	const std::string rivalName = "GARY";
+	const std::string playerName = "BLUE";
+	const std::string rivalName = "RED";
 
 	//std::vector<std::string> TextFile;
 	Texture* pTextBox;
@@ -86,6 +91,8 @@ private:
 
 	int paragraphNumber;
 	int lineNumber;
+
+	std::string accessText;
 
 };
 

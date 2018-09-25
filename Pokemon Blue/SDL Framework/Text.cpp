@@ -114,6 +114,7 @@ Text::Text() : Texture(" ", "POKEMONGB.ttf", 12, { 0,0,0 }) {
 	textLine = new TextLine();
 	NewText(currentArea, currentParagraph);
 
+	//accessText = 
 }
 //
 // NewText function 
