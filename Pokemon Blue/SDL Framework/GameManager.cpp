@@ -59,11 +59,12 @@ GameManager::~GameManager() {
 
 void GameManager::EarlyUpdate() {
 	// Updating the input state before any other updates are run
-
+	
+mPlayer->Move();
+	
 	//--Changes Map Position--//
-	int input = mPlayer->Move();
-	//
-	//
+	/*int input = mPlayer->Move();
+
 	if (input == 1) {
 		mPlayer->Y -= 1;
 	}
@@ -77,23 +78,14 @@ void GameManager::EarlyUpdate() {
 		mPlayer->X += 1;
 	}
 	//
-	if (mPlayer->X <= 0) {
-		mPlayer->X = 0;
-	}
-	else if (mPlayer->X > 88 - 1) { // ??? <-- NO MAGIC NUMBERS!
-		mPlayer->X = 88 - 1;
-	}
+	
 
-	if (mPlayer->Y <= 0) {
-		mPlayer->Y = 0;
-	}
-	else if (mPlayer->Y > 198 - 1) { // ??? <-- NO MAGIC NUMBERS!
-		mPlayer->Y = 198 - 1;
-	}
+	
+	*/
 
 	Vector2 offset = mPlayer->Pos();
 	Vector2 scl = mPlayer->Scale();
-	mMap->Pos(Vector2(offset.x -mPlayer->X * 16* scl.x, offset.y -mPlayer->Y * 16* scl.y));
+	mMap->Pos(Vector2(offset.x - mPlayer->GetX() * 16 * scl.x, offset.y - mPlayer->GetY() * 16 * scl.y));
 }
 
 void GameManager::Update() {

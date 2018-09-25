@@ -4,20 +4,25 @@
 #include "AnimatedTexture.h"
 #include "InputManager.h"
 #include <iostream>
+#include <string>
 
 
 class Player : public AnimatedTexture {
 public:
 	int Move();
-
 	void Update();
-	// void Render();
+	void Render();
 
 	Player();
 	~Player();
 
-	int X = 0;
-	int Y = 0;
+	float GetX() { return X; }
+	float GetY() { return Y; }
+
+private:
+	
+	float X;
+	float Y;
 
 
 	InputManager* playerInput;
@@ -26,3 +31,4 @@ public:
 
 
 #endif
+
