@@ -7,6 +7,7 @@
 #include "Texture.h"
 #include "Map.h"
 #include "Player.h"
+#include "PokemonBattle.h"
 
 
 class GameManager {
@@ -23,8 +24,7 @@ private:
 	AudioManager* mAudioMgr;
 
 	Timer* mTimer;
-	Map* mMap;
-	Player* mPlayer;
+	PokemonBattle* mPokemon;
 
 	SDL_Event mEvents;
 

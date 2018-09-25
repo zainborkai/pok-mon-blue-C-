@@ -1,6 +1,2 @@
-﻿  PewterCity.cpp
-c:\_projects\pokemon blue\sdl framework\pewtercity.cpp(17): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
-c:\_projects\pokemon blue\sdl framework\pewtercity.cpp(17): warning C4305: 'initializing': truncation from 'int' to 'char'
-c:\_projects\pokemon blue\sdl framework\pewtercity.cpp(17): warning C4309: 'initializing': truncation of constant value
-  SDL Framework.vcxproj -> C:\_Projects\Pokemon Blue\Debug\SDL Framework.exe
-  SDL Framework.vcxproj -> C:\_Projects\Pokemon Blue\Debug\SDL Framework.pdb (Partial PDB)
+﻿  PokemonBattle.cpp
+  SDL Framework.vcxproj -> C:\School\_Projects\GameDev\C++\Pokemon Blue\pok-mon-blue-C-\Pokemon Blue\Debug\SDL Framework.exe
