@@ -26,18 +26,9 @@ GameManager::GameManager() {
 	mAssetMgr = AssetManager::Instance();
 	mInputMgr = InputManager::Instance();
 	mAudioMgr = AudioManager::Instance();
+	mLevelMgr = LevelManager::Instance();
 	mTimer = Timer::Instance();
-	mMap = new Map();
-	mPlayer = new Player();
 
-
-	Vector2 offset(mGraphics->SCREEN_WIDTH / 2, mGraphics->SCREEN_HEIGHT / 2);
-	// mMap->Translate(offset);
-	mPlayer->Translate(offset);
-
-
-	mMap->Scale(Vector2(4, 4));
-	mPlayer->Scale(Vector2(4, 4));
 }
 
 GameManager::~GameManager() {
@@ -51,55 +42,20 @@ GameManager::~GameManager() {
 	mInputMgr = nullptr;
 	Timer::Release();
 	mTimer = nullptr;
-	delete mMap;
-	mMap = nullptr;
-	delete mPlayer;
-	mPlayer = nullptr;
+	LevelManager::Release();
+	mLevelMgr = nullptr;
+
 }
 
 void GameManager::EarlyUpdate() {
 	// Updating the input state before any other updates are run
 
-	//--Changes Map Position--//
-	int input = mPlayer->Move();
-	//
-	//
-	if (input == 1) {
-		mPlayer->Y -= 1;
-	}
-	else if (input == 2) {
-		mPlayer->Y += 1;
-	}
-	else if (input == 3) {
-		mPlayer->X -= 1;
-	}
-	else if (input == 4) {
-		mPlayer->X += 1;
-	}
-	//
-	if (mPlayer->X <= 0) {
-		mPlayer->X = 0;
-	}
-	else if (mPlayer->X > 88 - 1) { // ??? <-- NO MAGIC NUMBERS!
-		mPlayer->X = 88 - 1;
-	}
 
-	if (mPlayer->Y <= 0) {
-		mPlayer->Y = 0;
-	}
-	else if (mPlayer->Y > 198 - 1) { // ??? <-- NO MAGIC NUMBERS!
-		mPlayer->Y = 198 - 1;
-	}
-
-	Vector2 offset = mPlayer->Pos();
-	Vector2 scl = mPlayer->Scale();
-	mMap->Pos(Vector2(offset.x -mPlayer->X * 16* scl.x, offset.y -mPlayer->Y * 16* scl.y));
 }
 
 void GameManager::Update() {
 	// GameEntity updates should happen here
-	mMap->Update();
-	mPlayer->Update();
+	
 }
 
 void GameManager::LateUpdate() {
@@ -114,10 +70,8 @@ void GameManager::Render() {
 	mGraphics->ClearBackBuffer();
 
 	// All other rendering is to happen here
-
-	// mPlayer->Render();
-	mMap->Render();
-	mPlayer->Render();
+	
+	mLevelMgr->Render();
 	// Renders the current frame
 	mGraphics->Render();
 }

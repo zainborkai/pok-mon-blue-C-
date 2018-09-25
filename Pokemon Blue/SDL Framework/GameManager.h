@@ -3,10 +3,10 @@
 
 #include "InputManager.h"
 #include "AudioManager.h"
+#include "LevelManager.h"
 #include "Timer.h"
 #include "Texture.h"
-#include "Map.h"
-#include "Player.h"
+
 
 
 class GameManager {
@@ -21,10 +21,11 @@ private:
 	AssetManager* mAssetMgr;
 	InputManager* mInputMgr;
 	AudioManager* mAudioMgr;
+	LevelManager* mLevelMgr;
+
 
 	Timer* mTimer;
-	Map* mMap;
-	Player* mPlayer;
+
 
 	SDL_Event mEvents;
 

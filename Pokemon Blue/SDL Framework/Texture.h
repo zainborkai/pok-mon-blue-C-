@@ -31,7 +31,7 @@ protected:
 public:
 	// Loads a whole texture from a file
 	Texture(std::string filename);
-
+	SDL_Texture* GetmTex() { return mTex; }
 	// Loads a texture from a file (spritesheets)
 	// x = Starting pixel's X on the spritesheet
 	// y = Starting pixel's Y on the spritesheet

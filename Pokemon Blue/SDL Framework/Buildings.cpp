@@ -1,27 +1,25 @@
-#include "Map.h"
+#include "Buildings.h"
 
+Buildings::Buildings() {
+	ViridianHouse = new Texture("ViridianHouseOne.png", 0, 0, 128, 128);
 
-class Buildings : public Map {
-	// Put all arrays into this class!!
-	// Type char
-	int PalletPlayerHouseFloorOne[8][8]; // example...
-	int PalletPlayerHouseFloorTwo();
-	int PalletHouseOne();
-	int PalletLab();
+	SetCurrentBuilding(ViridianHouse);
+	SetPrevFloor(ViridianHouse);
+	//SetNextFloor()
+}
+// l
+void Buildings::Render() {
+	Vector2 pos = Pos(WORLD);
+	Vector2 scale = Scale(WORLD);
 
+	// Centers the texture on the texture's world position so that its position is not the top left
+	mRenderRect.x = (int)(pos.x - mWidth * scale.x * centering.x);
+	mRenderRect.y = (int)(pos.y - mWidth * scale.y * centering.y);
 
-	int ViridianHouseOne();
-	int ViridianHouseTwo();
-	int ViridianPokeCenter();
-	int ViridianPokeMart();
+	// Scales the width and height according to the scale of the GameEntity
+	mRenderRect.w = (int)(mWidth * scale.x);
+	mRenderRect.h = (int)(mHeight * scale.y);
 
-	int PewterHouseOne();
-	int PewterHouseTwo();
-	int PewterGym();
-	int PewterPokeCenter();
-	int PewterPokeMart();
-
-
-};
-
+	mGraphics->DrawTexture(ViridianHouse->GetmTex(), (mClipped) ? &mClipRect : NULL, &mRenderRect, Rotation(WORLD));
+}
 

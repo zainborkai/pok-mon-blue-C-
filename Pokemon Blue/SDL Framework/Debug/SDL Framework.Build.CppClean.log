@@ -5,11 +5,15 @@ c:\_projects\pokemon blue\sdl framework\debug\stdafx.obj
 c:\_projects\pokemon blue\sdl framework\debug\animatedtexture.obj
 c:\_projects\pokemon blue\sdl framework\debug\assetmanager.obj
 c:\_projects\pokemon blue\sdl framework\debug\audiomanager.obj
+c:\_projects\pokemon blue\sdl framework\debug\buildings.obj
 c:\_projects\pokemon blue\sdl framework\debug\gameentity.obj
 c:\_projects\pokemon blue\sdl framework\debug\gamemanager.obj
 c:\_projects\pokemon blue\sdl framework\debug\graphics.obj
 c:\_projects\pokemon blue\sdl framework\debug\inputmanager.obj
+c:\_projects\pokemon blue\sdl framework\debug\levelmanager.obj
+c:\_projects\pokemon blue\sdl framework\debug\map.obj
 c:\_projects\pokemon blue\sdl framework\debug\pallettown.obj
+c:\_projects\pokemon blue\sdl framework\debug\pewtercity.obj
 c:\_projects\pokemon blue\sdl framework\debug\player.obj
 c:\_projects\pokemon blue\sdl framework\debug\sdlframework.obj
 c:\_projects\pokemon blue\sdl framework\debug\texture.obj
