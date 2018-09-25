@@ -104,6 +104,12 @@
     <ClCompile Include="PalletTown.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PewterCity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Buildings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="ViridianCity.cpp">

@@ -168,12 +168,14 @@
     <ClCompile Include="AnimatedTexture.cpp" />
     <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="Buildings.cpp" />
     <ClCompile Include="GameEntity.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="PalletTown.cpp" />
+    <ClCompile Include="PewterCity.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SDLFramework.cpp" />
     <ClCompile Include="stdafx.cpp">
