@@ -5,8 +5,7 @@
 #include "AudioManager.h"
 #include "Timer.h"
 #include "Texture.h"
-#include "PalletTown.h"
-
+#include "Text.h"
 
 class GameManager {
 private:
@@ -20,9 +19,10 @@ private:
 	AssetManager* mAssetMgr;
 	InputManager* mInputMgr;
 	AudioManager* mAudioMgr;
+	Text* mText;
+
 
 	Timer* mTimer;
-	PalletTown* mPalletTown;
 
 	SDL_Event mEvents;
 
@@ -40,5 +40,5 @@ private:
 	void Render();
 };
 
+#endif // !GAMEMANAGER_H
 
-#endif 

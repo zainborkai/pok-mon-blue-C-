@@ -27,7 +27,7 @@ GameManager::GameManager() {
 	mInputMgr = InputManager::Instance();
 	mAudioMgr = AudioManager::Instance();
 	mTimer = Timer::Instance();
-	mPalletTown = new PalletTown();
+	mText = Text::Instance();
 }
 
 GameManager::~GameManager() {
@@ -41,37 +41,39 @@ GameManager::~GameManager() {
 	mInputMgr = nullptr;
 	Timer::Release();
 	mTimer = nullptr;
-	delete mPalletTown;
-	mPalletTown = nullptr;
+
+
+	Text::Release();
+	mText = nullptr;
+
 }
 
 void GameManager::EarlyUpdate() {
-	// Updating the input state before any other updates are run
+	//Update the input state before any other updates are run
 
-
+	mText->NextText();
 }
 
 void GameManager::Update() {
-	// GameEntity updates should happen here
-	mPalletTown->Update();
+	//GameEntity updates should happen here
+
 }
 
 void GameManager::LateUpdate() {
-	// Any collision detection should happen here
+	//Any collision detection should happen here
 
 	mInputMgr->UpdatePrevInput();
 	mTimer->Reset();
 }
 
 void GameManager::Render() {
-	// Clears the last frame's render from the back buffer 
+	//Clears the last frame's render from the back buffer
 	mGraphics->ClearBackBuffer();
 
-	// All other rendering is to happen here
+	//All other rendering is to happen here
+	mText->Render();
 
-	// mPlayer->Render();
-	mPalletTown->Render();
-	// Renders the current frame
+	//Renders the current frame
 	mGraphics->Render();
 }
 
@@ -85,7 +87,7 @@ void GameManager::Run() {
 			}
 		}
 
-		// Limits the frame rate to FRAME_RATE
+		//Limits the frame rate to FRAME_RATE
 		if (mTimer->DeltaTime() >= (1.0 / FRAME_RATE)) {
 			EarlyUpdate();
 			Update();

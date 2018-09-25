@@ -4,48 +4,52 @@
 #include "GameEntity.h"
 #include "AssetManager.h"
 
-
 class Texture : public GameEntity {
-protected: 
-	// The SDL_Texture to be rendered
-	SDL_Texture* mTex;
+protected:
+	//The SDL_Texture to be rendered
+	SDL_Texture* mTex; //control mTex to display something on screen
 
-	// Used to render the texture
+	//Used to render the texture
 	Graphics* mGraphics;
 
-	// Width of the texture
+	//Width of the texture
 	int mWidth;
 
-	// Height of the texture
+	//Height of the texture
 	int mHeight;
 
-	// True if the texture is loaded from a spritesheet
+	//true if the texture is loaded from a spritesheet
 	bool mClipped;
 
-	// Is used to render the texture on the screen
+	//Is used to render the texture on the screen
 	SDL_Rect mRenderRect;
 
-	// Is used to clip the texture from a spritesheet
+	//Is used to clip the texture from a spritesheet
 	SDL_Rect mClipRect;
 
 public:
-	// Loads a whole texture from a file
+	//Loads a whole texture from a file
 	Texture(std::string filename);
-
-	// Loads a texture from a file (spritesheets)
-	// x = Starting pixel's X on the spritesheet
-	// y = Starting pixel's Y on the spritesheet
-	// w = The width of the clipped sprite
-	// h = The height of the clipped sprite
+	SDL_Texture* GetmTex() { return mTex; }
+	SDL_Rect GetmRenderRect() { return mRenderRect; }
+	void SetmTex(SDL_Texture* texture) { mTex = texture; }
+	void SetmRenderRectX(float x) { mRenderRect.x = x; }
+	void SetmRenderRectY(float y) { mRenderRect.y = y; }
+	//Loads a texture from a file (spritesheets)
+	//x = starting pixel's X on the spritesheet
+	//y = starting pixel's Y on the spritesheet
+	//w = The width of the clipped sprite
+	//h = The heigh of the clipped sprite
 	Texture(std::string filename, int x, int y, int w, int h);
 
-	// Converts the given text into a texture (Constructor)
-	Texture(std::string text, std::string fontpath, int size, SDL_Color colour);
+	//Converts the given text into a texture
+	Texture(std::string text, std::string fontpath, int size, SDL_Color color);
 	~Texture();
 
-	// Called to render the texture to screen
+	//Called to render the texture to screen
 	virtual void Render();
 };
 
+#endif // !TEXTURE_H
 
-#endif
+
