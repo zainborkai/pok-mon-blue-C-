@@ -1,6 +1,24 @@
-﻿  PewterCity.cpp
-c:\_projects\pokemon blue\sdl framework\pewtercity.cpp(17): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
-c:\_projects\pokemon blue\sdl framework\pewtercity.cpp(17): warning C4305: 'initializing': truncation from 'int' to 'char'
-c:\_projects\pokemon blue\sdl framework\pewtercity.cpp(17): warning C4309: 'initializing': truncation of constant value
-  SDL Framework.vcxproj -> C:\_Projects\Pokemon Blue\Debug\SDL Framework.exe
-  SDL Framework.vcxproj -> C:\_Projects\Pokemon Blue\Debug\SDL Framework.pdb (Partial PDB)
+﻿  stdafx.cpp
+  Timer.cpp
+  Texture.cpp
+  SDLFramework.cpp
+  Player.cpp
+  PewterCity.cpp
+c:\users\zachary.carreiro\documents\github\pok-mon-blue-c-\pokemon blue.old\sdl framework\pewtercity.cpp(17): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+c:\users\zachary.carreiro\documents\github\pok-mon-blue-c-\pokemon blue.old\sdl framework\pewtercity.cpp(17): warning C4305: 'initializing': truncation from 'int' to 'char'
+c:\users\zachary.carreiro\documents\github\pok-mon-blue-c-\pokemon blue.old\sdl framework\pewtercity.cpp(17): warning C4309: 'initializing': truncation of constant value
+  PalletTown.cpp
+  Map.cpp
+  InputManager.cpp
+  Graphics.cpp
+  GameManager.cpp
+c:\users\zachary.carreiro\documents\github\pok-mon-blue-c-\pokemon blue.old\sdl framework\gamemanager.cpp(34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GameEntity.cpp
+c:\users\zachary.carreiro\documents\github\pok-mon-blue-c-\pokemon blue.old\sdl framework\gameentity.cpp(37): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Buildings.cpp
+  AudioManager.cpp
+  AssetManager.cpp
+  AnimatedTexture.cpp
+  Generating Code...
+  SDL Framework.vcxproj -> C:\Users\Zachary.Carreiro\Documents\GitHub\pok-mon-blue-C-\Pokemon Blue.old\Debug\SDL Framework.exe
+  SDL Framework.vcxproj -> C:\Users\Zachary.Carreiro\Documents\GitHub\pok-mon-blue-C-\Pokemon Blue.old\Debug\SDL Framework.pdb (Partial PDB)
