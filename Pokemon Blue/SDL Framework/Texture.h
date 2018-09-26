@@ -29,6 +29,8 @@ protected:
 	SDL_Rect mClipRect;
 
 public:
+	Texture();
+
 	// Loads a whole texture from a file
 	Texture(std::string filename);
 

@@ -1,5 +1,9 @@
 #include "Texture.h"
 
+Texture::Texture(){}
+
+
+
 Texture::Texture(std::string filename) {
 	mGraphics = Graphics::Instance();
 

@@ -159,6 +159,7 @@
     <ClInclude Include="MathHelper.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Pokemon.h" />
     <ClInclude Include="PokemonBattle.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -178,6 +179,7 @@
     <ClCompile Include="PalletTown.cpp" />
     <ClCompile Include="PewterCity.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Pokemon.cpp" />
     <ClCompile Include="PokemonBattle.cpp" />
     <ClCompile Include="SDLFramework.cpp" />
     <ClCompile Include="stdafx.cpp">

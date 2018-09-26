@@ -63,6 +63,9 @@
     <ClInclude Include="PokemonBattle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Pokemon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -114,6 +117,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PokemonBattle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pokemon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

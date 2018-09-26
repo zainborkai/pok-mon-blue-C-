@@ -27,7 +27,7 @@ GameManager::GameManager() {
 	mInputMgr = InputManager::Instance();
 	mAudioMgr = AudioManager::Instance();
 	mTimer = Timer::Instance();
-	mPokemon = new PokemonBattle();
+	mPokemon = new Pokemon();
 
 }
 

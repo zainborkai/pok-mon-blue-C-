@@ -1,42 +1,31 @@
 #ifndef POKEMONBATTLE_H
 #define POKEMONBATTLE_H
 
-#include <string>
-#include <vector>
-#include <fstream>
-#include <iostream>
+#include "Pokemon.h"
 
 
 class PokemonBattle {
 private:
-	std::vector<std::string> pokeBattle;
+
 	std::ifstream pokemonAttack;
+	std::string pokeResist[14][14];
 
 protected:
 	//variables
-	unsigned int maxHP;
-	unsigned int hp;
-	unsigned int baseATK;
-	unsigned int level;
 
-	int specAttack;
-	int defense;
-	int baseSpeed;
-	float accuracy;
-	float evasion;
-	float crit;
 	int mod;
+	bool check;
 
 
 public:
 	PokemonBattle();
 	~PokemonBattle() {};
-	void PokemonDamage(double);
-	void PokemonSTAB(float);
-	void PokemonMovePriority();
-	void PokemonOHKO();
-	void PokemonResistance();
-	void Substitute(float);
+	void PokemonDamage(double, Pokemon*);
+	void PokemonSTAB(float, Pokemon*);
+	void PokemonMovePriority(Pokemon*, Pokemon*);
+	void PokemonOHKO(Pokemon*, Pokemon*);
+	void PokemonResistance(Pokemon*, Pokemon*);
+	void Substitute(float, Pokemon*, Pokemon*);
 
 
 };
