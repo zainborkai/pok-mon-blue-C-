@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "Buildings.h"
+#include "GroundMap.h"
 #include "Player.h"
 
 class LevelManager {
@@ -27,6 +28,7 @@ private:
 	Buildings* buildings;
 
 	Map* mMap;
+	GroundMap* mGroundMap;
 	Player* mPlayer;
 	Graphics* mGraphics;
 };
