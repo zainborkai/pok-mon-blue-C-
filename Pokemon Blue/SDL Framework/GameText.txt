@@ -429,3 +429,63 @@ POKeMON CENTER!
 VIRIDIAN CITY
 The Eternally
 Green Paradise
+
+***GUY1_VIRIDIAN
+
+You want to know
+about the 2 kinds
+of caterpillar
+POKeMON?
+
+<<Input choice>>
+
+***GUY2_VIRIDIAN
+
+Those POKe BALLs
+at your waist!
+You have POKeMON!
+
+It's great that
+you can carry and
+use POKeMON any
+time, anywhere!
+
+--POKe CENTRE--
+
+***GUY_SITTING_POKECENTRE_VIRIDIAN
+
+POKeMON CENTERs
+heal your tired,
+hurt or fainted
+POKeMON!
+
+***GUY1_STANDING_POKECENTRE_VIRIDIAN
+
+There's a POKeMON
+CENTER in every
+town ahead.
+
+They don't charge 
+any money either!
+
+***GUY2_STANDING_POKECENTRE_VIRIDIAN
+
+You can use that 
+PC in the corner.
+
+The receptionist 
+told me. So kind!
+
+***POKECENTRE_NURSE
+
+Welcome to our
+POKeMON CENTER!
+
+We heal your 
+POKeMON back to
+perfect health!
+
+Shall we heal your
+POKeMON?
+
+<<Input choice>>

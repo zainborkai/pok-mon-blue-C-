@@ -28,7 +28,7 @@ GameManager::GameManager() {
 	mAudioMgr = AudioManager::Instance();
 	mTimer = Timer::Instance();
 	mText = Text::Instance();
-	mText->displayTextBox("MOM_STATIC");
+	mText->displayTextBox("POKEBALL_OAK_LAB");
 }
 
 GameManager::~GameManager() {

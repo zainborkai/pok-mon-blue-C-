@@ -153,3 +153,18 @@ CANCEL
 
 --QUIT--
 Thank you!
+
+***Guy1_VIRIDIAN
+
+YES
+
+CATERPIE has no
+poison, but
+WEEDLE does.
+
+Watch out for its 
+POISON STING!
+
+NO
+
+Oh, OK then!
