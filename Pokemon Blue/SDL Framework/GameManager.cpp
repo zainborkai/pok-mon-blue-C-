@@ -28,6 +28,7 @@ GameManager::GameManager() {
 	mAudioMgr = AudioManager::Instance();
 	mTimer = Timer::Instance();
 	mText = Text::Instance();
+	mText->displayTextBox("MOM_STATIC");
 }
 
 GameManager::~GameManager() {
@@ -47,10 +48,10 @@ GameManager::~GameManager() {
 	mText = nullptr;
 
 }
-
+//All the updates and the render happen every frame
 void GameManager::EarlyUpdate() {
 	//Update the input state before any other updates are run
-
+	//mText->displayTextBox("INTRO");
 	mText->NextText();
 }
 

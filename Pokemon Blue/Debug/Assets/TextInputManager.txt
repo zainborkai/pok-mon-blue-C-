@@ -91,6 +91,13 @@ BULBASAUR?
 YES
 NO
 
+--Once you pick--
+This POKeMON is
+really energetic!
+
+<NAME> received
+a <POKeMON>!
+
 <<Name your pokemon>>
 
 Do you want to 

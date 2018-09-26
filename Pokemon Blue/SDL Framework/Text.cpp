@@ -24,6 +24,21 @@ void Text::Release() {
 bool Text::Initialized() {
 	return sInitialized;
 }
+//
+// This function is going to allow us to access any part of the text file
+// Each part is identified with a leading ***
+void Text::displayTextBox(std::string currentPart) {
+	//Need to make a function so we can set currentArea to the part we want 
+	currentArea = currentPart; // I think this needs to be changed so we can use any area of the text file
+	currentParagraph = 0;
+
+	//Getting a bunch of lines and giving them a texture
+	textLine = new TextLine();
+	NewText(currentArea, currentParagraph);
+
+	NextText();
+	//displayTextBox("INTRO"); //I want this function to be able to change what text is displayed in the textbox
+} 
 
 //Function that will replace a string from the text file with a different specified string
 std::string Text::replaceString(std::string strToReplaceOn, std::string subStringToLookFor, std::string whatToReplaceItWith) {
@@ -79,6 +94,7 @@ Text::Text() : Texture(" ", "POKEMONGB.ttf", 12, { 0,0,0 }) {
 			(*textFile[key])[textFile[key]->size() - 1]->push_back(theLine);
 		}
 
+
 	}
 	src.close();
 	//
@@ -106,22 +122,15 @@ Text::Text() : Texture(" ", "POKEMONGB.ttf", 12, { 0,0,0 }) {
 	pTextBox->Pos(Vector2(0, 50));
 	//
 	//
-	//
-	currentArea = "INTRO"; // I think this needs to be changed so we can use any area of the text file
-	currentParagraph = 0;
 
-	//Getting a bunch of lines and giving them a texture
-	textLine = new TextLine();
-	NewText(currentArea, currentParagraph);
 
-	//accessText = 
+	//accessText. wanted to make a variable with getters and setters to access specific texts
 }
 //
-// NewText function 
+// NewText function. Creates the text
 void Text::NewText(std::string area, int paragraph) {
 	for (int i = 0; i < (*(*textFile[area])[paragraph]).size(); i++) {
 		textLine->stuff.push_back((*(*textFile[area])[paragraph])[i]);
-
 	}
 	for (int i = 0; i < textLine->stuff.size(); i++) {
 
@@ -159,13 +168,12 @@ void Text::NextText() {
 
 	if (!GetIsActive()) { return; }
 
-
 	//Trying to make code that will iterate through the elements of the textFile map
 	//and display each line by line when the Z key is pressed
 	if (mInputMgr->KeyPressed(SDL_SCANCODE_Z))
 	{//                   0          +             2        <          size of the vector
 		if (textLine->StartPoint + textLine->showLineCount < textLine->UseTexture.size()) {
-			textLine->StartPoint++; // increment the start pont by 1
+			textLine->StartPoint++; // increment the start point by 1
 		}
 		else {
 			currentParagraph++; //This will change to the next paragraph once we reach the end of the previous paragraph
@@ -242,6 +250,4 @@ void Text::Render() {
 
 	What if I said "i += 3"?
 	*/
-
-
 }

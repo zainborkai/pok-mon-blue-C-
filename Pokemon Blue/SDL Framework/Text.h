@@ -56,6 +56,8 @@ public:
 	void SetAccessText(std::string textPart) { accessText = textPart; }
 	std::string GetAccessText() { return accessText; }
 
+	void displayTextBox(std::string currentPart);
+
 private:
 	static Text* sInstance;
 	static bool sInitialized;

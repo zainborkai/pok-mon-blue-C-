@@ -56,6 +56,376 @@ and adventures
 with POKeMON
 awaits! Let's go!
 
-***ROOM
+--ROOM--
 
+***SNES
 
+<NAME> is
+playing the SNES!
+...Okay!
+It's time to go!
+
+***PC
+
+<NAME> turned on
+the PC.
+
+What do you want
+to do?
+
+<<PC needs some input functionality>>
+
+--DOWNSTAIRS--
+
+***TV
+
+There's a movie
+on TV. Four boys
+are walking on
+railroad tracks.
+
+I better go too.
+
+***BOOKSHELF
+
+Crammed full of 
+POKeMON books!
+
+***MOM_BEGINNING
+
+MOM: Right.
+All boys leave
+home some day.
+It said so on TV.
+
+PROF. OAK, next
+door, is looking
+for you.
+
+--OUTSIDE--
+
+***SIGN_OUTSIDE_HOUSE
+
+<NAME>'s house
+
+***GIRL_OUTSIDE_HOUSE
+
+I'm raising
+POKeMON too!
+
+When they get
+strong, they can
+protect me!
+
+***TOWN_SIGN
+
+PALLET TOWN
+Shades of your
+journey await!
+
+--RIVAL HOUSE--
+
+***TOWNMAP
+
+A TOWN MAP.
+
+***TABLE_RIVAL_HOUSE
+
+It's a big map!
+This is useful!
+
+***RIVAL_SISTER_BEGINNING
+
+Hi <NAME>!
+<RIVAL> is out at
+Grandpa's lab.
+
+***GUY_OUTSIDE_OAKLAB
+
+Technology is
+incredible!
+
+You can now store 
+and recall items
+and POKeMON as
+data via PC!
+
+--OAK RESEARCH LAB--
+
+***GUYS_LAB
+
+I study POKeMON as 
+PROF. OAK's AIDE.
+
+***GIRL_LAB
+
+PROF. OAK is the
+authority on
+POKeMON!
+
+Many POKeMON
+trainers hold him
+in high regard!
+
+***RIVAL_BEGINNING
+
+<RIVAL>: yo
+<NAME>! Gramps
+isn't around!
+
+***COMPUTER_OAK_LAB
+
+There's an email
+message here!
+...
+
+Calling all 
+POKeMON trainers!
+
+The elite trainers
+of POKeMON LEAGUE
+are ready to take
+on all comers!
+
+Bring your best
+POKeMON and see
+how you rate as a 
+trainer!
+
+POKeMON LEAGUE HQ
+INDIGO PLATEAU
+
+PS: PROF. OAK,
+please visit us!
+...
+
+***BOOK_OAK_LAB
+
+It's encyclopedia-
+like, but the
+pages are blank!
+
+***HELP1_OAK_LAB
+
+Push START to
+open the MENU!
+
+***HELP2_OAK_LAB
+
+The SAVE option is
+on the MENU
+screen.
+
+***POKEBALL_OAK_LAB
+
+Those are POKe
+BALLs. They
+contain POKeMON!
+
+***SCENE_ON_GRASS
+
+OAK: Hey! Wait!
+Don't go out!
+
+OAK: It's unsafe!
+Wild POKeMON live
+in tall grass!
+
+You need your own 
+POKeMON for your
+protection.
+I know!
+
+Here, come with
+me!
+
+<RIVAL>: Gramps!
+I'm fed up with
+waiting!
+
+OAK: <RIVAL>?
+Let me think...
+
+oh, that's right, 
+I told you to
+come! Just wait!
+
+Here, <NAME>!
+
+There are 3
+POKeMON here!
+
+Haha!
+
+They are inside 
+the POKe BALLs.
+
+When I was young,
+I was a serious
+POKeMON trainer!
+
+In my old age, I
+have only 3 left,
+but you can have
+one! Choose!
+
+<RIVAL>: Hey!
+Gramps! What
+about me?
+
+OAK: Be patient!
+<RIVAL>, you can
+have one too!
+
+***OAK_BEFORE_CHOICE
+
+OAK: Now, <NAME>,
+which POKeMON do
+you want?
+
+***RIVAL_BEFORE_CHOICE
+
+<RIVAL>: Hey, I
+don't need to be
+greedy like you!
+
+Go ahead and
+choose, <NAME>!
+
+***LEAVE_BEFORE_CHOICE
+
+OAK: Hey! Don't
+go away yet!
+
+<<Picking your pokemon input>>
+
+<<Name your pokemon input>>
+
+***AFTER_CHOICE
+
+<RIVAL>: I'll take 
+this one, then!
+
+<RIVAL> received
+a <POKeMON>!
+
+***LAST_POKEBALL
+
+That's PROF.OAK's
+last POKeMON!
+
+***RIVAL_AFTER_CHOICE
+
+<RIVAL>: My
+POKeMON looks a
+lot stronger.
+
+***OAK_AFTER_CHOICE
+
+OAK: If a wild
+POKeMON appears,
+your POKeMON can
+fight against it!
+
+***LEAVING_OAK_LAB
+
+<RIVAL>: Wait
+<NAME>!
+Let's check out
+our POKeMON!
+
+Come on, I'll take
+you on!
+
+***AFTER_FIRST_RIVAL_BATTLE
+
+<RIVAL>: Okay!
+I'll make my
+POKeMON fight to
+toughen it up!
+
+<NAME>! Gramps!
+Smell you later!
+
+***OAK_AFTER_RIVAL_BATTLE
+
+OAK: MATT,
+raise your young
+POKeMON by making
+it fight!
+
+***MOM_STATIC
+
+MOM: <NAME>!
+You should take a 
+quick rest
+
+MOM: Oh good!
+You and your
+POKeMON are
+looking great!
+Take care now!
+
+--ROUTE 1--
+
+***SIGN1_ROUTE1
+
+ROUTE 1
+PALLET TOWN - 
+VIRIDIAN CITY
+
+***GUY1_ROUTE1
+
+Hi! I work at a
+POKeMON MART.
+
+It's a convenient
+shop, so please
+visit us in
+VIRIDIAN CITY.
+
+I know, I'll give
+you a sample!
+Here you go!
+
+<NAME> got
+POTION!
+
+We also carry
+POKe BALLs for
+catching POKeMON!
+
+***GUY2_ROUTE1
+
+See those ledges
+along the road?
+
+It's a bit scary,
+but you can jump
+from them.
+
+You can get back
+to PALLET TOWN
+quicker that way.
+
+--VIRIDIAN CITY--
+
+***SIGN1_VIRIDIAN
+
+TRAINER TIPS
+
+The battle moves 
+of POKeMON are
+limited by their
+POWER POINTs, PP.
+
+To replenish PP,
+rest your tired
+POKeMON at a
+POKeMON CENTER!
+
+***SIGN2_VIRIDIAN
+
+VIRIDIAN CITY
+The Eternally
+Green Paradise
