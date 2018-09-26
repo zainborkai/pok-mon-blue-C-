@@ -50,12 +50,12 @@ GameManager::~GameManager() {
 void GameManager::EarlyUpdate() {
 	// Updating the input state before any other updates are run
 
-
 }
 
 void GameManager::Update() {
 	// GameEntity updates should happen here
-	
+	mLevelMgr->Update();
+
 }
 
 void GameManager::LateUpdate() {

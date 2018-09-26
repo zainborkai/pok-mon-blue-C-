@@ -16,6 +16,7 @@ public:
 	static void Release();
 	//
 	void Render();
+	//void EarlyUpdate();
 	void Update();
 
 private:

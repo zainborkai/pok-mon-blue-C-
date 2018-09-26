@@ -18,28 +18,28 @@ void Player::Update() {
 
 int Player::Move() {
 	int output = 0;
-	if (playerInput->KeyDown(SDL_SCANCODE_W)) {
+	if (playerInput->KeyPressed(SDL_SCANCODE_W)) {
 		// Move up..
 		mStartY = 48;
 		std::cout << "Moving up" << std::endl;
 
 		output = 1;
 	}
-	else if (playerInput->KeyDown(SDL_SCANCODE_S)) {
+	else if (playerInput->KeyPressed(SDL_SCANCODE_S)) {
 		// Move down..
 		mStartY = 0;
 		std::cout << "Moving down" << std::endl;
 
 		output = 2;
 	}
-	else if (playerInput->KeyDown(SDL_SCANCODE_A)) {
+	else if (playerInput->KeyPressed(SDL_SCANCODE_A)) {
 		// Move left..
 		mStartY = 16;
 		std::cout << "Moving left" << std::endl;
 
 		output = 3;
 	}
-	else if (playerInput->KeyDown(SDL_SCANCODE_D)) {
+	else if (playerInput->KeyPressed(SDL_SCANCODE_D)) {
 		// Move right..
 		mStartY = 32;
 		std::cout << "Moving right" << std::endl;
@@ -53,6 +53,9 @@ int Player::Move() {
 	}
 	//
 	return output;
+}
+
+void Player::MovePlayer() {
 }
 
 

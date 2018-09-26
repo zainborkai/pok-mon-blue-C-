@@ -7,7 +7,7 @@ class Map : public Texture {
 public:
 	Map();
 	~Map();
-	
+		
 	void Render();
 	void Update();
 

@@ -9,6 +9,7 @@
 class Player : public AnimatedTexture {
 public:
 	int Move();
+	void MovePlayer();
 
 	void Update();
 	// void Render();

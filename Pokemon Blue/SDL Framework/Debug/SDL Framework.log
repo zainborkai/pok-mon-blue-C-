@@ -1,3 +1,8 @@
-﻿  Map.cpp
+﻿  SDLFramework.cpp
+  LevelManager.cpp
+c:\_projects\pokemon blue\sdl framework\levelmanager.cpp(14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GameManager.cpp
+  Buildings.cpp
+  Generating Code...
   SDL Framework.vcxproj -> C:\_Projects\Pokemon Blue\Debug\SDL Framework.exe
   SDL Framework.vcxproj -> C:\_Projects\Pokemon Blue\Debug\SDL Framework.pdb (Partial PDB)

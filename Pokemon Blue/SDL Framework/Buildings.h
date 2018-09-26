@@ -150,7 +150,22 @@ public:
 	private:
 		
 
-		Texture* ViridianHouse;
+		Texture* PalletPlayerHouseFloor1;
+		Texture* PalletPlayerHouseFloor2;
+		Texture* PalletHouse1;
+		Texture* PalletLab;
+
+		Texture* ViridianHouse1;
+		Texture* ViridianHouse2;
+		Texture* ViridianMart;
+		Texture* ViridianCentre;
+
+		Texture* PewterHouse1;
+		Texture* PewterHouse2;
+		Texture* PewterMart;
+		Texture* PewterCentre;
+		//Texture* PewterGym;
+		//Texture* PewterMuseum;
 };
 
 
