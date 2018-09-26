@@ -1,8 +1,23 @@
-﻿  SDLFramework.cpp
+﻿  stdafx.cpp
+  Timer.cpp
+  Texture.cpp
+  SDLFramework.cpp
+  Player.cpp
+  PewterCity.cpp
+  PalletTown.cpp
+  Map.cpp
   LevelManager.cpp
-c:\_projects\pokemon blue\sdl framework\levelmanager.cpp(14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\levelmanager.cpp(14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  InputManager.cpp
+  Graphics.cpp
   GameManager.cpp
+  GameEntity.cpp
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\gameentity.cpp(37): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Buildings.cpp
+  AudioManager.cpp
+  AssetManager.cpp
+  AnimatedTexture.cpp
   Generating Code...
-  SDL Framework.vcxproj -> C:\_Projects\Pokemon Blue\Debug\SDL Framework.exe
-  SDL Framework.vcxproj -> C:\_Projects\Pokemon Blue\Debug\SDL Framework.pdb (Partial PDB)
+  LINK : C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\Debug\SDL Framework.exe not found or not built by the last incremental link; performing full link
+  SDL Framework.vcxproj -> C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\Debug\SDL Framework.exe
+  SDL Framework.vcxproj -> C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\Debug\SDL Framework.pdb (Partial PDB)
