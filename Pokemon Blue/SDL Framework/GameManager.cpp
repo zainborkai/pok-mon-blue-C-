@@ -29,6 +29,8 @@ GameManager::GameManager() {
 	mTimer = Timer::Instance();
 	mPokemon = new Pokemon();
 
+
+	Database::Instance();
 }
 
 GameManager::~GameManager() {

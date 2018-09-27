@@ -4,23 +4,6 @@
 Pokemon::Pokemon() {
 	mPos.x = 0;
 	mPos.y = 0;
-
-
-	pokeAttack.open("PokemonBlueAttackDatabase.csv");
-
-	while (!pokeAttack.eof()) {
-		std::string temp;
-		for (int rows = 0; rows < 166; rows++) {
-			for (int col = 0; col < 7;) {
-
-				getline(pokeAttack, temp, ',');
-				pokeBattle[rows][col] = temp;
-				col++;
-			}
-		}
-	}
-
-	pokeAttack.close();
 }
 
 Pokemon::~Pokemon() {}
@@ -28,7 +11,7 @@ Pokemon::~Pokemon() {}
 void Pokemon::BattleFunction() {
 	if (isBattle) {
 		
-
+		Database::Instance()->GetTypeEffectiveness(PokeType::FIRE, PokeType::BUG);
 		//int c;
 
 		//PLAYER CHOOSES FROM OPTIONS

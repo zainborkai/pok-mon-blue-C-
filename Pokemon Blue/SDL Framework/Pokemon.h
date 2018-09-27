@@ -6,26 +6,30 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include <stdlib.h>
+#include <time.h>
+#include "Database.h"
 
 
 class Pokemon : public Texture {
 private:
-	unsigned int level;
-	unsigned int exp;
-	unsigned int maxHP;
+	int level;
+	int exp;
+	int maxHP;
 	int hp;
 
-	unsigned int attack;
-	unsigned int accuracy;
-	unsigned int evasion;
-	unsigned int speed;
-	unsigned int defense;
+	int attack;
+	int accuracy;
+	int evasion;
+	int speed;
+	int defense;
 	int specAttack;
 	int baseATK;
 
 	float crit;
+	
 
-	std::string pokeBattle[166][7];
+	
 	Vector2 mPos;
 #pragma region AAAA
 	/*
@@ -44,25 +48,10 @@ private:
 #pragma endregion
 
 	
-	enum PokeType {
-		NORMAL = 0,
-		FIGHTER = 1,
-		FLYING = 2,
-		POISON = 3,
-		GROUND = 4,
-		ROCK = 5,
-		BUG = 6,
-		GHOST = 7,
-		FIRE = 8,
-		WATER = 9,
-		GRASS = 10,
-		ELECTRIC = 11,
-		PSYCHIC = 12,
-		ICE = 13
-	};
+	
 
-	enum Ailments {
-		TOXIC,
+	enum class Ailments {
+		POISON, // ??? <-- The "Toxic" status is actually a "volatile" status that amplifies damage
 		BURN,
 		PARALYZE,
 		FREEZE,
@@ -72,7 +61,7 @@ private:
 		FLINCH
 	};
 
-	enum States {
+	enum class States {
 		FIGHT = 0,
 		POKEMON = 1,
 		ITEM = 2,
@@ -112,7 +101,10 @@ public:
 	void SetLevel(int s_level) { level = s_level; }
 	int GetLevel() { return level; }
 
-	std::ifstream pokeAttack;
+	void SetMaxHp(int s_maxHP) { maxHP = s_maxHP; }
+	int GetMaxHp() { return maxHP; }
+
+	
 
 
 	bool isBattle = true;

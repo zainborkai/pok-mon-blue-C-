@@ -1,27 +1,6 @@
 #include "PokemonBattle.h"
 
-PokemonBattle::PokemonBattle() {
-	
-
-	pokemonAttack.open("PokemonResistanceChart.csv");
-
-	while (!pokemonAttack.eof()) {
-		std::string temp;
-		
-		for (int i = 0; i < 14; i++) {
-			for (int j = 0; j < 14;) {
-				getline(pokemonAttack, temp, ',');
-				if (temp[0] != '$' && temp[1] != '\n') {
-					pokeResist[i][j] = temp;
-					j++;
-				}
-				//std::cout << pokeResist[i][j] + ' ';
-			}
-			
-		}
-	}
-	pokemonAttack.close();
-}
+PokemonBattle::PokemonBattle() {}
 
 void PokemonBattle::PokemonDamage(double damage, Pokemon* pokemon) {
 
@@ -30,6 +9,7 @@ void PokemonBattle::PokemonDamage(double damage, Pokemon* pokemon) {
 }
 
 void PokemonBattle::PokemonSTAB(float stab, Pokemon* pokemon) {
+	
 	stab = (pokemon->GetBaseAttack() * .50f) + pokemon->GetBaseAttack();
 	pokemon->SetHP(pokemon->GetHp() - stab);
 
@@ -53,6 +33,7 @@ void PokemonBattle::PokemonOHKO(Pokemon* player, Pokemon* enemy) {
 }
 
 void PokemonBattle::PokemonResistance(Pokemon* player, Pokemon* enemy) {
+	/*
 	if (pokeResist[player->GetPokeType()][enemy->GetPokeType()] == "0.5") {
 		mod = 0.5f;
 	}else if (pokeResist[player->GetPokeType()][enemy->GetPokeType()] == "1") {
@@ -64,14 +45,20 @@ void PokemonBattle::PokemonResistance(Pokemon* player, Pokemon* enemy) {
 	{
 		mod = 0;
 	}
-	 
+	 */
 
 }
 
 void PokemonBattle::Substitute(float subs, Pokemon* player, Pokemon* enemy) {
-	subs = maxHP * .25f;
+	subs = player->GetMaxHp() * .25f;
 
-	if (subs > maxHP) {
-
+	if (subs > player->GetHp()) {
+		//substitute will fail
+	}
+	else if (subs == player->GetHp()) {
+		//pokemon will faint
+	}
+	else if (subs < 3) {
+		
 	}
 }

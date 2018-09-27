@@ -4,11 +4,11 @@
 #include "Pokemon.h"
 
 
-class PokemonBattle {
+class PokemonBattle : public Pokemon {
 private:
 
-	std::ifstream pokemonAttack;
-	std::string pokeResist[14][14];
+	//std::ifstream pokemonAttack;
+	
 
 protected:
 	//variables
