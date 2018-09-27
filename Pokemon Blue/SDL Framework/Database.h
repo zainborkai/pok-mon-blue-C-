@@ -80,6 +80,39 @@ private:
 	PokeType type;
 };
 
+class PokeData {
+	std::string pokename;
+	int hitpoint;
+	int attack;
+	int defense;
+	int special;
+	int speed;
+	PokeType typeI;
+	PokeType typeII;
+	float mass;
+	int captureRate;
+	int exp;
+
+public:
+	PokeData(std::string pknam, int hp, int atk, int def, int spc, int spd, PokeType tyI, PokeType tyII, float ms, int cr, int xp) {
+		pokename = pknam;
+		hitpoint = hp;
+		attack = atk;
+		defense = def;
+		special = spc;
+		speed = spd;
+		typeI = tyI;
+		typeII = tyII;
+		mass = ms;
+		captureRate = cr;
+		exp = xp;
+	}
+
+	std::string GetPokeData() { return pokename; }
+
+};
+
+
 class Database {
 	
 
@@ -117,9 +150,23 @@ public:
 		//
 		return nullptr;
 	}
+
+	std::vector<PokeData*> pokeData;
+	void AddPokeData(std::string pknam, int hp, int atk, int def, int spc, int spd, PokeType tyI, PokeType tyII, float ms, int cr, int xp) {
+		pokeData.push_back(new PokeData(pknam, hp, atk, def, spc, spd, tyI, tyII, ms, cr, xp));
+	}
+	PokeData* GetPokeData(std::string pkd) {
+		for (PokeData* Q : pokeData) {
+			if (Q->GetPokeData() == pkd) {
+				return Q;
+			}
+		}
+		return nullptr;
+	}
+
 private:
 	static Database* sInstance;
-	std::string pokeBattle[166][7];
-	std::string pokeResist[14][14];
 };
+
+
 #endif // !DATABASE_H

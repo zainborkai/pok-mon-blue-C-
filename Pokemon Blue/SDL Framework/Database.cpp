@@ -35,10 +35,8 @@ Database::Database() {
 
 	readfile.open("PokemonBlueAttackDatabase.csv");
 
-	std::string columns[7] = { "Name", "Mode", "Uses", "Power", "Accuracy", "Priority", "Type" };
-	
-
-	int row = 0;
+	//std::string columns[7] = { "Name", "Mode", "Uses", "Power", "Accuracy", "Priority", "Type" };
+	//int row = 0;
 	while (!readfile.eof()) {
 		std::string nam;
 		std::string mod;
@@ -57,6 +55,42 @@ Database::Database() {
 		getline(readfile, temp, ','); typ = strToPokeType[temp];
 		//
 		AddPokemonAttack(nam, mod, use, pow, acc, pri, typ);
+	}
+
+	readfile.close();
+
+
+	//std::string columns[11] = { "POKEMON", "HP", "ATK", "DEF", "Special", "Speed", "TYPE I", "TYPE II", "Mass(kG)", "Capture Rate", "Total EXP" };
+
+	readfile.open("PokemonDatabase.csv");
+
+	while (!readfile.eof()) {
+		std::string pknam;
+		int hp;
+		int atk;
+		int def;
+		int spc;
+		int spd;
+		PokeType tyI;
+		PokeType tyII;
+		float ms;
+		int cr;
+		int xp;
+
+		getline(readfile, pknam, ',');
+		getline(readfile, temp, ','); hp = stoi(temp);
+		getline(readfile, temp, ','); atk = stoi(temp);
+		getline(readfile, temp, ','); def = stoi(temp);
+		getline(readfile, temp, ','); spc = stoi(temp);
+		getline(readfile, temp, ','); spd = stoi(temp);
+		getline(readfile, temp, ','); tyI = strToPokeType[temp];
+		getline(readfile, temp, ','); tyII = strToPokeType[temp];
+		getline(readfile, temp, ','); ms = stof(temp);
+		getline(readfile, temp, ','); cr = stoi(temp);
+		getline(readfile, temp, ','); xp = stoi(temp);
+
+		AddPokeData(pknam, hp, atk, def, spc, spd, tyI, tyII, ms, cr, xp);
+
 	}
 
 	readfile.close();
