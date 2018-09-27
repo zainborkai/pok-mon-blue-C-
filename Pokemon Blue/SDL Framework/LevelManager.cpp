@@ -10,11 +10,13 @@ LevelManager::LevelManager() {
 	mPlayer = new Player();
 	buildings = new Buildings();
 	mGraphics = Graphics::Instance();
-	mapList.insert(mapList.begin(), buildings->GetCurrentBuilding());
-
-	mMap->Scale(Vector2(4, 4));
-	mGroundMap->Scale(Vector2(4, 4));
-	mPlayer->Scale(Vector2(4, 4));
+	inputManager = InputManager::Instance();
+	// Vector
+	
+	//mapList.pop_back;
+	//mGroundMap->Scale(Vector2(4, 4));
+	buildings->Scale(Vector2(7, 7));
+	mPlayer->Scale(Vector2(7, 7));
 
 	Vector2 offset(mGraphics->SCREEN_WIDTH / 2, mGraphics->SCREEN_HEIGHT / 2);
 	//mMap->Translate(offset);
@@ -55,17 +57,18 @@ void LevelManager::ChangeMap() {
 }
 
 void LevelManager::Render() {
-	//buildings->Render();
+	buildings->Render();
 	//mMap->Render();
-	mGroundMap->Render();
+	//mGroundMap->Render();
 	mPlayer->Render();
-	mapList[0]->Render();
 }
 
 
+
 void LevelManager::Update() {
-	mMap->Update();
+	//mMap->Update();
 	mGroundMap->Update();
+	//buildings->Update();
 	mPlayer->Update();
 	//--Changes Map Position--//
 	int input = mPlayer->Move();
@@ -73,6 +76,12 @@ void LevelManager::Update() {
 	//
 	int moveToX = 0, moveToY = 0;
 	//
+	if (inputManager->KeyPressed(SDL_SCANCODE_N)) {
+		buildings->ChangeMapForward(Buildings::PEWTERCENTRE);
+	}
+	if (inputManager->KeyPressed(SDL_SCANCODE_M)) {
+		buildings->ChangeMapBackward();
+	}
 	if (input == 0) {}
 	else {
 		if (input == 1) {
@@ -125,13 +134,12 @@ void LevelManager::Update() {
 		else if (mPlayer->Y > 198 - 1) { // ??? <-- NO MAGIC NUMBERS!
 			mPlayer->Y = 198 - 1;
 		}
-
-
 	}
-
+	Vector2 offset = mPlayer->Pos();
 
 	Vector2 offset = mPlayer->Pos();
 	Vector2 scl = mPlayer->Scale();
-	mMap->Pos(Vector2(offset.x - mPlayer->X * 16 * scl.x, offset.y - mPlayer->Y * 16 * scl.y));
+	//buildings->Pos(Vector2(offset.x - mPlayer->X * 16 * scl.x, offset.y - mPlayer->Y * 16 * scl.y));
+	buildings->GetCurrentBuilding()->Pos(Vector2(offset.x - buildings->GetCurrentBuilding()->GetmWidth() * scl.x - mPlayer->X, offset.y + mPlayer->Y * 16 * 0));
 	mGroundMap->Pos(Vector2(offset.x - mPlayer->X * 16 * scl.x, offset.y - mPlayer->Y * 16 * scl.y));
 }

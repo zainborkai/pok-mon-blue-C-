@@ -11,6 +11,7 @@ public:
 	LevelManager();
 	~LevelManager();
 
+	InputManager* inputManager;
 	void ChangeMap();
 
 	static LevelManager* Instance();
@@ -22,8 +23,6 @@ public:
 
 private:
 	static LevelManager* sInstance;
-
-	std::vector<Texture*> mapList;
 
 	Buildings* buildings;
 

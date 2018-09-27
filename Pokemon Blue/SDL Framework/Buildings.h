@@ -120,6 +120,7 @@ private:
 	Texture* currentBuilding;
 	Texture* nextFloor;
 	Texture* prevFloor;
+	std::vector<Texture*> mapList;
 
 public:
 	Buildings();
@@ -145,10 +146,22 @@ public:
 	Texture* GetPrevFloor() {
 		return prevFloor;
 	}
+
+
+	
 	//
 	void Render();
+	void Update();
+
+	enum BuildingNames {
+		PALLETPLAYERHOUSEFLOOR1, PALLETPLAYERHOUSEFLOOR2, PALLETHOUSE1, VIRIDIANHOUSE1, VIRIDIANHOUSE2, VIRIDIANMART,
+		VIRIDIANCENTRE, PEWTERHOUSE1, PEWTERMART, PEWTERCENTRE
+	};
+
+	void ChangeMapForward(BuildingNames);
+	void ChangeMapBackward();
 	private:
-		
+		BuildingNames buildingNames;
 
 		Texture* PalletPlayerHouseFloor1;
 		Texture* PalletPlayerHouseFloor2;

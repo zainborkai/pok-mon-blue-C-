@@ -29,6 +29,18 @@ protected:
 	SDL_Rect mClipRect;
 
 public:
+	SDL_Rect GetRenderRect() { return mRenderRect; }
+	int GetmWidth() { return mWidth; }
+	int GetmHeight() { return mHeight; }
+	int GetCenteringX() { return centering.x; }
+	int GetCenteringY() { return centering.y; }
+
+	void SetRenderRectX(int x) { mRenderRect.x = x; }
+	void SetRenderRectY(int y) { mRenderRect.y = y; }
+	void SetRenderRectW(int w) { mRenderRect.w = w; }
+	void SetRenderRectH(int h) { mRenderRect.h = h; }
+	void SetCenteringX(int cx) {  centering.x = cx; }
+	void SetCenteringY(int cy) {  centering.y = cy; }
 	// Loads a whole texture from a file
 	Texture(std::string filename);
 	SDL_Texture* GetmTex() { return mTex; }

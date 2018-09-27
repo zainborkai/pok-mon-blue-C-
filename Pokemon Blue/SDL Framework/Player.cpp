@@ -22,7 +22,6 @@ int Player::Move() {
 		// Move up..
 		mStartY = 48;
 		std::cout << "Moving up" << std::endl;
-
 		output = 1;
 	}
 	else if (playerInput->KeyPressed(SDL_SCANCODE_S)) {
@@ -36,7 +35,6 @@ int Player::Move() {
 		// Move left..
 		mStartY = 16;
 		std::cout << "Moving left" << std::endl;
-
 		output = 3;
 	}
 	else if (playerInput->KeyPressed(SDL_SCANCODE_D)) {
