@@ -80,35 +80,35 @@ void LevelManager::Update() {
 	if (inputManager->KeyPressed(SDL_SCANCODE_N)) {
 		buildings->ChangeMapForward(Buildings::GROUNDMAP);	
 		// Ground map starting position!
-		mPlayer->X = 60;
-		mPlayer->Y = 186;
+		mPlayer->SetX(60);
+		mPlayer->SetY(186);
 	}
 	if (inputManager->KeyPressed(SDL_SCANCODE_M)) {
 		buildings->ChangeMapBackward();
-		mPlayer->X = 10;
-		mPlayer->Y = 60;
+		mPlayer->SetX(10);
+		mPlayer->SetY(60);
 	}
 	if (input == 0) {}
 	else {
 		if (input == 1) {
 			// UP
-			moveToX = mPlayer->X + 0;
-			moveToY = mPlayer->Y - 16;
+			moveToX = mPlayer->GetX() + 0;
+			moveToY = mPlayer->GetY() - 16;
 		}
 		else if (input == 2) {
 			// DOWN
-			moveToX = mPlayer->X + 0;
-			moveToY = mPlayer->Y + 16;
+			moveToX = mPlayer->GetX() + 0;
+			moveToY = mPlayer->GetY() + 16;
 		}
 		else if (input == 3) {
 			// LEFT
-			moveToX = mPlayer->X - 16;
-			moveToY = mPlayer->Y + 0;
+			moveToX = mPlayer->GetX() - 16;
+			moveToY = mPlayer->GetY() + 0;
 		}
 		else if (input == 4) {
 			// RIGHT
-			moveToX = mPlayer->X + 16;
-			moveToY = mPlayer->Y + 0;
+			moveToX = mPlayer->GetX() + 16;
+			moveToY = mPlayer->GetY() + 0;
 		}
 
 		int groundID = mGroundMap->m_Map[0][moveToY][moveToX];
@@ -121,31 +121,31 @@ void LevelManager::Update() {
 		//
 		switch (groundID) {
 		case 0:
-			mPlayer->X = moveToX;
-			mPlayer->Y = moveToY;
+			mPlayer->SetX(moveToX);
+			mPlayer->SetY(moveToY);
 			break;
 		case 2:
-			if (moveToY > mPlayer->Y) {
-				moveToY = mPlayer->Y + 2;
+			if (moveToY > mPlayer->GetY()) {
+				moveToY = mPlayer->GetY() + 2;
 				//
-				mPlayer->Y = moveToY;
+				mPlayer->SetY(moveToY);
 			}
 			break;
 		}
 
 		
-		if (mPlayer->X <= 0) {
-			mPlayer->X = 0;
+		if (mPlayer->GetX() <= 0) {
+			mPlayer->SetX(0);
 		}
-		else if (mPlayer->X > 88 - 1) { // ??? <-- NO MAGIC NUMBERS!
-			mPlayer->X = 88 - 1;
+		else if (mPlayer->GetX() > 88 - 1) { // ??? <-- NO MAGIC NUMBERS!
+			mPlayer->SetX(88 - 1);
 		}
 
-		if (mPlayer->Y <= 0) {
-			mPlayer->Y = 0;
+		if (mPlayer->GetY() <= 0) {
+			mPlayer->SetY(0);
 		}
-		else if (mPlayer->Y > 198 - 1) { // ??? <-- NO MAGIC NUMBERS!
-			mPlayer->Y = 198 - 1;
+		else if (mPlayer->GetY() > 198 - 1) { // ??? <-- NO MAGIC NUMBERS!
+			mPlayer->SetY(198 - 1);
 		}
 	}
 
@@ -153,7 +153,7 @@ void LevelManager::Update() {
 	Vector2 scl = mPlayer->Scale();
 
 	//-------------- FIX THIS!!! --------------//
-	buildings->GetCurrentBuilding()->Pos(Vector2(offset.x - buildings->GetCurrentBuilding()->GetmWidth() / 2  * scl.x - mPlayer->X * 6, offset.y - mPlayer->Y * 4 - 32));
+	buildings->GetCurrentBuilding()->Pos(Vector2(offset.x - buildings->GetCurrentBuilding()->GetmWidth() / 2  * scl.x - mPlayer->GetX() * 6, offset.y - mPlayer->GetY() * 4 - 32));
 
 	
 	//--Working Map--//

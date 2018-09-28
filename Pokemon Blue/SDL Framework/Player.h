@@ -17,10 +17,13 @@ public:
 	Player();
 	~Player();
 
-	float GetX() { return X; }
-	float GetY() { return Y; }
+	int GetX() { return X; }
+	int GetY() { return Y; }
 
-	void NPCinteraction();
+	void SetX(int x) { X = x; }
+	void SetY(int y) { Y = y; }
+
+	//void NPCinteraction();
 	
 
 

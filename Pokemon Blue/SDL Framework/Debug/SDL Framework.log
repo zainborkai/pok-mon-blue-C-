@@ -1,8 +1,11 @@
-﻿  LevelManager.cpp
+﻿  Player.cpp
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(35): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(36): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(42): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(43): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\levelmanager.cpp(21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\player.h(20): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\player.h(21): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\player.h(23): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\player.h(24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   SDL Framework.vcxproj -> C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\Debug\SDL Framework.exe
   SDL Framework.vcxproj -> C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\Debug\SDL Framework.pdb (Partial PDB)

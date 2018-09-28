@@ -6,8 +6,8 @@ Player::Player() :
 	centering = Vector2(0, 0);
 	playerInput = InputManager::Instance();
 
-	X = 5;
-	Y = 5;
+	X = 10;
+	Y = 100;
 	
 }
 
@@ -29,8 +29,8 @@ void Player::Update() {
 }
 
 //movements of the player (assigning keys)
-/*int slowtime = 30;
-*/
+int slowtime = 30;
+
 int Player::Move() {
 int output = 0;
 
