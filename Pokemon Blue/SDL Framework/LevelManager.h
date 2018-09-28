@@ -6,6 +6,7 @@
 #include "GroundMap.h"
 #include "Player.h"
 
+
 class LevelManager {
 public:
 	LevelManager();
@@ -30,6 +31,9 @@ private:
 	GroundMap* mGroundMap;
 	Player* mPlayer;
 	Graphics* mGraphics;
+
+
+
 };
 
 

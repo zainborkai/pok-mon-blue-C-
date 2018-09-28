@@ -10,6 +10,7 @@ GroundMap::GroundMap() :
 	//	Pos(Vector2(2500, 2500));
 	//	centering = Vector2(0, 0);
 	//	m_grass = new Texture("grass.png", 0, 0, 16, 16);
+
 	Texture("CroppedMap.png", 0, 0, 1408, 3168) {
 
 	centering = Vector2(0, 0);
@@ -69,7 +70,10 @@ bool GroundMap::ReadCSVFile(string fname, string arrayName) {
 
 			currentLine.erase(0, pos + delimiter.length());
 			m_Map[currMap][line_number][cell_number] = stoi(cell_value);
-			//			std::cout << line_number << ":" << cell_number << ":" << m_Map[currMap][line_number][cell_number] << std::endl;
+
+			// Display all cells
+			//std::cout << line_number << ":" << cell_number << ":" << m_Map[currMap][line_number][cell_number] << std::endl;
+
 			cell_number++;
 		}
 		line_number++;

@@ -154,12 +154,15 @@ public:
 	void Update();
 
 	enum BuildingNames {
-		PALLETPLAYERHOUSEFLOOR1, PALLETPLAYERHOUSEFLOOR2, PALLETHOUSE1, VIRIDIANHOUSE1, VIRIDIANHOUSE2, VIRIDIANMART,
+		GROUNDMAP, PALLETPLAYERHOUSEFLOOR1, PALLETPLAYERHOUSEFLOOR2, PALLETHOUSE1, VIRIDIANHOUSE1, VIRIDIANHOUSE2, VIRIDIANMART,
 		VIRIDIANCENTRE, PEWTERHOUSE1, PEWTERMART, PEWTERCENTRE
 	};
-
+	// Map Instances
 	void ChangeMapForward(BuildingNames);
 	void ChangeMapBackward();
+
+	// Ground Map Setter
+	void SetGroundMapTexture(Texture* map) { groundMap = map; }
 	private:
 		BuildingNames buildingNames;
 
@@ -177,6 +180,9 @@ public:
 		Texture* PewterHouse2;
 		Texture* PewterMart;
 		Texture* PewterCentre;
+		Texture* groundMap;
+
+
 		//Texture* PewterGym;
 		//Texture* PewterMuseum;
 };

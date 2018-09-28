@@ -3,6 +3,8 @@
 
 Buildings::Buildings() {
 
+	groundMap = new Texture("CroppedMap.png", 0, 0, 1408, 3168);
+
 	PalletPlayerHouseFloor1 = new Texture("ViridianHouseOne.png", 0, 0, 128, 128);
 	PalletPlayerHouseFloor2 = new Texture("ViridianHouseTwo.png", 0, 0, 128, 128);
 	PalletHouse1 = new Texture("ViridianHouseOne.png", 0, 0, 128, 128);
@@ -28,45 +30,60 @@ Buildings::Buildings() {
 }
 
 void Buildings::ChangeMapForward(BuildingNames bn) {
+
 	switch (bn) {
+
+	case GROUNDMAP:
+		SetCurrentBuilding(groundMap);
+		break;
 
 	case PALLETPLAYERHOUSEFLOOR1:
 		SetCurrentBuilding(PalletPlayerHouseFloor1);
+		delete groundMap;
 		break;
 	case PALLETPLAYERHOUSEFLOOR2:
 		SetCurrentBuilding(PalletPlayerHouseFloor2);
+		delete groundMap;
 		break;
 
 	case PALLETHOUSE1:
 		SetCurrentBuilding(PalletHouse1);
+		delete groundMap;
 		break;
 
 	case VIRIDIANHOUSE1:
 		SetCurrentBuilding(ViridianHouse1);
+		delete groundMap;
 		break;
 
 	case VIRIDIANHOUSE2:
 		SetCurrentBuilding(ViridianHouse2);
+		delete groundMap;
 		break;
 
 	case VIRIDIANCENTRE:
 		SetCurrentBuilding(ViridianCentre);
+		delete groundMap;
 		break;
 
 	case VIRIDIANMART:
 		SetCurrentBuilding(ViridianMart);
+		delete groundMap;
 		break;
 
 	case PEWTERHOUSE1:
 		SetCurrentBuilding(PewterHouse1);
+		delete groundMap;
 		break;
 
 	case PEWTERMART:
 		SetCurrentBuilding(PewterMart);
+		delete groundMap;
 		break;
 
 	case PEWTERCENTRE:
 		SetCurrentBuilding(PewterCentre);
+		delete groundMap;
 		break;
 	}
 	mapList.insert(mapList.begin(), GetCurrentBuilding());

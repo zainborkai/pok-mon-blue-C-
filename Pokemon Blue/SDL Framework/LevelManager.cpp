@@ -1,6 +1,5 @@
 #include "LevelManager.h"
 
-
 LevelManager::LevelManager() {
 	mMap = new Map();
 	mGroundMap = new GroundMap();
@@ -9,6 +8,7 @@ LevelManager::LevelManager() {
 
 	mPlayer = new Player();
 	buildings = new Buildings();
+	buildings->SetGroundMapTexture(mGroundMap);
 	mGraphics = Graphics::Instance();
 	inputManager = InputManager::Instance();
 	// Vector
@@ -66,6 +66,7 @@ void LevelManager::Render() {
 
 
 void LevelManager::Update() {
+
 	//mMap->Update();
 	mGroundMap->Update();
 	//buildings->Update();
@@ -77,30 +78,37 @@ void LevelManager::Update() {
 	int moveToX = 0, moveToY = 0;
 	//
 	if (inputManager->KeyPressed(SDL_SCANCODE_N)) {
-		buildings->ChangeMapForward(Buildings::PEWTERCENTRE);
+		buildings->ChangeMapForward(Buildings::GROUNDMAP);	
+		mPlayer->X = 60;
+		mPlayer->Y = 186;
 	}
 	if (inputManager->KeyPressed(SDL_SCANCODE_M)) {
 		buildings->ChangeMapBackward();
+		mPlayer->X = 10;
+		mPlayer->Y = 60;
 	}
 	if (input == 0) {}
 	else {
 		if (input == 1) {
+			// UP
 			moveToX = mPlayer->X + 0;
-			moveToY = mPlayer->Y - 1;
+			moveToY = mPlayer->Y - 16;
 		}
 		else if (input == 2) {
+			// DOWN
 			moveToX = mPlayer->X + 0;
-			moveToY = mPlayer->Y + 1;
+			moveToY = mPlayer->Y + 16;
 		}
 		else if (input == 3) {
-			moveToX = mPlayer->X - 1;
+			// LEFT
+			moveToX = mPlayer->X - 16;
 			moveToY = mPlayer->Y + 0;
 		}
 		else if (input == 4) {
-			moveToX = mPlayer->X + 1;
+			// RIGHT
+			moveToX = mPlayer->X + 16;
 			moveToY = mPlayer->Y + 0;
 		}
-
 
 		int groundID = mGroundMap->m_Map[0][moveToY][moveToX];
 		//
@@ -120,7 +128,7 @@ void LevelManager::Update() {
 			break;
 		}
 
-		//
+		
 		if (mPlayer->X <= 0) {
 			mPlayer->X = 0;
 		}
@@ -138,8 +146,9 @@ void LevelManager::Update() {
 
 	Vector2 offset = mPlayer->Pos();
 	Vector2 scl = mPlayer->Scale();
-	//buildings->Pos(Vector2(offset.x - mPlayer->X * 16 * scl.x, offset.y - mPlayer->Y * 16 * scl.y));
-	buildings->GetCurrentBuilding()->Pos(Vector2(offset.x - buildings->GetCurrentBuilding()->GetmWidth() * scl.x - mPlayer->X, offset.y + mPlayer->Y * 16 * 0));
-	//buildings->GetCurrentBuilding()->Pos(Vector2(offset.x - buildings->GetCurrentBuilding()->GetmWidth()  * scl.x - mPlayer->X, offset.y - mPlayer->Y + 16));
+	buildings->GetCurrentBuilding()->Pos(Vector2(offset.x - buildings->GetCurrentBuilding()->GetmWidth()  * scl.x - mPlayer->X, offset.y - mPlayer->Y * 4 - 32));
+
+	
+	//--Working Map--//
 	//mGroundMap->Pos(Vector2(offset.x - mPlayer->X * 16 * scl.x, offset.y - mPlayer->Y * 16 * scl.y));
 }
