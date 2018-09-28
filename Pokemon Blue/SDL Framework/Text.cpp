@@ -53,7 +53,7 @@ std::string Text::replaceString(std::string strToReplaceOn, std::string subStrin
 };
 //
 //The Text constructor
-Text::Text() : Texture(" ", "POKEMONGB.ttf", 12, { 0,0,0 }) {
+Text::Text() : Texture(" ", "POKEMONGB.ttf", 8, { 0,0,0 }) {
 	Pos(Vector2(100, 100));
 	//
 	//need this code to access the input manager in Text
@@ -135,7 +135,7 @@ void Text::NewText(std::string area, int paragraph) {
 	for (int i = 0; i < textLine->stuff.size(); i++) {
 
 		textLine->UseTexture.push_back(
-			Texture(textLine->stuff[i], "POKEMONGB.ttf", 10, { 0,0,0 })
+			Texture(textLine->stuff[i], "POKEMONGB.ttf", 8, { 0,0,0 })
 		);
 	}
 }
@@ -207,8 +207,8 @@ void Text::Render() {
 		//
 		//we are declaring new variables that will adjust the position of the text on screen relative to the position of the text box
 		int screenX, screenY;
-		screenX = pTextBox->GetPos().x + 5;
-		screenY = pTextBox->GetPos().y + 10;
+		screenX = pTextBox->GetPos().x + 10;
+		screenY = pTextBox->GetPos().y + 15;
 		//
 		//This is going to display the text on the screen
 		int n; // Start Point
@@ -217,7 +217,7 @@ void Text::Render() {
 			//
 			if (n >= textLine->UseTexture.size()) { break; }
 			//
-			int pushTextDown = 15 * i; // This new variable makes sure that the second line is always displaced from the first line
+			int pushTextDown = 20 * i; // This new variable makes sure that the second line is always displaced from the first line
 			//
 			//
 			textLine->UseTexture[n].SetmRenderRectX(screenX);

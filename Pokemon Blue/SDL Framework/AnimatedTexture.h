@@ -34,6 +34,7 @@ public:
 	//animationSpeed - how long it takes to run the animation in seconds
 	//animationDirection - How the animation sprites are arranged in the spritesheet
 	AnimatedTexture(std::string filename, int x, int y, int w, int h, int frameCount, float animationSpeed, ANIM_DIR animationDir);
+	AnimatedTexture() {};
 	~AnimatedTexture();
 
 	void WrapMode(WRAP_MODE mode);

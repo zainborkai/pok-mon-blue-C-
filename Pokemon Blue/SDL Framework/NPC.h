@@ -1,9 +1,9 @@
-/*#ifndef NPC_H
+#ifndef NPC_H
 #define NPC_H
 
 #include "Text.h"
 
-class NPC : AnimatedTexture
+class NPC : public AnimatedTexture
 {
 public:
 	NPC();
@@ -12,7 +12,15 @@ public:
 	void Update();
 	void Render();
 
-	Text* pNPCText;
+	/*int GetPosX() { return posX; }
+	int GetPosY() { return posY; }
+	int GetWidth() { return width; }
+	int GetHeight() { return height; }
+
+	void SetPosX(int x) { posX = x; }
+	void SetPosY(int y) { posY = y; }
+	void SetPosX(int w) { width = w; }
+	void SetPosX(int h) { height = h; }*/
 
 private:
 	
@@ -21,10 +29,10 @@ private:
 	int posY;
 	int width;
 	int height;
-	movementPath
-	sprite
 
+	Text* pNPCText;
+	
 };
 
-#endif*/
+#endif
 

@@ -489,3 +489,438 @@ Shall we heal your
 POKeMON?
 
 <<Input choice>>
+
+***CABLE_CLUB
+
+Welcome to the 
+cable club!
+
+We're making
+preparations.
+Please wait.
+
+--POKEMART--
+
+***POKEMART_VIRIDIAN_CUTSCENE
+
+Hey! You came from
+PALLET TOWN?
+
+You know PORF. 
+OAK, right?
+
+His order came in.
+Will you take it
+to him?
+
+<NAME> got
+OAK's PARCEL!
+
+***ATTENDANT_POKEMART_VIRIDIAN
+
+Okay! Say hi to
+PROF. OAK for me!
+
+***GUY1_POKEMART_VIRIDIAN
+
+This shops sells
+many ANTIDOTEs.
+
+***GUY1_POKEMART_VIRIDIAN
+
+No! POTIONs are
+all sold out.
+
+***POKEMART_SHELF
+
+Wow! Tons of 
+POKeMON stuff!
+
+--SCHOOL VIRIDIAN--
+
+***STUDENT_SCHOOL
+
+Whew! I'm trying 
+to memorize all
+my notes.
+
+***NOTEBOOK_SCHOOL
+
+Looked at the 
+notebook!
+
+First page...
+
+POKe BALLs are
+used to catch
+POKeMON.
+
+Up to 6 POKeMON 
+can be carried.
+
+People who raise
+and make POKeMON
+fight are called
+POKeMON trainers.
+
+Turn the page?
+
+<<Input choice>>
+
+Second page...
+
+A healthy POKeMON
+may be hard to
+catch, so weaken
+it first!
+
+Poison, burns and
+other damage are
+effective!
+
+Turn the page?
+
+<<Input choice>>
+
+Third page...
+
+POKeMON trainers
+seek others to
+engage in POKeMON
+fights.
+
+Battles are 
+constantly fought
+at POKeMON GYMs.
+
+Turn the page?
+
+<<Input choice>>
+
+Fourth page...
+
+The goal for
+POKeMON trainers
+is to beat the
+top 8 POKeMON
+GYM LEADERs.
+
+Do so to earn the
+right to face...
+
+The ELITE FOUR of
+POKeMON LEAGUE!
+
+GIRL: Hey! Don't
+look at my notes!
+
+***TEACHER_SCHOOL
+
+Okay!
+
+Be sure to read 
+the blackboard 
+carefully!
+
+***BLACKBOARD
+
+The blackboard 
+describes POKeMON
+STATUS changes
+during battles.
+
+Which heading do 
+you want to read?
+
+<<Selecting a blackboard heading>>
+
+--People blocking path--
+
+***GIRL_BLOCKING_PATH_VIRIDIAN
+
+Oh Grandpa!
+Don't be so mean!
+
+He hasn't had 
+his coffee yet.
+
+***GRANDPA_BLOCKING_PATH_VIRIDIAN
+
+You can't go
+through here!
+This is private
+property!
+
+***RETURN_OAK_PARCEL
+
+Oak: oh, <NAME>!
+
+How is my old
+POKeMON?
+
+Well, it seems to
+like you a lot.
+
+You must be
+talented as a
+POKeMON trainer!
+
+What? You have
+something for me?
+
+<NAME> delivered
+OAK's PARCEL.
+
+ah! This is the
+custom POKe BALL
+I ordered!
+Thank you!
+
+<RIVAL>: Gramps!
+
+<RIVAL>: What did 
+you call me for?
+
+OAK: Oh right! I 
+have a request
+of you two.
+
+On the desk there
+is my invention, 
+POKeDEX!
+
+It automatically
+records data on
+POKeMON you've 
+seen of caught!
+
+It's a hi-tech
+encyclopedia!
+
+OAK: <NAME> and 
+<RIVAL>! take
+these with you!
+
+<NAME> got
+POKeDEX from OAK!
+
+To make a complete
+guide on all the
+POKeMON in the
+world...
+
+That was my dream!
+
+But, I'm too old!
+I can't do it!
+
+So, I want you two
+to fulfill my
+dream for me!
+
+Get moving, you
+two!
+
+This is a great
+undertaking in
+POKeMON history!
+
+<RIVAL>: Alright
+Gramps! Leave it
+all to me!
+
+<NAME>, I hate to
+say it, but I
+don't need you!
+
+I know! I'll
+borrow a TOWN MAP
+from my sis!
+
+I'll tell her not
+to lend you one,
+<NAME>! Hahaha!
+
+***OAK_AFTER_DELIVERY
+
+POKeMON around the
+world wait for
+you, <NAME>!
+
+***RIVAL_SISTER_AFTER_DELIVERY
+
+Grandpa asked you
+to run an errand?
+
+Here, this will
+help you!
+
+Use the TOWN MAP
+to find out where
+you are.
+
+***RIVAL_SISTER_AFTER_MAP
+
+POKeMON are living
+things! 
+
+If they get tired,
+give them a rest!
+
+***POKEMART_ATTENDANT
+
+Hi there!
+May I help you?
+
+<<Pokemart shopping screen>>
+
+***RIVAL_ROUTE22
+
+<RIVAL>: Hey!
+<NAME>!
+
+You're going to
+POKeMON LEAGUE?
+
+Forget it! You
+probably don't
+have any BADGEs!
+
+The guard won't 
+let you through!
+
+By the way, did
+your POKeMON
+get any stronger?
+
+***RIVAL_ROUTE22_AFTER_BATTLE
+
+I heard POKeMON 
+LEAGUE has many
+tough trainers!
+
+I have to figure
+out how to get
+past them!
+
+You should quit 
+dawdling and get
+a move on!
+
+***SIGN1_ROUTE22
+
+POKeMON LEAGUE
+Front Gate
+
+***GUARD_ROUTE22
+
+Only truly skilled
+trainers are
+allowed through.
+
+You don't have the
+BOULDERBADGE yet!
+
+The rules are 
+rules. I can't
+let you pass.
+
+***GIRL_HOUSE_VIRIDIAN
+
+My Daddy loves
+POKeMON too.
+
+***DAD_HOUSE_VIRIDIAN
+
+Coming up with
+nicknames is fun,
+but hard.
+
+Simple names are 
+the easiest to
+remember.
+
+***SPEAROW_HOUSE_VIRIDIAN
+
+SPEARY: Tetweet!
+
+***SIGN_HOUSE_VIRIDIAN
+
+SPEAROW
+Name: SPEARY
+
+***GIRL_BLOCKING_PATH_AFTER_OAK_DELIVERY
+
+When I go shop in
+PEWTER CITY, I
+have to take the
+winding trail in
+VIRIDIAN FOREST.
+
+***GRANDPA_BLOCKING_PATH_AFTER_OAK_DELIVERY
+
+ahh, I've had my
+coffee now and I
+feel great!
+
+Sure you can go 
+through!
+
+Are you in a
+hurry?
+
+<<Input choice>>
+
+***GUY_OUTSIDE_GYM_VIRIDIAN
+
+This POKeMON GYM
+is always closed.
+
+I wonder who the
+LEADER is?
+
+***GYM_DOOR_VIRIDIAN
+
+The GYM's doors 
+are locked...
+
+***SIGN3_VIRIDIAN
+
+TRAINER TIPS
+
+Catch POKeMON
+and expand your
+collection!
+
+The more you have,
+the easier it is
+to fight!
+
+***SIGN1_ROUTE2
+
+ROUTE 2
+VIRIDIAN CITY - 
+PEWTER CITY
+
+--Building going to Viridian forest--
+
+***GIRL1_BUILDING_ROUTE2
+
+RATTATA may be
+small, but its
+bite is wicked!
+Did you get one?
+
+***GIRL2_BUILDING_ROUTE2
+
+Are you going to
+VIRIDIAN FOREST?
+Be careful, it's
+a natural maze!
+
+--VIRIDIAN FOREST--
+
+***SIGN1_VIRIDIAN_FOREST
+
+
+

@@ -48,6 +48,8 @@ public:
 
 	//Called to render the texture to screen
 	virtual void Render();
+
+	Texture() {};
 };
 
 #endif // !TEXTURE_H

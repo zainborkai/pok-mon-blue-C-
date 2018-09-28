@@ -28,7 +28,9 @@ GameManager::GameManager() {
 	mAudioMgr = AudioManager::Instance();
 	mTimer = Timer::Instance();
 	mText = Text::Instance();
-	mText->displayTextBox("POKEBALL_OAK_LAB");
+	mText->displayTextBox("INTRO");
+	mNPC = new NPC;
+	mOak = new Oak;
 }
 
 GameManager::~GameManager() {
@@ -43,9 +45,14 @@ GameManager::~GameManager() {
 	Timer::Release();
 	mTimer = nullptr;
 
-
 	Text::Release();
 	mText = nullptr;
+
+	delete mNPC;
+	mNPC = nullptr;
+
+	delete mOak;
+	mOak = nullptr;
 
 }
 //All the updates and the render happen every frame
@@ -73,6 +80,9 @@ void GameManager::Render() {
 
 	//All other rendering is to happen here
 	mText->Render();
+
+	mNPC->Render();
+	mOak->Render();
 
 	//Renders the current frame
 	mGraphics->Render();

@@ -91,6 +91,13 @@ BULBASAUR?
 YES
 NO
 
+--Once you pick--
+This POKeMON is
+really energetic!
+
+<NAME> received
+a <POKeMON>!
+
 <<Name your pokemon>>
 
 Do you want to 
@@ -146,3 +153,126 @@ CANCEL
 
 --QUIT--
 Thank you!
+
+***Guy1_VIRIDIAN
+
+YES
+
+CATERPIE has no
+poison, but
+WEEDLE does.
+
+Watch out for its 
+POISON STING!
+
+NO
+
+Oh, OK then!
+
+***POKECENTRE_NURSE
+
+HEAL
+
+OK.We'll need
+your POKeMON.
+
+Thank you!
+Your POKeMON are
+fighting fit!
+
+We hope to see
+you again!
+
+CANCEL
+
+We hope to see
+you again!
+
+***BLACKBOARD
+
+--SLP--
+A POKeMON can't
+attack if it's
+asleep!
+
+POKeMON will stay
+asleep even after
+battles.
+
+Use AWAKENING to 
+wake them up!
+
+--PSN--
+When poisoned, a
+POKeMON's health
+steadily drops.
+
+Poison lingers
+after battles.
+
+Use an ANTIDOTE
+to cure poison!
+
+--PAR--
+Paralysis could
+make POKeMON
+moves misfire!
+
+Paralysis remains
+after battles.
+
+Use PARLYZ HEAL
+for treatment!
+
+--BRN--
+A burn reduces
+power and speed.
+It also causes
+ongoing damage.
+
+Burns remain
+after battles.
+
+Use BURN HEAL to
+cure a burn!
+
+--FRZ--
+If frozen, a 
+POKeMON becomes
+totally immobile!
+
+It stays frozen
+even after the
+battle ends.
+
+Use ICE HEAL to
+that out POKeMON!
+
+***GRANDPA_BLOCKING_PATH_AFTER_OAK_DELIVERY
+
+YES
+
+Time is money...
+Go along then.
+
+NO
+
+I see you're using
+a POKeDEX.
+
+When you catch a
+POKeMON, POKeDEX
+is automatically
+updated.
+
+What? Don't you 
+know how to catch 
+POKeMON?
+
+I'll show you
+how to then.
+
+First, you need
+to weaken the
+target POKeMON.
+

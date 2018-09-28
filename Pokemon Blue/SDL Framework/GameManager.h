@@ -4,8 +4,8 @@
 #include "InputManager.h"
 #include "AudioManager.h"
 #include "Timer.h"
-#include "Texture.h"
-#include "Text.h"
+#include "Oak.h"
+#include "NPC.h"
 
 class GameManager {
 private:
@@ -20,7 +20,8 @@ private:
 	InputManager* mInputMgr;
 	AudioManager* mAudioMgr;
 	Text* mText;
-
+	NPC* mNPC;
+	Oak* mOak;
 
 	Timer* mTimer;
 
