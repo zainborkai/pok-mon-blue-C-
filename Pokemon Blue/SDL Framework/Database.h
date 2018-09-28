@@ -42,6 +42,41 @@ static std::map<std::string, PokeType> strToPokeType = {
 	{ "ICE",		PokeType::ICE },
 };
 
+enum class PokemonType {
+	NORMAL = 0,
+	FIGHTER = 1,
+	FLYING = 2,
+	POISON = 3,
+	GROUND = 4,
+	ROCK = 5,
+	BUG = 6,
+	GHOST = 7,
+	FIRE = 8,
+	WATER = 9,
+	GRASS = 10,
+	ELECTRIC = 11,
+	PSYCHIC = 12,
+	ICE = 13,
+	NONE = 14
+};
+
+static std::map<std::string, PokemonType> strToPokemonType = {
+{ "NORMAL",		PokemonType::NORMAL },
+{ "FIGHTER",	PokemonType::FIGHTER },
+{ "FLYING",		PokemonType::FLYING },
+{ "POISON",		PokemonType::POISON },
+{ "GROUND",		PokemonType::GROUND },
+{ "ROCK",		PokemonType::ROCK },
+{ "BUG",		PokemonType::BUG },
+{ "GHOST",		PokemonType::GHOST },
+{ "FIRE",		PokemonType::FIRE },
+{ "WATER",		PokemonType::WATER },
+{ "GRASS",		PokemonType::GRASS },
+{ "ELECTRIC",	PokemonType::ELECTRIC },
+{ "PSYCHIC",	PokemonType::PSYCHIC },
+{ "ICE",		PokemonType::ICE },
+{ "NONE",		PokemonType::NONE}	
+};
 
 
 class TypeRelation {
@@ -88,13 +123,14 @@ class PokeData {
 	int special;
 	int speed;
 	PokeType typeI;
-	PokeType typeII;
+	PokemonType typeII;
 	float mass;
 	int captureRate;
 	int exp;
+	
 
 public:
-	PokeData(std::string pknam, int hp, int atk, int def, int spc, int spd, PokeType tyI, PokeType tyII, float ms, int cr, int xp) {
+	PokeData(std::string pknam, int hp, int atk, int def, int spc, int spd, PokeType tyI, PokemonType tyII, float ms, int cr, int xp) {
 		pokename = pknam;
 		hitpoint = hp;
 		attack = atk;
@@ -106,6 +142,7 @@ public:
 		mass = ms;
 		captureRate = cr;
 		exp = xp;
+		
 	}
 
 	std::string GetPokeData() { return pokename; }
@@ -114,8 +151,6 @@ public:
 
 
 class Database {
-	
-
 public:
 	static Database* Instance();
 	Database();
@@ -123,6 +158,7 @@ public:
 
 	std::ifstream readfile;
 
+#pragma region TypeRelation
 	std::vector<TypeRelation*> typeRelations;
 	void AddTypeRelation(PokeType atk, PokeType def, float eff) {
 		typeRelations.push_back(new TypeRelation(atk, def, eff));
@@ -136,7 +172,9 @@ public:
 		//
 		return 1.00;
 	}
+#pragma endregion
 
+#pragma region PokeAttack
 	std::vector<PokeAttack*> pokemonAttacks;
 	void AddPokemonAttack(std::string nam, std::string mod, int use, int pow, int acc, int pri, PokeType typ) {
 		pokemonAttacks.push_back(new PokeAttack(nam, mod, use, pow, acc, pri, typ));
@@ -150,9 +188,11 @@ public:
 		//
 		return nullptr;
 	}
+#pragma endregion
 
+#pragma region PokemonDatabase
 	std::vector<PokeData*> pokeData;
-	void AddPokeData(std::string pknam, int hp, int atk, int def, int spc, int spd, PokeType tyI, PokeType tyII, float ms, int cr, int xp) {
+	void AddPokeData(std::string pknam, int hp, int atk, int def, int spc, int spd, PokeType tyI, PokemonType tyII, float ms, int cr, int xp) {
 		pokeData.push_back(new PokeData(pknam, hp, atk, def, spc, spd, tyI, tyII, ms, cr, xp));
 	}
 	PokeData* GetPokeData(std::string pkd) {
@@ -163,6 +203,7 @@ public:
 		}
 		return nullptr;
 	}
+#pragma endregion
 
 private:
 	static Database* sInstance;

@@ -53,6 +53,8 @@ Database::Database() {
 		getline(readfile, temp, ','); acc = stoi(temp);
 		getline(readfile, temp, ','); pri = stoi(temp);
 		getline(readfile, temp, ','); typ = strToPokeType[temp];
+	
+		
 		//
 		AddPokemonAttack(nam, mod, use, pow, acc, pri, typ);
 	}
@@ -65,6 +67,7 @@ Database::Database() {
 	readfile.open("PokemonDatabase.csv");
 
 	while (!readfile.eof()) {
+		int numline = 0;
 		std::string pknam;
 		int hp;
 		int atk;
@@ -72,25 +75,25 @@ Database::Database() {
 		int spc;
 		int spd;
 		PokeType tyI;
-		PokeType tyII;
+		PokemonType tyII;
 		float ms;
 		int cr;
 		int xp;
 
-		getline(readfile, pknam, ',');
-		getline(readfile, temp, ','); hp = stoi(temp);
-		getline(readfile, temp, ','); atk = stoi(temp);
-		getline(readfile, temp, ','); def = stoi(temp);
-		getline(readfile, temp, ','); spc = stoi(temp);
-		getline(readfile, temp, ','); spd = stoi(temp);
-		getline(readfile, temp, ','); tyI = strToPokeType[temp];
-		getline(readfile, temp, ','); tyII = strToPokeType[temp];
-		getline(readfile, temp, ','); ms = stof(temp);
-		getline(readfile, temp, ','); cr = stoi(temp);
-		getline(readfile, temp, ','); xp = stoi(temp);
-
-		AddPokeData(pknam, hp, atk, def, spc, spd, tyI, tyII, ms, cr, xp);
-
+			getline(readfile, pknam, ',');
+			getline(readfile, temp, ','); hp = stoi(temp);
+			getline(readfile, temp, ','); atk = stoi(temp);
+			getline(readfile, temp, ','); def = stoi(temp);
+			getline(readfile, temp, ','); spc = stoi(temp);
+			getline(readfile, temp, ','); spd = stoi(temp);
+			getline(readfile, temp, ','); tyI = strToPokeType[temp];
+			getline(readfile, temp, ','); tyII = strToPokemonType[temp];
+			getline(readfile, temp, ','); ms = stof(temp);
+			getline(readfile, temp, ','); cr = stoi(temp);
+			getline(readfile, temp, ','); xp = stoi(temp);
+		
+			AddPokeData(pknam, hp, atk, def, spc, spd, tyI, tyII, ms, cr, xp);		
+			//std::cout << pknam<< std::endl;
 	}
 
 	readfile.close();
