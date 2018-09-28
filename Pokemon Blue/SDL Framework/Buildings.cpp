@@ -107,6 +107,8 @@ void Buildings::Render() {
 	// Scales the width and height according to the scale of the GameEntity
 	//mRenderRect.w = (int)(mWidth * scale.x);
 	//mRenderRect.h = (int)(mHeight * scale.y);
+
+	// Setters for the Map List
 	mapList[0]->SetRenderRectW((int)(mapList[0]->GetmWidth() * scale.x));
 	mapList[0]->SetRenderRectH((int)(mapList[0]->GetmHeight() * scale.y));
 	mapList[0]->SetCenteringX(0);
