@@ -152,10 +152,13 @@
     <ClInclude Include="AnimatedTexture.h" />
     <ClInclude Include="AssetManager.h" />
     <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="Database.h" />
     <ClInclude Include="GameEntity.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="Inventory.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="MathHelper.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Player.h" />
@@ -169,10 +172,13 @@
     <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="AudioManager.cpp" />
     <ClCompile Include="Buildings.cpp" />
+    <ClCompile Include="Database.cpp" />
     <ClCompile Include="GameEntity.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="PalletTown.cpp" />
     <ClCompile Include="PewterCity.cpp" />

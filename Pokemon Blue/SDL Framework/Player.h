@@ -5,10 +5,11 @@
 #include "InputManager.h"
 #include <iostream>
 #include <string>
-
+#include "Inventory.h"
 
 class Player : public AnimatedTexture {
 public:
+	
 	int Move();
 	void Update();
 	void Render();
@@ -19,6 +20,10 @@ public:
 	float GetX() { return X; }
 	float GetY() { return Y; }
 
+	void NPCinteraction();
+	
+
+
 private:
 	
 	float X;
@@ -28,7 +33,6 @@ private:
 	InputManager* playerInput;
 
 };
-
 
 #endif
 

@@ -22,13 +22,14 @@ GameManager::GameManager() {
 	if (!Graphics::Initialized()) {
 		mQuit = true;
 	}
-
+	
 	mAssetMgr = AssetManager::Instance();
 	mInputMgr = InputManager::Instance();
 	mAudioMgr = AudioManager::Instance();
 	mTimer = Timer::Instance();
 	mMap = new Map();
 	mPlayer = new Player();
+	mItem = new Item();
 
 
 	Vector2 offset(mGraphics->SCREEN_WIDTH / 2, mGraphics->SCREEN_HEIGHT / 2);
@@ -38,6 +39,7 @@ GameManager::GameManager() {
 
 	mMap->Scale(Vector2(4, 4));
 	mPlayer->Scale(Vector2(4, 4));
+
 }
 
 GameManager::~GameManager() {
@@ -55,6 +57,8 @@ GameManager::~GameManager() {
 	mMap = nullptr;
 	delete mPlayer;
 	mPlayer = nullptr;
+	delete mItem;
+	mItem = nullptr;
 }
 
 void GameManager::EarlyUpdate() {
@@ -62,26 +66,7 @@ void GameManager::EarlyUpdate() {
 	
 mPlayer->Move();
 	
-	//--Changes Map Position--//
-	/*int input = mPlayer->Move();
 
-	if (input == 1) {
-		mPlayer->Y -= 1;
-	}
-	else if (input == 2) {
-		mPlayer->Y += 1;
-	}
-	else if (input == 3) {
-		mPlayer->X -= 1;
-	}
-	else if (input == 4) {
-		mPlayer->X += 1;
-	}
-	//
-	
-
-	
-	*/
 
 	Vector2 offset = mPlayer->Pos();
 	Vector2 scl = mPlayer->Scale();

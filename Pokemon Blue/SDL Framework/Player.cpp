@@ -11,12 +11,24 @@ Player::Player() :
 	
 }
 
+/*void Player::NPCinteraction() {
+	int player;
+	std::string text;
+	bool isActive = true;
+	//create a staement to prompt interaction with npc
+	bool inFront = true;
+
+	//display text
+}*/
+
+
+
 void Player::Update() {
 	//Translate(Vector2(-.1f, -.1f));
 	AnimatedTexture::Update();
 }
 
-//
+//movements of the player (assigning keys)
 int slowtime = 30;
 int Player::Move() {
 	int output = 0;
@@ -25,6 +37,9 @@ int Player::Move() {
 		return 0;
 	}
 	slowtime = 30;
+
+	
+
 	if (playerInput->KeyDown(SDL_SCANCODE_W)) {
 		// Move up..
 		mStartY = 48;
@@ -92,10 +107,13 @@ void Player::Render() {
 	this->mRenderRect.w = (int)(mWidth * scale.x);
 	this->mRenderRect.h = (int)(mHeight * scale.y);
 
+
+
 	mGraphics->DrawTexture(this->mTex, (mClipped) ? &this->mClipRect : NULL, &this->mRenderRect, Rotation(WORLD));
 }
 
 
 
 Player::~Player() {}
+
 

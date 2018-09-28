@@ -7,6 +7,9 @@
 #include "Texture.h"
 #include "Map.h"
 #include "Player.h"
+#include "Item.h"
+
+#include "Database.h"
 
 
 class GameManager {
@@ -25,6 +28,7 @@ private:
 	Timer* mTimer;
 	Map* mMap;
 	Player* mPlayer;
+	Item* mItem;
 
 	SDL_Event mEvents;
 

@@ -1,0 +1,72 @@
+Name,Price,Description,Effect,Amount
+Antidote,100,Cures Poison,CureAilments,1
+Awakening,250,Cures Sleep,CureAilments,3
+Burn Heal,250,Cures Burn,CureAilments,2
+Calcium,9800,Raises Special Attack,PermaIncStats,1
+Carbon,9800,Raises Speed,PermaIncStats,1
+Dire Hit,650,Raises chances of a Critical Hit in battle,"PreventssTATSDec,",1
+Elixir,0,Restores PP to each move,RecoversPP,10PPE
+Escape Rope,550,Escape from current cave,FieldItem,1
+Ether,0, Restores PP of one move,RecoversPP,10PPO
+Fire Stone,2100,"Evolves Eevee, Growlithe and Vulpix",Evolution,1
+Fresh Water,200,Recovers HP,RecoversHP,50HP
+Full Heal,600,Cures all status ailments,CureAilments,6
+Full Restore,3000,Restores all HP and cures all status ailments,"PreventssTATSDec,","MaxPP, MaxHP"
+Guard Spec,700,Prevents stat reduction in a battle,PreventssTATSDec,1
+HP Up,9800,Raises max HP,RecoversHP,MaxHp
+Hyper Potion,1200,Restores HP,RecoversHP,200HP
+Ice Heal,250,Cures Freeze,CureAilments,4
+Iron,9800,Raises Defense,PreventssTATSDec,1
+Leaf Stone,0,"Evolves Exeggcute, Gloom, and Weepinbell",Evolution,2
+Lemonade,350,Restores HP,RecoversHP,80
+Max Elixir ,0,Restores all PP to all moves,RecoversPP,MaxPPE
+Max Ether ,0,Restores all PP to one move,RecoversPP,MaxPPO
+Max Potion ,2500,Restores all HP,RecoversHP,MaxHp
+Max Repel ,700,Repels weaker Pokemon for 250 steps,Repels,250
+Max Revive,0,Revives a fainted Pokemon to max HP,Revival,MaxfaintedO
+Moon Stone ,0,"Evolves Clefairy, Jigglypuff, Nidorina and Nidorino",Evolution,3
+Nugget ,0,Sell for money,MoneyItem,
+Paralyze Heal,200,Cures Paralysis,CureAilments,5
+Poke Doll,1000,"Trade for TM31 in Saffron, Allows escape from battle",ActivatableItems,1
+Potion,300,Restores HP,RecoversHP,20
+PP Up,0,Increases the max PP of a move,BoostsStats,MaxPP
+Protein,9800,Raises Attack,PermaIncStats,1
+Rare Candy,0,Raises a Pokemon's level by one,LevelUp,1
+Repel,350,Repels weaker Pokemon for 100 steps,Repels,100
+Revive ,1500,Recovers a fainted Pokemon to half max HP,RecoversHP,Revivefainted
+Soda Pop,300, Recovers 80HP,RecoversHP,
+Super Potion ,700,Restores 50HP ,RecoversHP,
+Super Repel ,500,Repels weaker Pokemon for 200 steps,Repels,SuperPokemonO
+Thunderstone,2100,Evolves Eevee and Pikachu,Evolution,4
+Water Stone,2100,"Evolves Eevee, Poliwag, Shellder and Staryu",Evolution,5
+X Accuracy ,950,Raises accuracy in a battle,BoostsStats,1
+X Attack,500,Raises attack in a battle ,BoostsStats,1
+X Defend,550,Raises defense in a battle,BoostsStats,1
+X Special,350,Raises special in a battle,BoostsStats,1
+X Speed,350,Raises speed in a battle,BoostsStats,1
+Pokeball,200,Catches Pokemon,CaptureItems,1
+Great Ball,600,Greater chance of catching Pokemon than a Pokeball,CaptureItems,2
+Ultra Ball,1200,Greater chance of catching Pokemon than a Great Ball,CaptureItems,3
+Master Ball,0,Always catches Pokemon,CaptureItems,4
+Safari Ball,0,A special ball for use in the Safari Zone,CaptureItems,5
+Bicycle,0,Allows travel at double speed,Bicycle,1
+Bike Voucher,0,Redeem at Cerulean Bike Shop for a free Bicycle,ActivatableItems,1
+Card Key,0,Unlocks doors in the Silph Co. building,ActivatableItems,1
+Coin Case,0,Holds 9999 Casino coins for use at Celadon Casino,ActivatableItems,1
+Dome Fossil,0,Used to clone Kabuto at the Cinnabar Island Laboratory,ActivatableItems,1
+EXP. All,0,Divides EXP from battle between all party members,ActivatableItems,1
+Gold Teeth,0,Return to Safari Zone Warden and receive HM04,ActivatableItems,1
+Good Rod,0,Fish for medium-levelled water Pokemon,FishingRods,
+Helix Fossil,0,Used to clone Omanyte at the Cinnabar Island Laboratory,ActivatableItems,1
+Itemfinder,0,Detects hidden items in close proximity,ActivatableItems,1
+Lift Key,0,"Unlocks the elevator in the Team Rocket Hideout, Celadon City",ActivatableItems,1
+Oak's Parcel,0,Deliver to Prof. Oak in Pallet Town and receive a Pokedex,ActivatableItems,1
+Old Amber,0,Used to clone Aerodactyl at the Cinnabar Island Laboratoy,ActivatableItems,1
+Old Rod,0,Fish for low-levelled water Pokemon,FishingRods,
+Pokeflute,0,Awakens sleeping Pokemon,CureAilments,3
+Pokedex,0, Records all information about Pokemon seen and caught,ActivatableItems,1
+S.S. Ticket,0,Use to board the S.S. Anne in Vermilion City,ActivatableItems,1
+Secret Key,0,Unlocks Blaine's Gym on Cinnabar Island,ActivatableItems,1
+Silph Scope,0,"Allows Ghosts to be detected in the Pokemon Tower, Lavendar Town",ActivatableItems,1
+Super Rod,0,Fish for high-levelled water Pokemon,FishingRods,
+Town Map,0,Shows your position in the Pokemon World,ActivatableItems,1
