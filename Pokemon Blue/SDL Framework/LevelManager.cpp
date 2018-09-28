@@ -135,11 +135,11 @@ void LevelManager::Update() {
 			mPlayer->Y = 198 - 1;
 		}
 	}
-	Vector2 offset = mPlayer->Pos();
 
 	Vector2 offset = mPlayer->Pos();
 	Vector2 scl = mPlayer->Scale();
 	//buildings->Pos(Vector2(offset.x - mPlayer->X * 16 * scl.x, offset.y - mPlayer->Y * 16 * scl.y));
 	buildings->GetCurrentBuilding()->Pos(Vector2(offset.x - buildings->GetCurrentBuilding()->GetmWidth() * scl.x - mPlayer->X, offset.y + mPlayer->Y * 16 * 0));
-	mGroundMap->Pos(Vector2(offset.x - mPlayer->X * 16 * scl.x, offset.y - mPlayer->Y * 16 * scl.y));
+	//buildings->GetCurrentBuilding()->Pos(Vector2(offset.x - buildings->GetCurrentBuilding()->GetmWidth()  * scl.x - mPlayer->X, offset.y - mPlayer->Y + 16));
+	//mGroundMap->Pos(Vector2(offset.x - mPlayer->X * 16 * scl.x, offset.y - mPlayer->Y * 16 * scl.y));
 }
