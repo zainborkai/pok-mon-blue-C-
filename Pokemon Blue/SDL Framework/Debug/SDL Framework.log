@@ -1,6 +1,14 @@
-﻿  Oak.cpp
+﻿  Text.cpp
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\oak.cpp(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\oak.cpp(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(105): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(108): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(132): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(135): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(175): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(210): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(211): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(218): warning C4018: '>=': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(223): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(224): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   SDL Framework.vcxproj -> C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\Debug\SDL Framework.exe
