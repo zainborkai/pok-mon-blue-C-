@@ -20,7 +20,7 @@ Database::Database() {
 	std::string temp;
 	//
 	while (!readfile.eof()) {
-		for (int i = 0; i < 14; i++) {
+		for (int i = 0; i < 15; i++) {
 			getline(readfile, temp, ',');
 			//
 			if (lineNum > 0) {
@@ -75,7 +75,7 @@ Database::Database() {
 		int spc;
 		int spd;
 		PokeType tyI;
-		PokemonType tyII;
+		PokeType tyII;
 		float ms;
 		int cr;
 		int xp;
@@ -87,7 +87,7 @@ Database::Database() {
 			getline(readfile, temp, ','); spc = stoi(temp);
 			getline(readfile, temp, ','); spd = stoi(temp);
 			getline(readfile, temp, ','); tyI = strToPokeType[temp];
-			getline(readfile, temp, ','); tyII = strToPokemonType[temp];
+			getline(readfile, temp, ','); tyII = strToPokeType[temp];
 			getline(readfile, temp, ','); ms = stof(temp);
 			getline(readfile, temp, ','); cr = stoi(temp);
 			getline(readfile, temp, ','); xp = stoi(temp);

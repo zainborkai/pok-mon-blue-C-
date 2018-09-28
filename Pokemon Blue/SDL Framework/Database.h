@@ -23,7 +23,8 @@ enum class PokeType {
 	ELECTRIC = 11,
 	PSYCHIC = 12,
 	ICE = 13,
-	COUNT = 14
+	NONE = 14,
+	COUNT = 15
 };
 static std::map<std::string, PokeType> strToPokeType = {
 	{ "NORMAL",		PokeType::NORMAL },
@@ -40,24 +41,25 @@ static std::map<std::string, PokeType> strToPokeType = {
 	{ "ELECTRIC",	PokeType::ELECTRIC },
 	{ "PSYCHIC",	PokeType::PSYCHIC },
 	{ "ICE",		PokeType::ICE },
+	{ "NONE",		PokeType::NONE }
 };
-
+/*
 enum class PokemonType {
-	NORMAL = 0,
-	FIGHTER = 1,
-	FLYING = 2,
-	POISON = 3,
-	GROUND = 4,
-	ROCK = 5,
-	BUG = 6,
-	GHOST = 7,
-	FIRE = 8,
-	WATER = 9,
-	GRASS = 10,
-	ELECTRIC = 11,
-	PSYCHIC = 12,
-	ICE = 13,
-	NONE = 14
+NORMAL = 0,
+FIGHTER = 1,
+FLYING = 2,
+POISON = 3,
+GROUND = 4,
+ROCK = 5,
+BUG = 6,
+GHOST = 7,
+FIRE = 8,
+WATER = 9,
+GRASS = 10,
+ELECTRIC = 11,
+PSYCHIC = 12,
+ICE = 13,
+NONE = 14
 };
 
 static std::map<std::string, PokemonType> strToPokemonType = {
@@ -75,8 +77,12 @@ static std::map<std::string, PokemonType> strToPokemonType = {
 { "ELECTRIC",	PokemonType::ELECTRIC },
 { "PSYCHIC",	PokemonType::PSYCHIC },
 { "ICE",		PokemonType::ICE },
-{ "NONE",		PokemonType::NONE}	
+{ "NONE",		PokemonType::NONE}
 };
+
+
+
+*/
 
 
 class TypeRelation {
@@ -123,14 +129,14 @@ class PokeData {
 	int special;
 	int speed;
 	PokeType typeI;
-	PokemonType typeII;
+	PokeType typeII;
 	float mass;
 	int captureRate;
 	int exp;
 	
 
 public:
-	PokeData(std::string pknam, int hp, int atk, int def, int spc, int spd, PokeType tyI, PokemonType tyII, float ms, int cr, int xp) {
+	PokeData(std::string pknam, int hp, int atk, int def, int spc, int spd, PokeType tyI, PokeType tyII, float ms, int cr, int xp) {
 		pokename = pknam;
 		hitpoint = hp;
 		attack = atk;
@@ -192,7 +198,7 @@ public:
 
 #pragma region PokemonDatabase
 	std::vector<PokeData*> pokeData;
-	void AddPokeData(std::string pknam, int hp, int atk, int def, int spc, int spd, PokeType tyI, PokemonType tyII, float ms, int cr, int xp) {
+	void AddPokeData(std::string pknam, int hp, int atk, int def, int spc, int spd, PokeType tyI, PokeType tyII, float ms, int cr, int xp) {
 		pokeData.push_back(new PokeData(pknam, hp, atk, def, spc, spd, tyI, tyII, ms, cr, xp));
 	}
 	PokeData* GetPokeData(std::string pkd) {

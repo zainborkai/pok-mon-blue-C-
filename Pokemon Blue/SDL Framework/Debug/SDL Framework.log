@@ -1,9 +1,2 @@
 ﻿  Database.cpp
-  GameManager.cpp
-  Pokemon.cpp
-  PokemonBattle.cpp
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\pokemonbattle.cpp(8): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\pokemonbattle.cpp(14): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  SDLFramework.cpp
-  Generating Code...
   SDL Framework.vcxproj -> C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\Debug\SDL Framework.exe
