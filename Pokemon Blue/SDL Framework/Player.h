@@ -4,26 +4,35 @@
 #include "AnimatedTexture.h"
 #include "InputManager.h"
 #include <iostream>
-
+#include <string>
+#include "Inventory.h"
 
 class Player : public AnimatedTexture {
 public:
+	
 	int Move();
-	void MovePlayer();
-
 	void Update();
-	// void Render();
+	void Render();
 
 	Player();
 	~Player();
 
-	int X = 0;
-	int Y = 0;
+	float GetX() { return X; }
+	float GetY() { return Y; }
+
+	void NPCinteraction();
+	
+
+
+private:
+	
+	float X;
+	float Y;
 
 
 	InputManager* playerInput;
 
 };
 
-
 #endif
+
