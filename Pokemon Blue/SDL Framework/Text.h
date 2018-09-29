@@ -80,6 +80,12 @@ private:
 	Texture* pText;
 	Texture* pNextLine;
 	SDL_Color color;
+	//
+	//Pointers to name variables
+	Texture* newName;
+	Texture* blueName;
+	Texture* garyName;
+	Texture* johnName;
 
 	//
 	std::string strToReplaceOn;

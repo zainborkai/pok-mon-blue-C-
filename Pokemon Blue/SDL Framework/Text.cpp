@@ -93,8 +93,6 @@ Text::Text() : Texture(" ", "POKEMONGB.ttf", 8, { 0,0,0 }) {
 		else {//What is this doing?
 			(*textFile[key])[textFile[key]->size() - 1]->push_back(theLine);
 		}
-
-
 	}
 	src.close();
 	//
@@ -124,6 +122,15 @@ Text::Text() : Texture(" ", "POKEMONGB.ttf", 8, { 0,0,0 }) {
 	//
 	pNameBox = new Texture("NameBox.PNG");
 	pNameBox->Pos(Vector2(250, 200));
+
+	newName = new Texture("NEW NAME", "POKEMONGB.ttf", 26, { 0,0,0 });
+	newName->Pos(Vector2(330, 270));
+	blueName = new Texture("BLUE", "POKEMONGB.ttf", 26, {0,0,0});
+	blueName->Pos(Vector2(330, 350));
+	garyName = new Texture("GARY", "POKEMONGB.ttf", 26, { 0,0,0 });
+	garyName->Pos(Vector2(330, 430));
+	johnName = new Texture("JOHN", "POKEMONGB.ttf", 26, { 0,0,0 });
+	johnName->Pos(Vector2(330, 510));
 	//
 	//
 	pArrow = new Texture("arrowPKMN.png");
@@ -176,22 +183,7 @@ void Text::Update() {
 //NextText function. This is the big one that will display each line, 2 lines at a time. 
 void Text::NextText() {
 	//
-	if (mInputMgr->KeyPressed(SDL_SCANCODE_DOWN)) {
-		//pArrow->Pos(pArrow->GetPos().x); // We dont want the X position to change
-		pArrow->Pos(Vector2(275, pArrow->GetPos().y + 80));
-
-		if (pArrow->GetPos().y >= 495) {
-			pArrow->Pos(Vector2(275, 495));
-		}
-	}
-
-	else if (mInputMgr->KeyPressed(SDL_SCANCODE_UP)) {
-		pArrow->Pos(Vector2(275, pArrow->GetPos().y - 80));
-
-		if (pArrow->GetPos().y <= 255) {
-			pArrow->Pos(Vector2(275, 255));
-		}
-	}
+	MoveArrow();
 	//
 	if (!GetIsActive()) { return; }
 
@@ -226,8 +218,22 @@ void Text::NextText() {
 
 //Want a function that will move the arrow on the screen
 void Text::MoveArrow() {
+	if (mInputMgr->KeyPressed(SDL_SCANCODE_DOWN)) {
+		//pArrow->Pos(pArrow->GetPos().x); // We dont want the X position to change
+		pArrow->Pos(Vector2(275, pArrow->GetPos().y + 80));
 
-	
+		if (pArrow->GetPos().y >= 495) {
+			pArrow->Pos(Vector2(275, 495));
+		}
+	}
+
+	else if (mInputMgr->KeyPressed(SDL_SCANCODE_UP)) {
+		pArrow->Pos(Vector2(275, pArrow->GetPos().y - 80));
+
+		if (pArrow->GetPos().y <= 255) {
+			pArrow->Pos(Vector2(275, 255));
+		}
+	}
 }
 
 void Text::Render() {
@@ -243,6 +249,22 @@ void Text::Render() {
 		pNameBox->SetmRenderRectX(pNameBox->Pos(WORLD).x);
 		pNameBox->SetmRenderRectY(pNameBox->Pos(WORLD).y);
 		mGraphics->DrawTexture(pNameBox->GetmTex(), (mClipped) ? &mClipRect : NULL, &pNameBox->GetmRenderRect(), Rotation(WORLD));
+		//
+		newName->SetmRenderRectX(newName->Pos(WORLD).x);
+		newName->SetmRenderRectY(newName->Pos(WORLD).y);
+		mGraphics->DrawTexture(newName->GetmTex(), (mClipped) ? &mClipRect : NULL, &newName->GetmRenderRect(), Rotation(WORLD));
+		//
+		blueName->SetmRenderRectX(blueName->Pos(WORLD).x);
+		blueName->SetmRenderRectY(blueName->Pos(WORLD).y);
+		mGraphics->DrawTexture(blueName->GetmTex(), (mClipped) ? &mClipRect : NULL, &blueName->GetmRenderRect(), Rotation(WORLD));
+		//
+		garyName->SetmRenderRectX(garyName->Pos(WORLD).x);
+		garyName->SetmRenderRectY(garyName->Pos(WORLD).y);
+		mGraphics->DrawTexture(garyName->GetmTex(), (mClipped) ? &mClipRect : NULL, &garyName->GetmRenderRect(), Rotation(WORLD));
+		//
+		johnName->SetmRenderRectX(johnName->Pos(WORLD).x);
+		johnName->SetmRenderRectY(johnName->Pos(WORLD).y);
+		mGraphics->DrawTexture(johnName->GetmTex(), (mClipped) ? &mClipRect : NULL, &johnName->GetmRenderRect(), Rotation(WORLD));
 		//
 		//Render the arrow on screen
 		pArrow->SetmRenderRectX(pArrow->Pos(WORLD).x);
