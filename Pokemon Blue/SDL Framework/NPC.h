@@ -7,10 +7,13 @@ class NPC : public AnimatedTexture
 {
 public:
 	NPC();
+	NPC(std::string filename, int x, int y, int w, int h, int frameCount, float animationSpeed, ANIM_DIR animationDir);
 	~NPC();
 
 	void Update();
 	void Render();
+
+	std::string conversationID;
 
 	/*int GetPosX() { return posX; }
 	int GetPosY() { return posY; }

@@ -163,11 +163,13 @@ SDL2_ttf.lib
     <ClInclude Include="AnimatedTexture.h" />
     <ClInclude Include="AssetManager.h" />
     <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="Brock.h" />
     <ClInclude Include="GameEntity.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="MathHelper.h" />
+    <ClInclude Include="Mom.h" />
     <ClInclude Include="NPC.h" />
     <ClInclude Include="Oak.h" />
     <ClInclude Include="Rival.h" />
@@ -176,15 +178,18 @@ SDL2_ttf.lib
     <ClInclude Include="Text.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Timer.h" />
+    <ClInclude Include="Trainer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnimatedTexture.cpp" />
     <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="Brock.cpp" />
     <ClCompile Include="GameEntity.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Mom.cpp" />
     <ClCompile Include="NPC.cpp" />
     <ClCompile Include="Oak.cpp" />
     <ClCompile Include="Rival.cpp" />
@@ -198,6 +203,7 @@ SDL2_ttf.lib
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Trainer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

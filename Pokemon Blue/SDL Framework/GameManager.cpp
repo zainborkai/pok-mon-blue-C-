@@ -31,6 +31,10 @@ GameManager::GameManager() {
 	mText->displayTextBox("INTRO");
 	mNPC = new NPC;
 	mOak = new Oak;
+	mRival = new Rival;
+	mMom = new Mom;
+	mBrock = new Brock;
+	mTrainer = new Trainer;
 }
 
 GameManager::~GameManager() {
@@ -53,6 +57,18 @@ GameManager::~GameManager() {
 
 	delete mOak;
 	mOak = nullptr;
+
+	delete mRival;
+	mRival = nullptr;
+
+	delete mMom;
+	mMom = nullptr;
+
+	delete mBrock;
+	mBrock = nullptr;
+
+	delete mTrainer;
+	mTrainer = nullptr;
 
 }
 //All the updates and the render happen every frame
@@ -83,6 +99,10 @@ void GameManager::Render() {
 
 	mNPC->Render();
 	mOak->Render();
+	mRival->Render();
+	mMom->Render();
+	mBrock->Render();
+	mTrainer->Render();
 
 	//Renders the current frame
 	mGraphics->Render();

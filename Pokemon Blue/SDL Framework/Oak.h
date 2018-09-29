@@ -2,8 +2,9 @@
 #define OAK_H
 
 #include "Text.h"
+#include "NPC.h"
 
-class Oak : public AnimatedTexture
+class Oak : public NPC
 {
 public:
 	Oak();

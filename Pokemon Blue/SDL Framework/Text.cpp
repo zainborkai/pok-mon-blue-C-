@@ -122,8 +122,12 @@ Text::Text() : Texture(" ", "POKEMONGB.ttf", 8, { 0,0,0 }) {
 	pTextBox->Pos(Vector2(0, 50));
 	//
 	//
-
-
+	pNameBox = new Texture("NameBox.PNG");
+	pNameBox->Pos(Vector2(250, 200));
+	//
+	//
+	pArrow = new Texture("arrowPKMN.png");
+	pArrow->Pos(Vector2(275, 255));
 	//accessText. wanted to make a variable with getters and setters to access specific texts
 }
 //
@@ -145,6 +149,12 @@ Text::~Text() {
 	delete pTextBox;
 	pTextBox = nullptr;
 
+	delete pNameBox;
+	pNameBox = nullptr;
+
+	delete pArrow;
+	pArrow = nullptr;
+
 	delete pText;
 	pText = nullptr;
 
@@ -165,7 +175,24 @@ void Text::Update() {
 //
 //NextText function. This is the big one that will display each line, 2 lines at a time. 
 void Text::NextText() {
+	//
+	if (mInputMgr->KeyPressed(SDL_SCANCODE_DOWN)) {
+		//pArrow->Pos(pArrow->GetPos().x); // We dont want the X position to change
+		pArrow->Pos(Vector2(275, pArrow->GetPos().y + 80));
 
+		if (pArrow->GetPos().y >= 495) {
+			pArrow->Pos(Vector2(275, 495));
+		}
+	}
+
+	else if (mInputMgr->KeyPressed(SDL_SCANCODE_UP)) {
+		pArrow->Pos(Vector2(275, pArrow->GetPos().y - 80));
+
+		if (pArrow->GetPos().y <= 255) {
+			pArrow->Pos(Vector2(275, 255));
+		}
+	}
+	//
 	if (!GetIsActive()) { return; }
 
 	//Trying to make code that will iterate through the elements of the textFile map
@@ -196,6 +223,13 @@ void Text::NextText() {
 	}
 }
 
+
+//Want a function that will move the arrow on the screen
+void Text::MoveArrow() {
+
+	
+}
+
 void Text::Render() {
 
 	if (isActive == true) {
@@ -204,6 +238,16 @@ void Text::Render() {
 		pTextBox->SetmRenderRectX(pTextBox->Pos(WORLD).x);
 		pTextBox->SetmRenderRectY(pTextBox->Pos(WORLD).y);
 		mGraphics->DrawTexture(pTextBox->GetmTex(), (mClipped) ? &mClipRect : NULL, &pTextBox->GetmRenderRect(), Rotation(WORLD));
+		//
+		//
+		pNameBox->SetmRenderRectX(pNameBox->Pos(WORLD).x);
+		pNameBox->SetmRenderRectY(pNameBox->Pos(WORLD).y);
+		mGraphics->DrawTexture(pNameBox->GetmTex(), (mClipped) ? &mClipRect : NULL, &pNameBox->GetmRenderRect(), Rotation(WORLD));
+		//
+		//Render the arrow on screen
+		pArrow->SetmRenderRectX(pArrow->Pos(WORLD).x);
+		pArrow->SetmRenderRectY(pArrow->Pos(WORLD).y);
+		mGraphics->DrawTexture(pArrow->GetmTex(), (mClipped) ? &mClipRect : NULL, &pArrow->GetmRenderRect(), Rotation(WORLD));
 		//
 		//we are declaring new variables that will adjust the position of the text on screen relative to the position of the text box
 		int screenX, screenY;

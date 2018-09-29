@@ -1,7 +1,7 @@
 #include "Oak.h"
 
 Oak::Oak() :
-	AnimatedTexture("OAK.png", 0, 0, 32, 32, 1, 1.0f, HORIZONTAL)
+	NPC("OAK.png", 0, 0, 32, 32, 1, 1.0f, HORIZONTAL)
 {
 	mText = Text::Instance();
 	Pos(Vector2(100, 0));

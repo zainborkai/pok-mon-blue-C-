@@ -526,7 +526,7 @@ PROF. OAK for me!
 This shops sells
 many ANTIDOTEs.
 
-***GUY1_POKEMART_VIRIDIAN
+***GUY2_POKEMART_VIRIDIAN
 
 No! POTIONs are
 all sold out.
@@ -922,5 +922,20 @@ a natural maze!
 
 ***SIGN1_VIRIDIAN_FOREST
 
+TRAINER TIPS
 
+Weaken POKeMON
+before attempting
+capture!
+
+When healthy, 
+they may escape!
+
+***GUY1_VIRIDIAN_FOREST
+
+I came here with
+some friends!
+
+They're out for
+POKeMON fights!
 

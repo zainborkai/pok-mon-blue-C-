@@ -2,8 +2,9 @@
 #define RIVAL_H
 
 #include "Text.h"
+#include "NPC.h"
 
-class Rival : public AnimatedTexture
+class Rival : public NPC
 {
 public:
 	Rival();

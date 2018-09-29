@@ -8,6 +8,12 @@ NPC::NPC() :
 	//conversation = 
 }
 
+NPC::NPC(std::string filename, int x, int y, int w, int h, int frameCount, float animationSpeed, ANIM_DIR animationDir) :
+	AnimatedTexture(filename, x, y, w, h, frameCount, animationSpeed, animationDir) {
+
+	pNPCText = Text::Instance();
+}
+
 NPC::~NPC() {
 
 }

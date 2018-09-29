@@ -26,6 +26,7 @@ public:
 	void Update();
 	void Render();
 	void NextText();
+	void MoveArrow();
 	void SetmWords(std::string words) { mWords = words; }
 	std::string GetmWords() { return mWords; }
 
@@ -74,6 +75,8 @@ private:
 
 	//std::vector<std::string> TextFile;
 	Texture* pTextBox;
+	Texture* pNameBox;
+	Texture* pArrow;
 	Texture* pText;
 	Texture* pNextLine;
 	SDL_Color color;
