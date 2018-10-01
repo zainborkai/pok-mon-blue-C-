@@ -43,6 +43,137 @@ static std::map<std::string, PokeType> strToPokeType = {
 	{ "ICE",		PokeType::ICE },
 	{ "NONE",		PokeType::NONE }
 };
+
+enum class MoveEffect {
+	Absorb,
+	SpeedDown,
+	Poison,
+	Paralyzes,
+	Counter,
+	Crashes,
+	Flinch,
+	Recoil,
+	Burn,
+	FireSpin,
+	FlyState,
+	SkyState,
+	Confuse,
+	Nightmare,
+	Seed,
+	PetalDance,
+	Sleep,
+	SolarBeam,
+	Dig,
+	OHKO,
+	AccuracyDown,
+	AttackDown,
+	Freeze,
+	Mist,
+	Bide,
+	StatReset,
+	Bind,
+	Conversion,
+	DefenseUp,
+	Disable,
+	EvasionUp,
+	Suicide,
+	FocusEnergy,
+	SpecialUp,
+	DefenseDown,
+	Mimic,
+	PayDay,
+	Rage,
+	RazorWind,
+	Heal,
+	Switch,
+	DefenseDownBig,
+	AttackUp,
+	SkullBash,
+	Splash,
+	Substitute,
+	CutHP,
+	AttackUpBig,
+	Thrash,
+	Transforming,
+	Wrap,
+	DefenseUpBig,
+	Toxic,
+	SpeedUpBig,
+	LightScreen,
+	SpecialDown,
+	Reflect,
+	Rest,
+	Escape,
+	Clamp,
+	DefenseUP,
+	NA
+};
+
+static std::map<std::string, MoveEffect> strToMoveEffect = {
+	{ "Absorb",			MoveEffect::Absorb },
+	{ "SpeedDown",		MoveEffect::SpeedDown },
+	{ "Poison",			MoveEffect::Poison },
+	{ "Paralyzes",		MoveEffect::Paralyzes },
+	{ "Counter",		MoveEffect::Counter },
+	{ "Crashes",		MoveEffect::Crashes },
+	{ "Flinch",			MoveEffect::Flinch },
+	{ "Recoil",			MoveEffect::Recoil },
+	{ "Burn",			MoveEffect::Burn },
+	{ "FireSpin",		MoveEffect::FireSpin },
+	{ "FlyState",		MoveEffect::FlyState },
+	{ "SkyState",		MoveEffect::SkyState },
+	{ "Confuse",		MoveEffect::Confuse },
+	{ "Nightmare",		MoveEffect::Nightmare },
+	{ "Seed",			MoveEffect::Seed },
+	{ "PetalDance",		MoveEffect::PetalDance },
+	{ "Sleep",			MoveEffect::Sleep },
+	{ "SolarBeam",		MoveEffect::SolarBeam },
+	{ "Dig",			MoveEffect::Dig },
+	{ "OHKO",			MoveEffect::OHKO },
+	{ "AccuracyDown",	MoveEffect::AccuracyDown },
+	{ "AttackDown",		MoveEffect::AttackDown },
+	{ "Freeze",			MoveEffect::Freeze },
+	{ "Mist",			MoveEffect::Mist },
+	{ "Bide",			MoveEffect::Bide },
+	{ "StatReset",		MoveEffect::StatReset },
+	{ "Bind",			MoveEffect::Bind },
+	{ "Conversion",		MoveEffect::Conversion },
+	{ "DefenseUp",		MoveEffect::DefenseUp },
+	{ "Disable",		MoveEffect::Disable },
+	{ "EvasionUp",		MoveEffect::EvasionUp },
+	{ "Suicide",		MoveEffect::Suicide },
+	{ "FocusEnergy",	MoveEffect::FocusEnergy },
+	{ "SpecialUp",		MoveEffect::SpecialUp },
+	{ "DefenseDown",	MoveEffect::DefenseDown },
+	{ "Mimic",			MoveEffect::Mimic },
+	{ "PayDay",			MoveEffect::PayDay },
+	{ "Rage",			MoveEffect::Rage },
+	{ "RazorWind",		MoveEffect::RazorWind },
+	{ "Heal",			MoveEffect::Heal },
+	{ "Switch",			MoveEffect::Switch },
+	{ "DefenseDownBig", MoveEffect::DefenseDownBig },
+	{ "AttackUp",		MoveEffect::AttackUp },
+	{ "SkullBash",		MoveEffect::SkullBash },
+	{ "Splash",			MoveEffect::Splash },
+	{ "Substitute",		MoveEffect::Substitute },
+	{ "CutHP",			MoveEffect::CutHP },
+	{ "AttackUpBig",	MoveEffect::AttackUpBig },
+	{ "Thrash",			MoveEffect::Thrash },
+	{ "Transforming",	MoveEffect::Transforming },
+	{ "Wrap",			MoveEffect::Wrap },
+	{ "DefenseUpBig",	MoveEffect::DefenseUpBig },
+	{ "Toxic",			MoveEffect::Toxic },
+	{ "SpeedUpBig",		MoveEffect::SpeedUpBig },
+	{ "LightScreen",	MoveEffect::LightScreen },
+	{ "SpecialDown",	MoveEffect::SpecialDown },
+	{ "Reflect",		MoveEffect::Reflect },
+	{ "Rest",			MoveEffect::Rest },
+	{ "Escape",			MoveEffect::Escape },
+	{ "Clamp",			MoveEffect::Clamp },
+	{ "DefenseUP",		MoveEffect::DefenseUP },
+	{ "NA",				MoveEffect::NA },
+};
+
 /*
 enum class PokemonType {
 NORMAL = 0,
@@ -100,14 +231,20 @@ public:
 };
 class PokeAttack {
 public:
-	PokeAttack(std::string nam, std::string mod, int use, int pow, int acc, int pri, PokeType typ) {
+	PokeAttack(std::string nam, std::string mod, int use, int pow, int acc, bool critRate, int pri, PokeType typ, int hitCnt, int procRt, MoveEffect procEff, bool useWrld) {
 		name = nam;
 		mode = mod;
 		uses = use;
 		power = pow;
 		accuracy = acc;
+		criticalRate = critRate;
 		priority = pri;
 		type = typ;
+		hitCounts = hitCnt;
+		procRates = procRt;
+		procEffect = procEff;
+		useWorld = useWrld;
+
 	}
 
 	std::string GetName() { return name; };
@@ -117,8 +254,13 @@ private:
 	int uses;
 	int power;
 	int accuracy;
+	bool criticalRate;
 	int priority;
 	PokeType type;
+	int hitCounts;
+	int procRates;
+	MoveEffect procEffect;
+	bool useWorld;
 };
 
 class PokeData {
@@ -182,8 +324,8 @@ public:
 
 #pragma region PokeAttack
 	std::vector<PokeAttack*> pokemonAttacks;
-	void AddPokemonAttack(std::string nam, std::string mod, int use, int pow, int acc, int pri, PokeType typ) {
-		pokemonAttacks.push_back(new PokeAttack(nam, mod, use, pow, acc, pri, typ));
+	void AddPokemonAttack(std::string nam, std::string mod, int use, int pow, int acc, bool critRate, int pri, PokeType typ, int hitCnt, int procRt, MoveEffect procEff, bool useWrld) {
+		pokemonAttacks.push_back(new PokeAttack(nam, mod, use, pow, acc, critRate, pri, typ, hitCnt, procRt, procEff, useWrld));
 	};
 	PokeAttack* GetPokemonAttack(std::string id) {
 		for (PokeAttack* Q : pokemonAttacks) {

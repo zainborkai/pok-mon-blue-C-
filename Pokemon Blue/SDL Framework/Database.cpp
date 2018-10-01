@@ -35,29 +35,41 @@ Database::Database() {
 
 	readfile.open("PokemonBlueAttackDatabase.csv");
 
-	//std::string columns[7] = { "Name", "Mode", "Uses", "Power", "Accuracy", "Priority", "Type" };
+	//std::string columns[7] = { "Name", "Mode", "Uses", "Power", "Accuracy", "CritRate", "Priority", "Type", "HitCount"	"ProcRate	ProcEff	UseWorld};
 	//int row = 0;
+
 	while (!readfile.eof()) {
 		std::string nam;
 		std::string mod;
 		int use;
 		int pow;
 		int acc;
+		bool critRate;
 		int pri;
 		PokeType typ;
+		int hitCnt;
+		int procRt;
+		MoveEffect procEff;
+		bool useWrld;
 
 		getline(readfile, nam, ',');
 		getline(readfile, mod, ',');
 		getline(readfile, temp, ','); use = stoi(temp);
 		getline(readfile, temp, ','); pow = stoi(temp);
 		getline(readfile, temp, ','); acc = stoi(temp);
+		getline(readfile, temp, ','); critRate = stoi(temp);
 		getline(readfile, temp, ','); pri = stoi(temp);
 		getline(readfile, temp, ','); typ = strToPokeType[temp];
+		getline(readfile, temp, ','); hitCnt = stoi(temp);
+		getline(readfile, temp, ','); procRt = stoi(temp);
+		getline(readfile, temp, ','); procEff = strToMoveEffect[temp];
+		getline(readfile, temp, ','); useWrld = stoi(temp);
 	
 		
 		//
-		AddPokemonAttack(nam, mod, use, pow, acc, pri, typ);
+		AddPokemonAttack(nam, mod, use, pow, acc, critRate, pri, typ, hitCnt, procRt, procEff, useWrld);
 	}
+
 
 	readfile.close();
 

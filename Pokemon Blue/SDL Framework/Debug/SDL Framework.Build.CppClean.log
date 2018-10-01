@@ -4,17 +4,13 @@ c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\vc141.idb
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\stdafx.obj
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\timer.obj
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\texture.obj
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\sdlframework.obj
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\pokemon.obj
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\player.obj
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\pewtercity.obj
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\pallettown.obj
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\map.obj
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\inputmanager.obj
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\graphics.obj
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\gamemanager.obj
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\gameentity.obj
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\database.obj
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\buildings.obj
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\audiomanager.obj
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\assetmanager.obj
@@ -22,7 +18,11 @@ c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\animatedte
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\debug\sdl framework.exe
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\debug\sdl framework.ilk
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\debug\sdl framework.pdb
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\database.obj
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\gamemanager.obj
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\pokemon.obj
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\pokemonbattle.obj
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\sdlframework.obj
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\sdl framework.tlog\cl.command.1.tlog
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\sdl framework.tlog\cl.read.1.tlog
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\debug\sdl framework.tlog\cl.write.1.tlog
