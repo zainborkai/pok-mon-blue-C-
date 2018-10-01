@@ -26,6 +26,7 @@ void Rival::Update() {
 
 }
 
+
 void Rival::conversation() {
 
 	mText = Text::Instance();

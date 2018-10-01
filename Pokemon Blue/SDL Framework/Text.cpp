@@ -117,12 +117,13 @@ Text::Text() : Texture(" ", "POKEMONGB.ttf", 8, { 0,0,0 }) {
 	// lineNumber = 0;
 	//Display the text box
 	pTextBox = new Texture("TextBox.png");
-	pTextBox->Pos(Vector2(0, 50));
+	pTextBox->Pos(Vector2(325, 460));
 	//
 	//
 	pNameBox = new Texture("NameBox.PNG");
 	pNameBox->Pos(Vector2(250, 200));
 
+	// Choose name
 	newName = new Texture("NEW NAME", "POKEMONGB.ttf", 26, { 0,0,0 });
 	newName->Pos(Vector2(330, 270));
 	blueName = new Texture("BLUE", "POKEMONGB.ttf", 26, {0,0,0});
@@ -131,6 +132,10 @@ Text::Text() : Texture(" ", "POKEMONGB.ttf", 8, { 0,0,0 }) {
 	garyName->Pos(Vector2(330, 430));
 	johnName = new Texture("JOHN", "POKEMONGB.ttf", 26, { 0,0,0 });
 	johnName->Pos(Vector2(330, 510));
+	//
+	//
+	Trainer = new Texture("PokemonIntro_Sprites.png");
+	Trainer->Pos(Vector2(264, 280));
 	//
 	//
 	pArrow = new Texture("arrowPKMN.png");
@@ -190,8 +195,14 @@ void Text::NextText() {
 	//Trying to make code that will iterate through the elements of the textFile map
 	//and display each line by line when the Z key is pressed
 	if (mInputMgr->KeyPressed(SDL_SCANCODE_Z))
-	{//                   0          +             2        <          size of the vector
-		if (textLine->StartPoint + textLine->showLineCount < textLine->UseTexture.size()) {
+	{
+		// Creates text and text box, removes "choose name" menu
+		textActive = true;
+		boxActive = true;
+
+		std::cout << "text active" << std::endl;
+		//0          +             2        <          size of the vector
+		if (textLine->StartPoint + textLine->showLineCount < textLine->UseTexture.size()) {	
 			textLine->StartPoint++; // increment the start point by 1
 		}
 		else {
@@ -205,11 +216,12 @@ void Text::NextText() {
 				NewText(currentArea, currentParagraph);
 			}
 			else {
-				// FINISH TALKING!!!
+				// FINISH INTRO!!!
 				delete textLine;
 				textLine = nullptr;
 				//
 				SetIsActive(false);
+
 			}
 		}
 	}
@@ -230,38 +242,71 @@ void Text::MoveArrow() {
 	else if (mInputMgr->KeyPressed(SDL_SCANCODE_UP)) {
 		pArrow->Pos(Vector2(275, pArrow->GetPos().y - 80));
 
-		if (pArrow->GetPos().y <= 255) {
+		if (pArrow->GetPos().y <= 25.5) {
 			pArrow->Pos(Vector2(275, 255));
 		}
 	}
 }
 
 void Text::Render() {
+	// Text Box
 
-	if (isActive == true) {
-		//display textBox 
-		//
+	if (boxActive == true) {
 		pTextBox->SetmRenderRectX(pTextBox->Pos(WORLD).x);
 		pTextBox->SetmRenderRectY(pTextBox->Pos(WORLD).y);
 		mGraphics->DrawTexture(pTextBox->GetmTex(), (mClipped) ? &mClipRect : NULL, &pTextBox->GetmRenderRect(), Rotation(WORLD));
+	}
+
+	//we are declaring new variables that will adjust the position of the text on screen relative to the position of the text box
+	int screenX, screenY;
+	screenX = pTextBox->GetPos().x + 10;
+	screenY = pTextBox->GetPos().y + 15;
+	//
+	//This is going to display the text on the screen
+	int n; // Start Point
+		   // We want the text to display after a name choice....
+	if (textActive == true) {
+		for (int i = 0; i < textLine->showLineCount; i++) { // for (int i = 0; i < wordBox.size(); i++) {
+			n = textLine->StartPoint + i;
+			//
+			if (n >= textLine->UseTexture.size()) { break; }
+			//
+			int pushTextDown = 20 * i; // This new variable makes sure that the second line is always displaced from the first line
+									   //
+									   //
+			textLine->UseTexture[n].SetmRenderRectX(screenX);
+			textLine->UseTexture[n].SetmRenderRectY(screenY + pushTextDown);
+			//Need help on what this line is doing 
+			mGraphics->DrawTexture(textLine->UseTexture[n].GetmTex(), (mClipped) ? &mClipRect : NULL, &textLine->UseTexture[n].GetmRenderRect(), Rotation(WORLD));
+
+		}
+
+	}
+
+	// This will handle rendering the "Choose Name" group of assets
+	if (textActive == false) {
 		//
-		//
+		// Render "Choose Name" Text Box
 		pNameBox->SetmRenderRectX(pNameBox->Pos(WORLD).x);
 		pNameBox->SetmRenderRectY(pNameBox->Pos(WORLD).y);
 		mGraphics->DrawTexture(pNameBox->GetmTex(), (mClipped) ? &mClipRect : NULL, &pNameBox->GetmRenderRect(), Rotation(WORLD));
 		//
+		// Render New Name
 		newName->SetmRenderRectX(newName->Pos(WORLD).x);
 		newName->SetmRenderRectY(newName->Pos(WORLD).y);
 		mGraphics->DrawTexture(newName->GetmTex(), (mClipped) ? &mClipRect : NULL, &newName->GetmRenderRect(), Rotation(WORLD));
 		//
+		// Render Blue Name
 		blueName->SetmRenderRectX(blueName->Pos(WORLD).x);
 		blueName->SetmRenderRectY(blueName->Pos(WORLD).y);
 		mGraphics->DrawTexture(blueName->GetmTex(), (mClipped) ? &mClipRect : NULL, &blueName->GetmRenderRect(), Rotation(WORLD));
 		//
+		// Render Gary Name
 		garyName->SetmRenderRectX(garyName->Pos(WORLD).x);
 		garyName->SetmRenderRectY(garyName->Pos(WORLD).y);
 		mGraphics->DrawTexture(garyName->GetmTex(), (mClipped) ? &mClipRect : NULL, &garyName->GetmRenderRect(), Rotation(WORLD));
 		//
+		// Render John Name
 		johnName->SetmRenderRectX(johnName->Pos(WORLD).x);
 		johnName->SetmRenderRectY(johnName->Pos(WORLD).y);
 		mGraphics->DrawTexture(johnName->GetmTex(), (mClipped) ? &mClipRect : NULL, &johnName->GetmRenderRect(), Rotation(WORLD));
@@ -271,26 +316,7 @@ void Text::Render() {
 		pArrow->SetmRenderRectY(pArrow->Pos(WORLD).y);
 		mGraphics->DrawTexture(pArrow->GetmTex(), (mClipped) ? &mClipRect : NULL, &pArrow->GetmRenderRect(), Rotation(WORLD));
 		//
-		//we are declaring new variables that will adjust the position of the text on screen relative to the position of the text box
-		int screenX, screenY;
-		screenX = pTextBox->GetPos().x + 10;
-		screenY = pTextBox->GetPos().y + 15;
-		//
-		//This is going to display the text on the screen
-		int n; // Start Point
-		for (int i = 0; i < textLine->showLineCount; i++) { // for (int i = 0; i < wordBox.size(); i++) {
-			n = textLine->StartPoint + i;
-			//
-			if (n >= textLine->UseTexture.size()) { break; }
-			//
-			int pushTextDown = 20 * i; // This new variable makes sure that the second line is always displaced from the first line
-			//
-			//
-			textLine->UseTexture[n].SetmRenderRectX(screenX);
-			textLine->UseTexture[n].SetmRenderRectY(screenY + pushTextDown);
-			//Need help on what this line is doing 
-			mGraphics->DrawTexture(textLine->UseTexture[n].GetmTex(), (mClipped) ? &mClipRect : NULL, &textLine->UseTexture[n].GetmRenderRect(), Rotation(WORLD));
-		}
+		
 	}
 	//   0         1          2       3         4      5       (size is 6)
 	/*{ "Khori", "Armstrong", "Matt", "Walsh", "Bob", "Jones" }

@@ -1,14 +1,88 @@
 ﻿  Text.cpp
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\inputmanager.h(7): error C2143: syntax error: missing ';' before '<class-head>'
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\inputmanager.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(103): warning C4018: '<': signed/unsigned mismatch
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(106): warning C4018: '<': signed/unsigned mismatch
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(143): warning C4018: '<': signed/unsigned mismatch
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(146): warning C4018: '<': signed/unsigned mismatch
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(194): warning C4018: '<': signed/unsigned mismatch
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(276): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(277): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(284): warning C4018: '>=': signed/unsigned mismatch
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(289): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(290): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  SDL Framework.vcxproj -> C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\Debug\SDL Framework.exe
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(148): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(151): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(205): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(262): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(263): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(272): warning C4018: '>=': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(277): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(278): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  NPC.cpp
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\inputmanager.h(7): error C2143: syntax error: missing ';' before '<class-head>'
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\inputmanager.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\npc.cpp(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\npc.cpp(29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  AnimatedTexture.cpp
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\animatedtexture.cpp(3): error C2143: syntax error: missing ';' before 'AnimatedTexture::{ctor}'
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\animatedtexture.cpp(3): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  Generating Code...
+  Compiling...
+  Brock.cpp
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\inputmanager.h(7): error C2143: syntax error: missing ';' before '<class-head>'
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\inputmanager.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\brock.cpp(21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\brock.cpp(22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  Compiling...
+  GameManager.cpp
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\vector(15): error C2143: syntax error: missing ';' before 'namespace'
+c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\vector(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  Generating Code...
+  Compiling...
+  Mom.cpp
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\inputmanager.h(7): error C2143: syntax error: missing ';' before '<class-head>'
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\inputmanager.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\mom.cpp(19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\mom.cpp(20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  Compiling...
+  Oak.cpp
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\inputmanager.h(7): error C2143: syntax error: missing ';' before '<class-head>'
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\inputmanager.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\oak.cpp(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\oak.cpp(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  Compiling...
+  Rival.cpp
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\inputmanager.h(7): error C2143: syntax error: missing ';' before '<class-head>'
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\inputmanager.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\rival.cpp(19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\rival.cpp(20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  Compiling...
+  SDLFramework.cpp
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\vector(15): error C2143: syntax error: missing ';' before 'namespace'
+c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\vector(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  Generating Code...
+  Compiling...
+  Trainer.cpp
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\inputmanager.h(7): error C2143: syntax error: missing ';' before '<class-head>'
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\inputmanager.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\trainer.cpp(6): warning C4552: '/': operator has no effect; expected operator with side-effect
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\trainer.cpp(18): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\trainer.cpp(19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
