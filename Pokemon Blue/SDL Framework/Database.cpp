@@ -39,6 +39,8 @@ Database::Database() {
 	//int row = 0;
 
 	while (!readfile.eof()) {
+		int newLine = 0;
+
 		std::string nam;
 		std::string mod;
 		int use;
@@ -64,10 +66,10 @@ Database::Database() {
 		getline(readfile, temp, ','); procRt = stoi(temp);
 		getline(readfile, temp, ','); procEff = strToMoveEffect[temp];
 		getline(readfile, temp, ','); useWrld = stoi(temp);
+
 	
-		
-		//
 		AddPokemonAttack(nam, mod, use, pow, acc, critRate, pri, typ, hitCnt, procRt, procEff, useWrld);
+		
 	}
 
 
