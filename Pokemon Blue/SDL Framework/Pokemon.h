@@ -80,6 +80,8 @@ public:
 	void Update();
 	void Render();
 
+	
+	
 	void SetHP(int s_hp) { hp = s_hp; }
 	int GetHp() { return hp; }
 
@@ -103,6 +105,8 @@ public:
 
 	void SetMaxHp(int s_maxHP) { maxHP = s_maxHP; }
 	int GetMaxHp() { return maxHP; }
+	
+	
 
 	
 
