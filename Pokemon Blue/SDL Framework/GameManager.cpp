@@ -97,14 +97,12 @@ void GameManager::Render() {
 	//All other rendering is to happen here
 	mText->Render();
 
-	// Random characters
-
-	/*mNPC->Render();
+	mNPC->Render();
 	mOak->Render();
 	mRival->Render();
 	mMom->Render();
 	mBrock->Render();
-	mTrainer->Render();*/
+	mTrainer->Render();
 
 	//Renders the current frame
 	mGraphics->Render();

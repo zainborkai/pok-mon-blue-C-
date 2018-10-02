@@ -42,6 +42,5 @@ public:
 	void Update();
 };
 
-#endif // !
-_H
+#endif // !ANIMATEDTEXTURE_H
 
