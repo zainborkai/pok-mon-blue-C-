@@ -11,12 +11,14 @@ AssetManager* AssetManager::Instance() {
 	return sInstance;
 }
 
+
 void AssetManager::Release() {
 	delete sInstance;
 	sInstance = nullptr;
 }
 
 AssetManager::AssetManager() {}
+
 
 AssetManager::~AssetManager() {
 	//Freeing all load textures
@@ -29,13 +31,20 @@ AssetManager::~AssetManager() {
 	mTexture.clear();
 
 	//Freeing all rendered text
+	for (auto text : mTextures) {
+		if (text.second != NULL) {
+			SDL_DestroyTexture(text.second);
+		}
+	}
+	mTextures.clear();
+
 	for (auto text : mText) {
 		if (text.second != NULL) {
 			SDL_DestroyTexture(text.second);
 		}
 	}
 
-	mFonts.clear();
+	mText.clear();
 
 	//Freeing all loaded music
 	for (auto music : mMusic) {
@@ -43,7 +52,6 @@ AssetManager::~AssetManager() {
 			Mix_FreeMusic(music.second);
 		}
 	}
-
 	mMusic.clear();
 
 	//Freeing all loaded sound effects
@@ -52,9 +60,9 @@ AssetManager::~AssetManager() {
 			Mix_FreeChunk(sfx.second);
 		}
 	}
-
 	mSFX.clear();
 }
+
 
 SDL_Texture* AssetManager::GetTexture(std::string filename) {
 	//Get the full path of the file
@@ -64,35 +72,34 @@ SDL_Texture* AssetManager::GetTexture(std::string filename) {
 	//If the file hasn't been loaded
 	if (mTexture[fullPath] == nullptr) {
 		mTexture[fullPath] = Graphics::Instance()->LoadTexture(fullPath);
-	}
+		std::string fullPath = SDL_GetBasePath();
+		fullPath.append("Assets/" + filename);
 
-	return mTexture[fullPath];
+		return mTexture[fullPath];
+	}
 }
 
 TTF_Font* AssetManager::GetFont(std::string filename, int size) {
-	//Get the full path of font
+	//Key takes into account the size of the font so the same font can be opened with different sizes
 	std::string fullPath = SDL_GetBasePath();
 	fullPath.append("Assets/" + filename);
 
-	//Key takes into account the size of the font so the same font can be opened with different sizes
 	std::string key = fullPath + (char)size;
-
 	if (mFonts[key] == nullptr) {
 		mFonts[key] = TTF_OpenFont(fullPath.c_str(), size);
 
 		if (mFonts[key] == nullptr) {
-			std::printf("Font loading error: Font-%s Error-%s", filename.c_str(), TTF_GetError());
+			std::printf("Font Loading Error: Font -%s Error -%s", filename.c_str(), TTF_GetError());
 		}
 	}
-
 	return mFonts[key];
 }
 
-SDL_Texture* AssetManager::GetText(std::string text, std::string filename, int size, SDL_Color color) {
-	//Get the font from the font cache
+SDL_Texture* AssetManager::GetText(std::string text, std::string filename, int size, SDL_Color colour) {
 	TTF_Font* font = GetFont(filename, size);
 
-	std::string key = text + filename + (char)size + (char)color.r + (char)color.b + (char)color.g;
+
+	std::string key = text + filename + (char)size + (char)colour.r + (char)colour.g + (char)colour.b;
 
 	if (mText[key] == nullptr) {
 		mText[key] = Graphics::Instance()->CreateTextTexture(font, text, color);
@@ -100,6 +107,7 @@ SDL_Texture* AssetManager::GetText(std::string text, std::string filename, int s
 
 	return mText[key];
 }
+
 
 Mix_Music* AssetManager::GetMusic(std::string filename) {
 	//Get the full path of the WAV file
@@ -117,6 +125,7 @@ Mix_Music* AssetManager::GetMusic(std::string filename) {
 	return mMusic[fullPath];
 }
 
+
 Mix_Chunk* AssetManager::GetSFX(std::string filename) {
 	//Get the full path of the WAV file
 	std::string fullPath = SDL_GetBasePath();
@@ -129,6 +138,7 @@ Mix_Chunk* AssetManager::GetSFX(std::string filename) {
 			std::printf("SFX Loading ErrorL File %s Error %s", filename.c_str(), Mix_GetError());
 		}
 	}
+
 
 	return mSFX[fullPath];
 }

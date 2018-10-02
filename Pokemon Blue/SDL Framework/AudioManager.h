@@ -12,6 +12,7 @@ private:
 public:
 	static AudioManager* Instance();
 	static void Release();
+
 	//-1 is infinite looping
 	void PlayMusic(std::string filename, int loops = -1);
 	void PauseMusic();
@@ -24,3 +25,4 @@ private:
 };
 
 #endif // !AUDIOMANAGER_H
+

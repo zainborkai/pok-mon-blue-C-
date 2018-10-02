@@ -1,6 +1,9 @@
+
 #include "GameManager.h"
+#include "BattleManager.h"
 
 GameManager* GameManager::sInstance = nullptr;
+
 
 GameManager* GameManager::Instance() {
 	if (sInstance == nullptr) {
@@ -10,10 +13,12 @@ GameManager* GameManager::Instance() {
 	return sInstance;
 }
 
+
 void GameManager::Release() {
 	delete sInstance;
 	sInstance = nullptr;
 }
+
 
 GameManager::GameManager() {
 	mQuit = false;
@@ -76,13 +81,25 @@ void GameManager::EarlyUpdate() {
 	//Update the input state before any other updates are run
 	//mText->displayTextBox("INTRO");
 	mText->NextText();
+	for (auto actor : actorList) {
+		delete actor;
+	}
+	actorList.clear();
 }
 
 void GameManager::Update() {
 	//GameEntity updates should happen here
-
+	
+	std::vector<Actor*> copyList(actorList);
+	//
+	for (int i = 0; i < copyList.size(); i++) {
+		auto actor = copyList[i];
+		//
+		actor->Update();
+	}
+	//
+	_ProcessDestroys();
 }
-
 void GameManager::LateUpdate() {
 	//Any collision detection should happen here
 
@@ -90,7 +107,9 @@ void GameManager::LateUpdate() {
 	mTimer->Reset();
 }
 
+
 void GameManager::Render() {
+<<<<<<< HEAD
 	//Clears the last frame's render from the back buffer
 	mGraphics->ClearBackBuffer();
 
@@ -103,12 +122,24 @@ void GameManager::Render() {
 	mMom->Render();
 	mBrock->Render();
 	mTrainer->Render();
-
-	//Renders the current frame
+	//
+	std::vector<Actor*> copyList(actorList);
+	//
+	for (int i = 0; i < copyList.size(); i++) {
+		auto actor = copyList[i];
+		//
+		actor->Render();
+	}
+	//
+	_ProcessDestroys();
+	//
 	mGraphics->Render();
 }
 
 void GameManager::Run() {
+
+	// BattleManager::Instance(); // To activate everything.
+
 	while (!mQuit) {
 		mTimer->Update();
 
@@ -121,9 +152,53 @@ void GameManager::Run() {
 		//Limits the frame rate to FRAME_RATE
 		if (mTimer->DeltaTime() >= (1.0 / FRAME_RATE)) {
 			EarlyUpdate();
+			//
 			Update();
+			//
 			LateUpdate();
+			//
 			Render();
 		}
 	}
+}
+
+
+/*
+Actor* GameManager::CreateActor() {
+	Actor* temp = new Actor();
+	//
+	RegisterActor(temp);
+	//
+	return temp;
+}
+*/
+bool GameManager::RegisterActor(Actor* act) {
+	// act._gm = this;
+	
+	actorList.push_back(act);
+	return true;
+}
+bool GameManager::UnregisterActor(Actor* act) {
+	for (int i = 0; actorList.size(); i++) {
+		if (actorList[i] == act) {
+			actorList.erase(actorList.begin() + i);
+			return true;
+		}
+	}
+
+	return false;
+}
+
+void GameManager::_QueueDestroy(Actor* act) {
+	_destroyList.push_back(act);
+}
+void GameManager::_ProcessDestroys() {
+	for (int i = 0; i < _destroyList.size(); i++) {
+		Actor* actor = _destroyList[i];
+		//
+		UnregisterActor(actor);
+		delete actor;
+	}
+	//
+	_destroyList.clear();
 }

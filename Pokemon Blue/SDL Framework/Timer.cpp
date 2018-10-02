@@ -1,8 +1,8 @@
+
 #include "Timer.h"
 
-Timer* Timer::sInstance = NULL;
 
-// Singleton
+Timer* Timer::sInstance = NULL;
 Timer* Timer::Instance() {
 	if (sInstance == nullptr) {
 		sInstance = new Timer();
@@ -11,10 +11,12 @@ Timer* Timer::Instance() {
 	return sInstance;
 }
 
+
 void Timer::Release() {
 	delete sInstance;
 	sInstance = nullptr;
 }
+
 
 Timer::Timer() {
 	Reset();
@@ -37,13 +39,15 @@ float Timer::DeltaTime() {
 	return mDeltaTime;
 }
 
+
 float Timer::TimeScale() {
 	return mTimeScale;
 }
 
+
 void Timer::Update() {
 	mElapsedTicks = SDL_GetTicks() - mStartTicks;
 
-	// Covnerting milliseconds to seconds
 	mDeltaTime = mElapsedTicks * 0.001f;
 }
+

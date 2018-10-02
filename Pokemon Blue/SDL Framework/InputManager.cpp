@@ -1,5 +1,7 @@
+
 #include <string.h>
 #include "InputManager.h"
+
 
 InputManager* InputManager::sInstance = nullptr;
 
@@ -11,15 +13,15 @@ InputManager* InputManager::Instance() {
 	return sInstance;
 }
 
+void InputManager::Release() {
+	delete sInstance;
+	sInstance = nullptr;
+}
+
 InputManager::InputManager() {
 	mKeyboardState = SDL_GetKeyboardState(&mKeyLength);
 	mPrevKeyBoardState = new Uint8[mKeyLength];
 	memcpy(mPrevKeyBoardState, mKeyboardState, mKeyLength);
-}
-
-void InputManager::Release() {
-	delete sInstance;
-	sInstance = nullptr;
 }
 
 InputManager::~InputManager() {
@@ -32,12 +34,13 @@ bool InputManager::KeyDown(SDL_Scancode scanCode) {
 }
 
 bool InputManager::KeyPressed(SDL_Scancode scanCode) {
-	return (mPrevKeyBoardState[scanCode]) == 0 && (mKeyboardState[scanCode] != 0);
+	return (mPrevKeyBoardState[scanCode] == 0 && (mKeyboardState[scanCode] != 0));
 }
 
 bool InputManager::KeyReleased(SDL_Scancode scanCode) {
-	return (mPrevKeyBoardState[scanCode] != 0) && (mKeyboardState[scanCode] == 0);
+	return (mPrevKeyBoardState[scanCode] != 0 && (mKeyboardState[scanCode] == 0));
 }
+
 
 void InputManager::UpdatePrevInput() {
 	memcpy(mPrevKeyBoardState, mKeyboardState, mKeyLength);

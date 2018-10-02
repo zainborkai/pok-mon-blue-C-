@@ -23,7 +23,7 @@
     <ProjectGuid>{07B508AF-C5B6-4454-9B67-29E8ADA1FB6B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>SDLFramework</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -93,13 +93,26 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+<<<<<<< HEAD
       <AdditionalIncludeDirectories>C:\Users\zain\Desktop\Pokemon Blue\SDL2-devel-2.0.8-VC\SDL2-2.0.8\include;C:\Users\zain\Desktop\Pokemon Blue\SDL2_ttf-devel-2.0.14-VC\SDL2_ttf-2.0.14\include;C:\Users\zain\Desktop\Pokemon Blue\SDL2_mixer-devel-2.0.2-VC\SDL2_mixer-2.0.2\include;C:\Users\zain\Desktop\Pokemon Blue\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\include;C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\include;C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\SDL2-devel-2.0.8-VC\SDL2-2.0.8\include;C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\SDL2_ttf-devel-2.0.14-VC\SDL2_ttf-2.0.14\include;C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\SDL2_mixer-devel-2.0.2-VC\SDL2_mixer-2.0.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+=======
+      <AdditionalIncludeDirectories>C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\SDL2-devel-2.0.8-VC\SDL2-2.0.8\include;C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\SDL2_ttf-devel-2.0.14-VC\SDL2_ttf-2.0.14\include;C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\SDL2_mixer-devel-2.0.2-VC\SDL2_mixer-2.0.2\include;C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>> master
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+<<<<<<< HEAD
       <AdditionalLibraryDirectories>C:\Users\zain\Desktop\Pokemon Blue\SDL2-devel-2.0.8-VC\SDL2-2.0.8\lib\x86;C:\Users\zain\Desktop\Pokemon Blue\SDL2_ttf-devel-2.0.14-VC\SDL2_ttf-2.0.14\lib\x86;C:\Users\zain\Desktop\Pokemon Blue\SDL2_mixer-devel-2.0.2-VC\SDL2_mixer-2.0.2\lib\x86;C:\Users\zain\Desktop\Pokemon Blue\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\lib\x86;C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\lib\x86;C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\SDL2_mixer-devel-2.0.2-VC\SDL2_mixer-2.0.2\lib\x86;C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\SDL2_ttf-devel-2.0.14-VC\SDL2_ttf-2.0.14\lib\x86;C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\SDL2-devel-2.0.8-VC\SDL2-2.0.8\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_image.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+=======
+      <AdditionalLibraryDirectories>C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\SDL2-devel-2.0.8-VC\SDL2-2.0.8\lib\x86;C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\SDL2_ttf-devel-2.0.14-VC\SDL2_ttf-2.0.14\lib\x86;C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\SDL2_mixer-devel-2.0.2-VC\SDL2_mixer-2.0.2\lib\x86;C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib
+;SDL2main.lib;
+SDL2_ttf.lib
+;SDL2_image.lib
+;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+>>>>>>> master
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -160,15 +173,25 @@ SDL2_ttf.lib
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Actor.h" />
     <ClInclude Include="AnimatedTexture.h" />
     <ClInclude Include="AssetManager.h" />
     <ClInclude Include="AudioManager.h" />
+<<<<<<< HEAD
     <ClInclude Include="Brock.h" />
+=======
+    <ClInclude Include="BattleManager.h" />
+    <ClInclude Include="Database.h" />
+>>>>>>> master
     <ClInclude Include="GameEntity.h" />
     <ClInclude Include="GameManager.h" />
+    <ClInclude Include="GameSystem.h" />
     <ClInclude Include="Graphics.h" />
+    <ClInclude Include="Helper.h" />
+    <ClInclude Include="HPGauge.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="MathHelper.h" />
+<<<<<<< HEAD
     <ClInclude Include="Mom.h" />
     <ClInclude Include="NPC.h" />
     <ClInclude Include="Oak.h" />
@@ -176,23 +199,45 @@ SDL2_ttf.lib
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Text.h" />
+=======
+    <ClInclude Include="MenuBox.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TextArea.h" />
+>>>>>>> master
     <ClInclude Include="Texture.h" />
+    <ClInclude Include="Tile.h" />
+    <ClInclude Include="TiledTexture.h" />
     <ClInclude Include="Timer.h" />
+<<<<<<< HEAD
     <ClInclude Include="Trainer.h" />
+=======
+    <ClInclude Include="VariedTexture.h" />
+>>>>>>> master
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Actor.cpp" />
     <ClCompile Include="AnimatedTexture.cpp" />
     <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="AudioManager.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="Brock.cpp" />
+=======
+    <ClCompile Include="BattleManager.cpp" />
+    <ClCompile Include="Database.cpp" />
+>>>>>>> master
     <ClCompile Include="GameEntity.cpp" />
     <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="GameSystem.cpp" />
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="InputManager.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="Mom.cpp" />
     <ClCompile Include="NPC.cpp" />
     <ClCompile Include="Oak.cpp" />
     <ClCompile Include="Rival.cpp" />
+=======
+>>>>>>> master
     <ClCompile Include="SDLFramework.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -202,8 +247,12 @@ SDL2_ttf.lib
     </ClCompile>
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Timer.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="Trainer.cpp" />
+=======
+>>>>>>> master
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

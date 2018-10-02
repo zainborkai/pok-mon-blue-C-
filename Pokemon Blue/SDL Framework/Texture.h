@@ -16,7 +16,9 @@ protected:
 	int mWidth;
 
 	//Height of the texture
+
 	int mHeight;
+	Vector2 centering;
 
 	//true if the texture is loaded from a spritesheet
 	bool mClipped;
@@ -25,6 +27,7 @@ protected:
 	SDL_Rect mRenderRect;
 
 	//Is used to clip the texture from a spritesheet
+
 	SDL_Rect mClipRect;
 
 public:
@@ -50,8 +53,13 @@ public:
 	virtual void Render();
 
 	Texture() {};
+
+	void AssignTexture(std::string filename);
+	void AssignTexture(std::string filename, int x, int y, int w, int h);
+	void AssignTexture(std::string text, std::string fontpath, int size, SDL_Color colour);
+	void SetCenter(int x, int y);
+
 };
 
 #endif // !TEXTURE_H
-
 

@@ -15,6 +15,7 @@ private:
 	const Uint8* mKeyboardState;
 
 	//The number of keys in the mKeyboardState array
+
 	int mKeyLength;
 
 public:
