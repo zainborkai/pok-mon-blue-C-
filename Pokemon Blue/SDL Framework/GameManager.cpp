@@ -89,7 +89,7 @@ void GameManager::Render() {
 
 void GameManager::Run() {
 
-	BattleManager::Instance(); // To activate everything.
+	// BattleManager::Instance(); // To activate everything.
 
 
 	while (!mQuit) {
