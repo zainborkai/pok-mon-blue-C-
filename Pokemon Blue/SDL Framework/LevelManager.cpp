@@ -79,7 +79,6 @@ void LevelManager::Update() {
 	//
 	if (inputManager->KeyPressed(SDL_SCANCODE_N)) {
 		buildings->ChangeMapForward(Buildings::GROUNDMAP);	
-		// Ground map starting position!
 		mPlayer->X = 60;
 		mPlayer->Y = 186;
 	}
@@ -112,10 +111,6 @@ void LevelManager::Update() {
 		}
 
 		int groundID = mGroundMap->m_Map[0][moveToY][moveToX];
-		//int buildingID = buildings->(Building[0];
-
-		// Disables collision check
-		groundID = 0;
 		//
 		cout << "value: " << groundID << endl;
 		//
@@ -151,9 +146,7 @@ void LevelManager::Update() {
 
 	Vector2 offset = mPlayer->Pos();
 	Vector2 scl = mPlayer->Scale();
-
-	//-------------- FIX THIS!!! --------------//
-	buildings->GetCurrentBuilding()->Pos(Vector2(offset.x - buildings->GetCurrentBuilding()->GetmWidth() / 2  * scl.x - mPlayer->X * 6, offset.y - mPlayer->Y * 4 - 32));
+	buildings->GetCurrentBuilding()->Pos(Vector2(offset.x - buildings->GetCurrentBuilding()->GetmWidth()  * scl.x - mPlayer->X, offset.y - mPlayer->Y * 4 - 32));
 
 	
 	//--Working Map--//
