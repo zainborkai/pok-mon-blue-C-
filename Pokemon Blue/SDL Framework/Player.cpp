@@ -6,8 +6,8 @@ Player::Player() :
 	centering = Vector2(0, 0);
 	playerInput = InputManager::Instance();
 
-	X = 60;
-	Y = 186;
+	X = 5;
+	Y = 5;
 	
 }
 
