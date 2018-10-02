@@ -102,7 +102,7 @@ SDL_Texture* AssetManager::GetText(std::string text, std::string filename, int s
 	std::string key = text + filename + (char)size + (char)colour.r + (char)colour.g + (char)colour.b;
 
 	if (mText[key] == nullptr) {
-		mText[key] = Graphics::Instance()->CreateTextTexture(font, text, color);
+		mText[key] = Graphics::Instance()->CreateTextTexture(font, text, colour);
 	}
 
 	return mText[key];

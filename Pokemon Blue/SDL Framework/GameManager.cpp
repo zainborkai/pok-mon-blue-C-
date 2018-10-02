@@ -79,7 +79,6 @@ GameManager::~GameManager() {
 //All the updates and the render happen every frame
 void GameManager::EarlyUpdate() {
 	//Update the input state before any other updates are run
-	//mText->displayTextBox("INTRO");
 	mText->NextText();
 	for (auto actor : actorList) {
 		delete actor;
@@ -109,7 +108,6 @@ void GameManager::LateUpdate() {
 
 
 void GameManager::Render() {
-<<<<<<< HEAD
 	//Clears the last frame's render from the back buffer
 	mGraphics->ClearBackBuffer();
 
@@ -138,7 +136,7 @@ void GameManager::Render() {
 
 void GameManager::Run() {
 
-	// BattleManager::Instance(); // To activate everything.
+	BattleManager::Instance(); // To activate everything.
 
 	while (!mQuit) {
 		mTimer->Update();

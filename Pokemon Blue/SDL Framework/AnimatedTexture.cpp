@@ -33,9 +33,6 @@ void AnimatedTexture::Update() {
 	}
 }
 
-
-
-
 AnimatedTexture::AnimData::AnimData(int x, int y, int w, int h, int frameCount, float animationSpeed, ANIM_DIR animationDir) {
 	mStartX = x;
 	mStartY = y;
@@ -50,33 +47,6 @@ AnimatedTexture::AnimData::AnimData(int x, int y, int w, int h, int frameCount, 
 	mWrapMode = LOOP;
 
 }
-
-AnimatedTexture::~AnimatedTexture() {}
-
-void AnimatedTexture::WrapMode(WRAP_MODE mode) {
-	mWrapMode = mode;
-}
-
-void AnimatedTexture::Update() {
-	if (!mAnimationDone) {
-		if (mAnimationTimer >= mAnimationSpeed) {
-			if (mWrapMode == LOOP) {
-				mAnimationTimer -= mAnimationSpeed;
-			}
-			else {
-				mAnimationDone = true;
-				mAnimationTimer = mAnimationSpeed - mTimePerFrame;
-			}
-		}
-
-		if (mAnimationDirection == HORIZONTAL) {
-			mClipRect.x = mStartX + (int)(mAnimationTimer / mTimePerFrame) * mWidth;
-		}
-		else {
-			mClipRect.y = mStartY + (int)(mAnimationTimer / mTimePerFrame) * mHeight;
-		}
-	}
-};
 
 void AnimatedTexture::AnimData::Run(float deltaTime) {
 	if (!mAnimationDone) {
@@ -93,10 +63,10 @@ void AnimatedTexture::AnimData::Run(float deltaTime) {
 		}
 
 		if (mAnimationDirection == HORIZONTAL) {
-			mClipRect.x = mStartX + (int)(mAnimationTimer / mTimePerFrame) * mWidth;
+			//mClipRect.x = mStartX + (int)(mAnimationTimer / mTimePerFrame) * mWidth;
 		}
 		else {
-			mClipRect.y = mStartY + (int)(mAnimationTimer / mTimePerFrame) * mHeight;
+			//mClipRect.y = mStartY + (int)(mAnimationTimer / mTimePerFrame) * mHeight;
 		}
 	}
 }

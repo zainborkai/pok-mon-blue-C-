@@ -63,20 +63,6 @@ Texture::~Texture() {
 	mGraphics = nullptr;
 }
 
-
-void Texture::Render() {
-	Vector2 pos = Pos(WORLD)*Graphics::GameScale;
-	Vector2 scale = Scale(WORLD)*Graphics::GameScale;
-
-	mRenderRect.x = (int)(pos.x - mWidth * scale.x * centering.x);
-	mRenderRect.y = (int)(pos.y - mHeight * scale.y * centering.y);
-
-	mRenderRect.w = (int)(mWidth * scale.x);
-	mRenderRect.h = (int)(mHeight * scale.y);
-
-	mGraphics->DrawTexture(mTex, (mClipped) ? &mClipRect : NULL, &mRenderRect, Rotation(WORLD));
-}
-
 void Texture::AssignTexture(std::string filename) {
 	if (filename.size() == 0) { filename = "nulltexture.png"; }
 	
@@ -133,14 +119,12 @@ void Texture::AssignTexture(std::string text, std::string fontPath, int size, SD
 }
 
 void Texture::Render() {
-	Vector2 pos = Pos(WORLD);
-	Vector2 scale = Scale(WORLD);
+	Vector2 pos = Pos(WORLD)*Graphics::GameScale;
+	Vector2 scale = Scale(WORLD)*Graphics::GameScale;
 
-	//Centers the texture on the texture's world position so that its position is not the top left
-	mRenderRect.x = (int)(pos.x - mWidth * scale.x * 0.5f);
-	mRenderRect.y = (int)(pos.y - mHeight * scale.y * 0.5f);
+	mRenderRect.x = (int)(pos.x - mWidth * scale.x * centering.x);
+	mRenderRect.y = (int)(pos.y - mHeight * scale.y * centering.y);
 
-	//Scales the width and height according to the scale of the GameEntity
 	mRenderRect.w = (int)(mWidth * scale.x);
 	mRenderRect.h = (int)(mHeight * scale.y);
 

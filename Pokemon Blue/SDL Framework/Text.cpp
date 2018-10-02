@@ -220,17 +220,17 @@ void Text::NextText() {
 void Text::MoveArrow() {
 	if (mInputMgr->KeyPressed(SDL_SCANCODE_DOWN)) {
 		//pArrow->Pos(pArrow->GetPos().x); // We dont want the X position to change
-		pArrow->Pos(Vector2(275, pArrow->GetPos().y + 80));
+		pArrow->Pos(Vector2(275, pArrow->Pos().y + 80));
 
-		if (pArrow->GetPos().y >= 495) {
+		if (pArrow->Pos().y >= 495) {
 			pArrow->Pos(Vector2(275, 495));
 		}
 	}
 
 	else if (mInputMgr->KeyPressed(SDL_SCANCODE_UP)) {
-		pArrow->Pos(Vector2(275, pArrow->GetPos().y - 80));
+		pArrow->Pos(Vector2(275, pArrow->Pos().y - 80));
 
-		if (pArrow->GetPos().y <= 255) {
+		if (pArrow->Pos().y <= 255) {
 			pArrow->Pos(Vector2(275, 255));
 		}
 	}
@@ -273,8 +273,8 @@ void Text::Render() {
 		//
 		//we are declaring new variables that will adjust the position of the text on screen relative to the position of the text box
 		int screenX, screenY;
-		screenX = pTextBox->GetPos().x + 10;
-		screenY = pTextBox->GetPos().y + 15;
+		screenX = pTextBox->Pos().x + 10;
+		screenY = pTextBox->Pos().y + 15;
 		//
 		//This is going to display the text on the screen
 		int n; // Start Point
