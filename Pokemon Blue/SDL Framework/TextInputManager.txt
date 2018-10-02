@@ -276,3 +276,54 @@ First, you need
 to weaken the
 target POKeMON.
 
+***GUY2_PEWTER
+
+YES
+That's right!
+It's hard work!
+
+NO
+I'm spraying REPEL
+to keep POKeMON
+out of my garden!
+
+***ATTENDANT_MUSEUM
+
+YES
+Right, $50!
+Thank you!
+
+NO
+Come again!
+
+***GUY1_PEWTER_GYM
+
+YES
+All right! Let's
+get happening!
+
+The 1st POKeMON
+out in a match is
+at the top of the
+POKeMON LIST!
+
+By changing the 
+order of POKeMON,
+matches could be
+made easier!
+
+NO
+It's a free
+service! Let's
+get happening!
+
+The 1st POKeMON
+out in a match is
+at the top of the
+POKeMON LIST!
+
+By changing the 
+order of POKeMON,
+matches could be
+made easier!
+

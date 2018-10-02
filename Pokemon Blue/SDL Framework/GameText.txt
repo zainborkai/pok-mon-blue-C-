@@ -939,3 +939,472 @@ some friends!
 They're out for
 POKeMON fights!
 
+***GUY2_VIRIDIAN_FOREST
+
+I ran out of POKe
+BALLs to catch
+POKeMON with!
+
+You should carry 
+extras!
+
+***SIGN2_VIRIDIAN_FOREST
+
+TRAINER TIPS
+
+If you want to
+avoid battles,
+stay away from
+grassy areas!
+
+***TRAINER1_VIRIDIAN_FOREST_ENCOUNTER
+
+Hey! You have
+POKeMON! Come on!
+Let's battle'em!
+
+***TRAINER1_VIRIDIAN_FOREST_AFTER
+
+Ssh! You'll scare
+the bugs away!
+
+***TRAINER2_VIRIDIAN_FOREST_ENCOUNTER
+
+Yo! You can't jam
+out if you're a
+POKeMON trainer!
+
+***TRAINER2_VIRIDIAN_FOREST_AFTER
+
+Darn! I'm going 
+to catch some
+stronger ones!
+
+***SIGN3_VIRIDIAN_FOREST
+
+For poison, use
+ANTIDOTE! Get it
+at POKeMON MARTs!
+
+***SIGN4_VIRIDIAN_FOREST
+
+TRAINER TIPS
+
+Contact PROF. OAK
+via PC to get
+your POKeDEX
+evaluated!
+
+***SIGN5_VIRIDIAN_FOREST
+
+TRAINER TIPS
+
+No stealing of 
+POKeMON from
+other trainers!
+Catch only wild
+POKeMON!
+
+***TRAINER3_VIRIDIAN_FOREST_ENCOUNTER
+
+Hey, wait up!
+What's the hurry?
+
+***TRAINER3_VIRIDIAN_FOREST_AFTER
+
+Sometimes, you
+can find stuff on
+the ground!
+
+I'm looking for 
+the stuff I
+dropped!
+
+***SIGN6_VIRIDIAN_FOREST
+
+LEAVING
+VIRIDIAN FOREST
+PEWTER CITY AHEAD
+
+--Building after VIRIDIAN FOREST--
+
+***OLD_GUY_BUILDING_VIRIDIAN_FOREST
+
+Have you noticed
+the bushes on the
+roadside?
+
+They can be cut
+down by a special
+POKeMON move.
+
+***YOUNG_GUY_BUILDING_VIRIDIAN_FOREST
+
+Many POKeMON live
+only in forests
+and caves.
+
+You need to look 
+everywhere to get
+different kinds!
+
+--PEWTER CITY--
+
+***SIGN1_PEWTER
+
+Any POKeMON that
+takes part in
+battle, however
+short, earns EXP!
+
+***GUY1_PEWTER
+
+There aren't many
+serious POKeMON
+trainers here!
+
+They're all like
+BUG CATCHERs,
+but PEWTER GYM's
+BROCK is totally 
+into it!
+
+***SIGN2_PEWTER
+
+PEWTER CITY
+A Stone Gray
+City
+
+***GUY2_PEWTER
+
+Psssst!
+Do you know what
+I'm doing?
+
+<<Input choice>>
+
+***SIGN3_PEWTER
+
+NOTICE!
+
+Thieves have been 
+stealing POKeMON
+fossils at MT.
+MOON! Please call
+PEWTER POLICE
+with any info!
+
+***GUY_EAST_PEWTER
+
+You're a trainer
+right? BROCK's
+looking for new
+challengers!
+Follow me!
+
+<<Guy takes you to the gym>>
+
+If you have the
+right stuff, go
+take on BROCK!
+
+***GIRL1_PEWTER
+
+It's rumored that
+CLEFAIRYs came
+from the moon!
+
+They appeared 
+after MOON STONE
+fell on MT. MOON.
+
+***SIGN4_PEWTER
+
+PEWTER CITY
+POKeMON GYM
+LEADER: BROCK
+
+The Rock Solid 
+POKeMON Trainer!
+
+***SIGN5_PEWTER
+
+PEWTER MUSEUM
+OF SCIENCE
+
+--House1 PEWTER--
+
+***OLD_GUY_HOUSE1_PEWTER
+
+POKeMON learn new
+techniques as
+they grow!
+
+But, some moves
+must be taught by
+the trainer!
+
+***YOUNG_GUY_HOUSE1_PEWTER
+
+POKeMON become
+easier to catch
+when they are
+hurt or asleep!
+
+But, it's not a 
+sure thing!
+
+--Poke centre PEWTER--
+
+***GUY_SITTING_POKECENTRE_PEWTER
+
+Yawn!
+
+When JIGGLYPUFF
+sings, POKeMON
+get drowsy...
+
+...Me too...
+Snore...
+
+***JIGGLYPUFF_POKECENTRE_PEWTER
+
+JIGGLYPUFF: Puu
+pupuu!
+
+***GUY_STANDING_POKECENTRE_PEWTER
+
+What!?
+
+TEAM ROCKET is
+at MT. MOON? Huh?
+I'm on the phone!
+
+Scram!
+
+--Poke mart PEWTER--
+
+***GUY1_POKEMART_PEWTER
+
+Good things can
+happen if you
+raise POKeMON
+diligently, even
+the weak ones!
+
+***GUY2_POKEMART_PEWTER
+
+A shady, old man
+got me to buy
+this really weird
+fish POKeMON!
+
+It's totally weak
+and it cost $500!
+
+--House2 PEWTER--
+
+***KID_HOUSE2_PEWTER
+
+NIDORAN sit!
+
+***NIDORAN_HOUSE2_PEWTER
+
+NIDORAN: Bowbow!
+
+***DAD_HOUSE2_PEWTER
+
+Our POKeMON's an 
+outsider, so it's
+hard to handle.
+
+An outsider is a
+POKeMON that you
+get in a trade.
+
+It grows fast, but
+it may ignore an
+unskilled trainer
+in battle!
+
+If only we had
+some BADGEs...
+
+--Museum PEWTER--
+
+***ATTENDANT_MUSEUM
+
+It's $50 for a 
+child's ticket.
+
+Would you like to
+come in?
+
+<<Input choice>>
+
+***GUY1_MUSEUM_UPSTAIRS
+
+That is one
+magnificent
+fossil!
+
+***FOSSIL1_MUSEUM_UPSTAIRS
+
+AERODACTYL Fossil
+A primitive and
+rare POKeMON.
+
+***FOSSIL2_MUSEUM_UPSTAIRS
+
+KABUTOPS Fossil
+A primitive and
+rare POKeMON.
+
+***FOSSIL_MUSEUM_DOWNSTAIRS
+
+Meteorite that
+fell on MT. MOON.
+(MOON STONE?)
+
+
+***GUY1_MUSEUM_DOWNSTAIRS
+
+MOON STONE?
+
+What's so special 
+about it?
+
+***GUY2_MUSEUM_DOWNSTAIRS
+
+July 20, 1969!
+The 1st lunar
+landing!
+
+I bought a color 
+TV to watch it!
+
+***GUY3_MUSEUM_DOWNSTAIRS
+
+We have a space
+exhibit now.
+
+***SPACESHIP_MUSEUM
+
+SPACE SHUTTLE
+COLUMBIA
+
+***DAUGHTER_MUSEUM_DOWNSTAIRS
+
+I want a PIKACHU!
+It's so cute!
+
+I asked my Daddy
+to catch me one!
+
+***DAD_MUSEUM_DOWNSTAIRS
+
+Yeah, a PIKACHU
+soon, I promise!
+
+--Brocks gym--
+
+***STATUES_PEWTER_GYM
+
+PEWTER CITY
+POKeMON GYM
+LEADER: BROCK
+
+WINNING TRAINERS:
+<RIVAL>
+
+***GUY1_PEWTER_GYM
+
+Hiya! I can tell
+you have what it
+takes to become a
+POKeMON champ!
+
+I'm no trainer,
+but I can tell
+you how to win!
+
+Let me take you 
+to the top!
+
+<<Input choice>>
+
+***TRAINER1_PEWTER_GYM_ENCOUNTER
+
+Stop right there,
+kid!
+
+You're still light 
+years from facing
+BROCK!
+
+***TRAINER1_PEWTER_GYM_AFTER
+
+You're pretty hot,
+but not as hot
+as BROCK!
+
+***BROCK_ENCOUNTER
+
+I'm BROCK!
+I'm PEWTER's GYM
+LEADER!
+
+I believe in rock
+hard defense and 
+determination!
+
+That's why my
+POKeMON are all
+the rock-type!
+
+Do you still want
+to challenge me?
+Fine then! Show
+me your best!
+
+***BROCK_AFTER
+
+Wait! Take this
+with you!
+
+<NAME> received 
+TM34!
+
+A TM contains a
+technique that
+can be taught to
+POKeMON!
+
+A TM is good only 
+once! So when you
+use one to teach
+a new technique,
+pick the POKeMON
+carefully!
+
+TM34 contains 
+BIDE!
+
+Your POKeMON will
+absorb damage in 
+battle then pay
+it back double!
+
+***BROCK_FINAL
+
+There are all
+kinds of trainers
+in the world!
+
+You appear to be 
+very gifted as a
+POKeMON trainer!
+
+Go to the GYM in
+CERULEAN and test
+your abilities!
