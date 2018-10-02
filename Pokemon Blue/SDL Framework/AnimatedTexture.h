@@ -4,45 +4,46 @@
 #include "Timer.h"
 #include "Texture.h"
 
-
 class AnimatedTexture : public Texture {
 public:
 	enum WRAP_MODE { ONCE = 0, LOOP = 1 };
-	enum ANIM_DIR { HORIZONTAL = 0, VERTICAL = 1};
+	enum ANIM_DIR { HORIZONTAL = 0, VERTICAL = 1 };
+	class AnimData {
+	public:
+		AnimData(int x, int y, int w, int h, int frameCount, float animationSpeed, ANIM_DIR animationDir);
+
+		void WrapMode(WRAP_MODE mode);
+		void Run(float deltaTime);
+
+		int mStartX;
+		int mStartY;
+
+		float mAnimationTimer;
+		bool mAnimationDone;
+		float mAnimationSpeed;
+		float mTimePerFrame;
+		int mFrameCount;
+
+		WRAP_MODE mWrapMode;
+		ANIM_DIR mAnimationDirection;
+	};
 
 private:
 	Timer* mTimer;
-	int mStartX;
-	int mStartY;
-
-	float mAnimationTimer;
-	float mAnimationSpeed;
-	float mTimePerFrame;
-	int mFrameCount;
-
-	WRAP_MODE mWrapMode;
-	ANIM_DIR mAnimationDirection;
-	bool mAnimationDone;
+	AnimData* data;
 
 public:
-	// Loads a texture from a file (relative to the exe path)
-	// Supports spritesheets
-	// x - Starting pixel's X on spritesheet
-	// y - Starting pixel's Y on spritesheet
-	// w - The width of the clipped sprite
-	// h - The height of the clipped sprite
-	// frameCount - The number of frames in the animation
-	// animationSpeed - How long it takes to run the animation in seconds
-	// animationDirection - How the animation sprites are arranged in the spritesheet
-
-	AnimatedTexture(std::string filename, int x, int y, int w, int h, int frameCount, float animationSpeed, ANIM_DIR animationDir);
+	AnimatedTexture(std::string filename, int x, int y, int w, int h);
 	~AnimatedTexture();
 
-	void WrapMode(WRAP_MODE mode);
-
 	void Update();
-};
 
+	void AssignData(int _x, int _y, int _w, int _h, int _frameCount, float _animSpeed, ANIM_DIR _animDir) {
+		AssignData(new AnimData(_x, _y, _w, _h, _frameCount, _animSpeed, _animDir));
+	}
+	void AssignData(AnimData* data);
+	AnimData* GetData() { return data; }
+};
 
 
 #endif
