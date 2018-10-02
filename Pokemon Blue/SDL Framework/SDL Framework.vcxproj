@@ -23,7 +23,7 @@
     <ProjectGuid>{07B508AF-C5B6-4454-9B67-29E8ADA1FB6B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>SDLFramework</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -93,7 +93,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\zain\Desktop\Pokemon Blue\SDL2-devel-2.0.8-VC\SDL2-2.0.8\include;C:\Users\zain\Desktop\Pokemon Blue\SDL2_ttf-devel-2.0.14-VC\SDL2_ttf-2.0.14\include;C:\Users\zain\Desktop\Pokemon Blue\SDL2_mixer-devel-2.0.2-VC\SDL2_mixer-2.0.2\include;C:\Users\zain\Desktop\Pokemon Blue\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Khori Armstrong\Documents\GitHub\pok-mon-blue-C-\Pokemon Blue\SDL2-devel-2.0.8-VC\SDL2-2.0.8\include;C:\Users\Khori Armstrong\Documents\GitHub\pok-mon-blue-C-\Pokemon Blue\SDL2_ttf-devel-2.0.14-VC\SDL2_ttf-2.0.14\include;C:\Users\Khori Armstrong\Documents\GitHub\pok-mon-blue-C-\Pokemon Blue\SDL2_mixer-devel-2.0.2-VC\SDL2_mixer-2.0.2\include;C:\Users\Khori Armstrong\Documents\GitHub\pok-mon-blue-C-\Pokemon Blue\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
