@@ -30,7 +30,7 @@ GameManager::GameManager() {
 	mPokemon = new Pokemon();
 
 
-	Database::Instance();
+	Database::Instance()->Initialize();
 }
 
 GameManager::~GameManager() {

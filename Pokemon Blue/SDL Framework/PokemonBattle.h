@@ -4,7 +4,8 @@
 #include "Pokemon.h"
 
 
-class PokemonBattle : public Pokemon {
+
+class PokemonBattle : public Database {
 private:
 
 	//std::ifstream pokemonAttack;
@@ -26,6 +27,9 @@ public:
 	void PokemonOHKO(Pokemon*, Pokemon*);
 	void PokemonResistance(Pokemon*, Pokemon*);
 	void Substitute(float, Pokemon*, Pokemon*);
+
+	//
+
 
 
 };

@@ -11,7 +11,7 @@ Pokemon::~Pokemon() {}
 void Pokemon::BattleFunction() {
 	if (isBattle) {
 		
-		Database::Instance()->GetTypeEffectiveness(PokeType::FIRE, PokeType::BUG);
+		//TypeRelation::GetTypeEffectiveness(PokeType::FIRE, PokeType::BUG);
 		//int c;
 
 		//PLAYER CHOOSES FROM OPTIONS

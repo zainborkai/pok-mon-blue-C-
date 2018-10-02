@@ -8,7 +8,7 @@
 #include <map>
 
 
-enum class PokeType {
+enum class DataPokeType {
 	NORMAL = 0,
 	FIGHTER = 1,
 	FLYING = 2,
@@ -26,25 +26,26 @@ enum class PokeType {
 	NONE = 14,
 	COUNT = 15
 };
-static std::map<std::string, PokeType> strToPokeType = {
-	{ "NORMAL",		PokeType::NORMAL },
-	{ "FIGHTER",	PokeType::FIGHTER },
-	{ "FLYING",		PokeType::FLYING },
-	{ "POISON",		PokeType::POISON },
-	{ "GROUND",		PokeType::GROUND },
-	{ "ROCK",		PokeType::ROCK },
-	{ "BUG",		PokeType::BUG },
-	{ "GHOST",		PokeType::GHOST },
-	{ "FIRE",		PokeType::FIRE },
-	{ "WATER",		PokeType::WATER },
-	{ "GRASS",		PokeType::GRASS },
-	{ "ELECTRIC",	PokeType::ELECTRIC },
-	{ "PSYCHIC",	PokeType::PSYCHIC },
-	{ "ICE",		PokeType::ICE },
-	{ "NONE",		PokeType::NONE }
+static std::map<std::string, DataPokeType> strToPokeType = {
+	{ "NORMAL",		DataPokeType::NORMAL },
+	{ "FIGHTER",	DataPokeType::FIGHTER },
+	{ "FLYING",		DataPokeType::FLYING },
+	{ "POISON",		DataPokeType::POISON },
+	{ "GROUND",		DataPokeType::GROUND },
+	{ "ROCK",		DataPokeType::ROCK },
+	{ "BUG",		DataPokeType::BUG },
+	{ "GHOST",		DataPokeType::GHOST },
+	{ "FIRE",		DataPokeType::FIRE },
+	{ "WATER",		DataPokeType::WATER },
+	{ "GRASS",		DataPokeType::GRASS },
+	{ "ELECTRIC",	DataPokeType::ELECTRIC },
+	{ "PSYCHIC",	DataPokeType::PSYCHIC },
+	{ "ICE",		DataPokeType::ICE },
+	{ "NONE",		DataPokeType::NONE }
 };
 
-enum class MoveEffect {
+enum class MoveEffect
+{
 	Absorb,
 	SpeedDown,
 	Poison,
@@ -218,36 +219,24 @@ static std::map<std::string, PokemonType> strToPokemonType = {
 
 class TypeRelation {
 public:
+	TypeRelation();
+	~TypeRelation();
 	static float effectiveChart[4];
 
-	TypeRelation(PokeType atk, PokeType def, float eff) {
-		attacking = atk;
-		defending = def;
-		effect = eff;
-	}
-	PokeType attacking;
-	PokeType defending;
+	TypeRelation(DataPokeType, DataPokeType, float);
+	DataPokeType attacking;
+	DataPokeType defending;
 	float effect;
 };
-class PokeAttack {
+class DataPokeMove {
 public:
-	PokeAttack(std::string nam, std::string mod, int use, int pow, int acc, bool critRate, int pri, PokeType typ, int hitCnt, int procRt, MoveEffect procEff, bool useWrld) {
-		name = nam;
-		mode = mod;
-		uses = use;
-		power = pow;
-		accuracy = acc;
-		criticalRate = critRate;
-		priority = pri;
-		type = typ;
-		hitCounts = hitCnt;
-		procRates = procRt;
-		procEffect = procEff;
-		useWorld = useWrld;
-
-	}
-
+	DataPokeMove();
+	~DataPokeMove();
+	DataPokeMove(std::string, std::string, int, int, int, bool, int, DataPokeType, int, int, MoveEffect, bool);
 	std::string GetName() { return name; };
+
+	
+
 private:
 	std::string name;
 	std::string mode; // ??? <-- HUH?!
@@ -256,45 +245,34 @@ private:
 	int accuracy;
 	bool criticalRate;
 	int priority;
-	PokeType type;
+	DataPokeType type;
 	int hitCounts;
 	int procRates;
 	MoveEffect procEffect;
 	bool useWorld;
+
+
 };
 
-class PokeData {
+class DataPokeInfo {
 	std::string pokename;
 	int hitpoint;
 	int attack;
 	int defense;
 	int special;
 	int speed;
-	PokeType typeI;
-	PokeType typeII;
+	DataPokeType typeI;
+	DataPokeType typeII;
 	float mass;
 	int captureRate;
 	int exp;
 	
 
 public:
-	PokeData(std::string pknam, int hp, int atk, int def, int spc, int spd, PokeType tyI, PokeType tyII, float ms, int cr, int xp) {
-		pokename = pknam;
-		hitpoint = hp;
-		attack = atk;
-		defense = def;
-		special = spc;
-		speed = spd;
-		typeI = tyI;
-		typeII = tyII;
-		mass = ms;
-		captureRate = cr;
-		exp = xp;
-		
-	}
-
+	DataPokeInfo();
+	~DataPokeInfo();
+	DataPokeInfo(std::string, int, int, int, int, int, DataPokeType, DataPokeType, float, int, int);
 	std::string GetPokeData() { return pokename; }
-
 };
 
 
@@ -304,31 +282,14 @@ public:
 	Database();
 	~Database() {}
 
-	std::ifstream readfile;
+	void Initialize();
+	void FillDataPokeMove();
 
-#pragma region TypeRelation
-	std::vector<TypeRelation*> typeRelations;
-	void AddTypeRelation(PokeType atk, PokeType def, float eff) {
-		typeRelations.push_back(new TypeRelation(atk, def, eff));
-	};
-	float GetTypeEffectiveness(PokeType attacking, PokeType defending) {
-		for (TypeRelation* Q : typeRelations) {
-			if (Q->attacking == attacking && Q->defending == defending) {
-				return Q->effect;
-			}
-		}
-		//
-		return 1.00;
-	}
-#pragma endregion
 
-#pragma region PokeAttack
-	std::vector<PokeAttack*> pokemonAttacks;
-	void AddPokemonAttack(std::string nam, std::string mod, int use, int pow, int acc, bool critRate, int pri, PokeType typ, int hitCnt, int procRt, MoveEffect procEff, bool useWrld) {
-		pokemonAttacks.push_back(new PokeAttack(nam, mod, use, pow, acc, critRate, pri, typ, hitCnt, procRt, procEff, useWrld));
-	};
-	PokeAttack* GetPokemonAttack(std::string id) {
-		for (PokeAttack* Q : pokemonAttacks) {
+	std::vector<DataPokeMove*> pokemonAttacks;
+	void AddPokemonAttack(std::string nam, std::string mod, int use, int pow, int acc, bool critRate, int pri, DataPokeType typ, int hitCnt, int procRt, MoveEffect procEff, bool useWrld);
+	DataPokeMove* GetPokemonAttack(std::string id) {
+		for (DataPokeMove* Q : pokemonAttacks) {
 			if (Q->GetName() == id) {
 				return Q;
 			}
@@ -336,22 +297,25 @@ public:
 		//
 		return nullptr;
 	}
-#pragma endregion
 
-#pragma region PokemonDatabase
-	std::vector<PokeData*> pokeData;
-	void AddPokeData(std::string pknam, int hp, int atk, int def, int spc, int spd, PokeType tyI, PokeType tyII, float ms, int cr, int xp) {
-		pokeData.push_back(new PokeData(pknam, hp, atk, def, spc, spd, tyI, tyII, ms, cr, xp));
-	}
-	PokeData* GetPokeData(std::string pkd) {
-		for (PokeData* Q : pokeData) {
+	std::vector<DataPokeInfo*> pokedata;
+	void AddPokeData(std::string, int, int, int, int, int, DataPokeType, DataPokeType, float, int, int);
+	DataPokeInfo* GetPokeData(std::string pkd) {
+		for (DataPokeInfo* Q : pokedata) {
 			if (Q->GetPokeData() == pkd) {
 				return Q;
 			}
 		}
 		return nullptr;
 	}
-#pragma endregion
+
+	std::vector<TypeRelation*> typeRelations;
+	void AddTypeRelation(DataPokeType, DataPokeType, float);
+	float GetTypeEffectiveness(DataPokeType, DataPokeType);
+	
+	/*DataPokeMove* pokeAtk;
+	DataPokeInfo* pokeData;
+	DataPokeType* pokeType;*/
 
 private:
 	static Database* sInstance;
@@ -359,3 +323,8 @@ private:
 
 
 #endif // !DATABASE_H
+
+
+
+//std::string columns[11] = { "POKEMON", "HP", "ATK", "DEF", "Special", "Speed", "TYPE I", "TYPE II", "Mass(kG)", "Capture Rate", "Total EXP" };
+

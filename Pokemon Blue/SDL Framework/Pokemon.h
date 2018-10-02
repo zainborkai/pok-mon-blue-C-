@@ -68,7 +68,7 @@ private:
 		RUN = 3,
 	};
 
-	PokeType pokeType;
+	DataPokeType pokeType;
 	//std::vector<std::string>pokeType;
 
 public:
@@ -83,8 +83,8 @@ public:
 	void SetHP(int s_hp) { hp = s_hp; }
 	int GetHp() { return hp; }
 
-	void SetPokeType(PokeType s_pokeType) { pokeType = s_pokeType; }
-	PokeType GetPokeType() { return pokeType; }
+	void SetPokeType(DataPokeType s_pokeType) { pokeType = s_pokeType; }
+	DataPokeType GetPokeType() { return pokeType; }
 
 	void SetSpeed(int s_speed) { speed = s_speed; }
 	int GetSpeed() { return speed; }
