@@ -6,45 +6,38 @@
 
 
 class Texture : public GameEntity {
-protected: 
-	// The SDL_Texture to be rendered
-	SDL_Texture* mTex;
+protected:
+	SDL_Texture * mTex;
 
-	// Used to render the texture
+
 	Graphics* mGraphics;
 
-	// Width of the texture
+
 	int mWidth;
-
-	// Height of the texture
 	int mHeight;
+	Vector2 centering;
 
-	// True if the texture is loaded from a spritesheet
+
 	bool mClipped;
 
-	// Is used to render the texture on the screen
 	SDL_Rect mRenderRect;
 
-	// Is used to clip the texture from a spritesheet
+
 	SDL_Rect mClipRect;
 
+
 public:
-	// Loads a whole texture from a file
 	Texture(std::string filename);
-
-	// Loads a texture from a file (spritesheets)
-	// x = Starting pixel's X on the spritesheet
-	// y = Starting pixel's Y on the spritesheet
-	// w = The width of the clipped sprite
-	// h = The height of the clipped sprite
 	Texture(std::string filename, int x, int y, int w, int h);
-
-	// Converts the given text into a texture (Constructor)
 	Texture(std::string text, std::string fontpath, int size, SDL_Color colour);
 	~Texture();
 
-	// Called to render the texture to screen
+
 	virtual void Render();
+	void AssignTexture(std::string filename);
+	void AssignTexture(std::string filename, int x, int y, int w, int h);
+	void AssignTexture(std::string text, std::string fontpath, int size, SDL_Color colour);
+	void SetCenter(int x, int y);
 };
 
 

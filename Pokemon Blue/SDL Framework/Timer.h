@@ -7,17 +7,11 @@ class Timer {
 private:
 	static Timer* sInstance;
 
-	// Contains the time of the last reset
 	unsigned int mStartTicks;
-
-	// Stores the number of milliseconds sicne last reset
 	unsigned int mElapsedTicks;
-
-	// Stores the time elapsed since the last reset in seconds
 	float mDeltaTime;
-
-	// Can be used tos eppd up or slowdown all entities that transform using it
 	float mTimeScale;
+
 
 public:
 	static Timer* Instance();
@@ -31,8 +25,6 @@ public:
 private:
 	Timer();
 	~Timer();
-
 };
 
-
-#endif TIMER_H
+#endif

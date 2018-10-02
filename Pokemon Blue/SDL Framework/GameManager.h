@@ -4,8 +4,8 @@
 #include "InputManager.h"
 #include "AudioManager.h"
 #include "Timer.h"
-#include "Texture.h"
-#include "PalletTown.h"
+#include "Actor.h"
+#include <vector>
 
 
 class GameManager {
@@ -22,7 +22,7 @@ private:
 	AudioManager* mAudioMgr;
 
 	Timer* mTimer;
-	PalletTown* mPalletTown;
+	std::vector<Actor*> actorList;
 
 	SDL_Event mEvents;
 
@@ -30,6 +30,15 @@ public:
 	static GameManager* Instance();
 	static void Release();
 	void Run();
+
+	// Actor* CreateActor();
+	bool RegisterActor(Actor* act);
+	bool UnregisterActor(Actor* act);
+	std::vector<Actor*> _destroyList;
+	void _QueueDestroy(Actor* act);
+	void _ProcessDestroys();
+
+	inline int GetFrameRate() { return FRAME_RATE; };
 
 private:
 	GameManager();
@@ -41,4 +50,4 @@ private:
 };
 
 
-#endif 
+#endif
