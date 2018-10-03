@@ -219,8 +219,8 @@ static std::map<std::string, PokemonType> strToPokemonType = {
 
 class TypeRelation {
 public:
-	TypeRelation();
-	~TypeRelation();
+	TypeRelation(){}
+	~TypeRelation(){}
 	static float effectiveChart[4];
 
 	TypeRelation(DataPokeType, DataPokeType, float);
@@ -230,8 +230,8 @@ public:
 };
 class DataPokeMove {
 public:
-	DataPokeMove();
-	~DataPokeMove();
+	DataPokeMove(){}
+	~DataPokeMove(){}
 	DataPokeMove(std::string, std::string, int, int, int, bool, int, DataPokeType, int, int, MoveEffect, bool);
 	std::string GetName() { return name; };
 
@@ -269,8 +269,8 @@ class DataPokeInfo {
 	
 
 public:
-	DataPokeInfo();
-	~DataPokeInfo();
+	DataPokeInfo() {}
+	~DataPokeInfo() {}
 	DataPokeInfo(std::string, int, int, int, int, int, DataPokeType, DataPokeType, float, int, int);
 	std::string GetPokeData() { return pokename; }
 };
@@ -279,8 +279,9 @@ public:
 class Database {
 public:
 	static Database* Instance();
-	Database();
-	~Database() {}
+	Database(){}
+	~Database(){}
+	//ReleaseData();
 
 	void Initialize();
 	void FillDataPokeMove();

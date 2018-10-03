@@ -11,13 +11,6 @@ Database* Database::Instance() {
 	return sInstance;
 }
 
-TypeRelation::TypeRelation() {
-	std::ifstream readfile;
-	
-}
-
-TypeRelation::~TypeRelation(){}
-
 void Database::AddTypeRelation(DataPokeType atk, DataPokeType def, float eff) {
 	typeRelations.push_back(new TypeRelation(atk, def, eff));
 };
@@ -143,9 +136,6 @@ void Database::FillDataPokeMove() {
 	readfile.close();
 }
 
-DataPokeMove::DataPokeMove(){}
-DataPokeMove::~DataPokeMove(){}
-
 void Database::AddPokemonAttack(std::string nam, std::string mod, int use, int pow, int acc, bool critRate, int pri, DataPokeType typ, int hitCnt, int procRt, MoveEffect procEff, bool useWrld) {
 	pokemonAttacks.push_back(new DataPokeMove(nam, mod, use, pow, acc, critRate, pri, typ, hitCnt, procRt, procEff, useWrld));
 };
@@ -165,47 +155,6 @@ DataPokeMove::DataPokeMove(std::string nam, std::string mod, int use, int pow, i
 	useWorld = useWrld;
 }
 
-DataPokeInfo::DataPokeInfo() {
-	/*std::ifstream readfile;
-	readfile.open("PokemonDatabase.csv");
-
-	while (!readfile.eof()) {
-		int numline = 0;
-		std::string temp;
-
-		std::string pknam;
-		int hp;
-		int atk;
-		int def;
-		int spc;
-		int spd;
-		DataPokeType tyI;
-		DataPokeType tyII;
-		float ms;
-		int cr;
-		int xp;
-
-		getline(readfile, pknam, ',');
-		getline(readfile, temp, ','); hp = stoi(temp);
-		getline(readfile, temp, ','); atk = stoi(temp);
-		getline(readfile, temp, ','); def = stoi(temp);
-		getline(readfile, temp, ','); spc = stoi(temp);
-		getline(readfile, temp, ','); spd = stoi(temp);
-		getline(readfile, temp, ','); tyI = strToPokeType[temp];
-		getline(readfile, temp, ','); tyII = strToPokeType[temp];
-		getline(readfile, temp, ','); ms = stof(temp);
-		getline(readfile, temp, ','); cr = stoi(temp);
-		getline(readfile, temp, ','); xp = stoi(temp);
-
-		AddPokeData(pknam, hp, atk, def, spc, spd, tyI, tyII, ms, cr, xp);
-		//std::cout << pknam<< std::endl;
-	}
-
-	readfile.close();*/
-}
-
-DataPokeInfo::~DataPokeInfo(){}
-
 void Database::AddPokeData(std::string pknam, int hp, int atk, int def, int spc, int spd, DataPokeType tyI, DataPokeType tyII, float ms, int cr, int xp) {
 	pokedata.push_back(new DataPokeInfo(pknam, hp, atk, def, spc, spd, tyI, tyII, ms, cr, xp));
 }
@@ -223,8 +172,6 @@ DataPokeInfo::DataPokeInfo(std::string pknam, int hp, int atk, int def, int spc,
 	captureRate = cr;
 	exp = xp;
 }
-
-Database::Database() {}
 
 void Database::Initialize() {
 

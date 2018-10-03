@@ -19,8 +19,8 @@ protected:
 
 
 public:
-	PokemonBattle();
-	~PokemonBattle() {};
+	PokemonBattle(){}
+	~PokemonBattle() {}
 	void PokemonDamage(double, Pokemon*);
 	void PokemonSTAB(float, Pokemon*);
 	void PokemonMovePriority(Pokemon*, Pokemon*);

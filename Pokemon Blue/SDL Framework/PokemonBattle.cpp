@@ -1,7 +1,5 @@
 #include "PokemonBattle.h"
 
-PokemonBattle::PokemonBattle() {}
-
 void PokemonBattle::PokemonDamage(double damage, Pokemon* pokemon) {
 
 	damage = ((((2 * pokemon->GetLevel() / 5 + 2) * pokemon->GetSpecAttack() * pokemon->GetBaseAttack() / pokemon->GetDefense()) / 50 + 2) * mod);
