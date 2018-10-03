@@ -4,6 +4,7 @@
 #include <map>
 #include "TiledTexture.h"
 #include "Helper.h"
+#include "GameSystem.h"
 
 
 class TextArea : public TiledTexture {
@@ -105,7 +106,12 @@ public:
 		TiledTexture::Update();
 
 
-		textTime++;
+		if (InputManager::Instance()->KeyDown(GameSystem::KEY_AFFIRM)) {
+			textTime += 1 *3;
+		}
+		else {
+			textTime += 1;
+		}
 		//
 		textDuration = textSpeed * message.size(); // ??? <-- Kinda inefficient...
 		//

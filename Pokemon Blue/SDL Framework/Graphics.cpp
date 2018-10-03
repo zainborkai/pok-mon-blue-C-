@@ -6,6 +6,7 @@ Graphics* Graphics::sInstance = NULL;
 bool Graphics::sInitialized = false;
 
 const Vector2 Graphics::GameScale = Vector2(4, 4);
+Vector2 Graphics::GamePos = Vector2(0, 0);
 
 Graphics* Graphics::Instance() {
 	if (sInstance == NULL) {
@@ -48,7 +49,7 @@ bool Graphics::Init() {
 	}
 	
 
-	mWindow = SDL_CreateWindow(WINDOW_TITLE, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+	mWindow = SDL_CreateWindow(WINDOW_TITLE, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH*GameScale.x, SCREEN_HEIGHT*GameScale.y, SDL_WINDOW_SHOWN);
 	//
 	if (mWindow == NULL) {
 		std::printf("Window Creation Error: %s\n", SDL_GetError());

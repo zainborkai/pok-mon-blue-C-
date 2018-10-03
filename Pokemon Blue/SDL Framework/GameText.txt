@@ -1,0 +1,1410 @@
+***INTRO
+
+Hello there!
+Welcome to the
+world of POKeMON!
+
+My name is OAK!
+People call me
+the POKeMON PROF!
+
+This world is 
+inhabited by
+creatures called
+POKeMON!
+
+For some people, 
+POKeMON are
+pets. Others use
+them for fights.
+
+Myself...
+
+I study POKeMON
+as a profession.
+
+First, what is 
+your name?
+
+<<Name select input>>
+
+Right! So your 
+name is <NAME>!
+
+This is my grand-
+son. He's been 
+your rival since
+you were a baby.
+
+...Erm, what is
+his name again?
+
+<<Rival name select input>>
+
+That's right! I
+remember now! His
+name is <RIVAL>!
+
+<NAME>!
+
+Your very own
+POKeMON legend is 
+about to unfold!
+
+A world of dreams
+and adventures
+with POKeMON
+awaits! Let's go!
+
+--ROOM--
+
+***SNES
+
+<NAME> is
+playing the SNES!
+...Okay!
+It's time to go!
+
+***PC
+
+<NAME> turned on
+the PC.
+
+What do you want
+to do?
+
+<<PC needs some input functionality>>
+
+--DOWNSTAIRS--
+
+***TV
+
+There's a movie
+on TV. Four boys
+are walking on
+railroad tracks.
+
+I better go too.
+
+***BOOKSHELF
+
+Crammed full of 
+POKeMON books!
+
+***MOM_BEGINNING
+
+MOM: Right.
+All boys leave
+home some day.
+It said so on TV.
+
+PROF. OAK, next
+door, is looking
+for you.
+
+--OUTSIDE--
+
+***SIGN_OUTSIDE_HOUSE
+
+<NAME>'s house
+
+***GIRL_OUTSIDE_HOUSE
+
+I'm raising
+POKeMON too!
+
+When they get
+strong, they can
+protect me!
+
+***TOWN_SIGN
+
+PALLET TOWN
+Shades of your
+journey await!
+
+--RIVAL HOUSE--
+
+***TOWNMAP
+
+A TOWN MAP.
+
+***TABLE_RIVAL_HOUSE
+
+It's a big map!
+This is useful!
+
+***RIVAL_SISTER_BEGINNING
+
+Hi <NAME>!
+<RIVAL> is out at
+Grandpa's lab.
+
+***GUY_OUTSIDE_OAKLAB
+
+Technology is
+incredible!
+
+You can now store 
+and recall items
+and POKeMON as
+data via PC!
+
+--OAK RESEARCH LAB--
+
+***GUYS_LAB
+
+I study POKeMON as 
+PROF. OAK's AIDE.
+
+***GIRL_LAB
+
+PROF. OAK is the
+authority on
+POKeMON!
+
+Many POKeMON
+trainers hold him
+in high regard!
+
+***RIVAL_BEGINNING
+
+<RIVAL>: yo
+<NAME>! Gramps
+isn't around!
+
+***COMPUTER_OAK_LAB
+
+There's an email
+message here!
+...
+
+Calling all 
+POKeMON trainers!
+
+The elite trainers
+of POKeMON LEAGUE
+are ready to take
+on all comers!
+
+Bring your best
+POKeMON and see
+how you rate as a 
+trainer!
+
+POKeMON LEAGUE HQ
+INDIGO PLATEAU
+
+PS: PROF. OAK,
+please visit us!
+...
+
+***BOOK_OAK_LAB
+
+It's encyclopedia-
+like, but the
+pages are blank!
+
+***HELP1_OAK_LAB
+
+Push START to
+open the MENU!
+
+***HELP2_OAK_LAB
+
+The SAVE option is
+on the MENU
+screen.
+
+***POKEBALL_OAK_LAB
+
+Those are POKe
+BALLs. They
+contain POKeMON!
+
+***SCENE_ON_GRASS
+
+OAK: Hey! Wait!
+Don't go out!
+
+OAK: It's unsafe!
+Wild POKeMON live
+in tall grass!
+
+You need your own 
+POKeMON for your
+protection.
+I know!
+
+Here, come with
+me!
+
+<RIVAL>: Gramps!
+I'm fed up with
+waiting!
+
+OAK: <RIVAL>?
+Let me think...
+
+oh, that's right, 
+I told you to
+come! Just wait!
+
+Here, <NAME>!
+
+There are 3
+POKeMON here!
+
+Haha!
+
+They are inside 
+the POKe BALLs.
+
+When I was young,
+I was a serious
+POKeMON trainer!
+
+In my old age, I
+have only 3 left,
+but you can have
+one! Choose!
+
+<RIVAL>: Hey!
+Gramps! What
+about me?
+
+OAK: Be patient!
+<RIVAL>, you can
+have one too!
+
+***OAK_BEFORE_CHOICE
+
+OAK: Now, <NAME>,
+which POKeMON do
+you want?
+
+***RIVAL_BEFORE_CHOICE
+
+<RIVAL>: Hey, I
+don't need to be
+greedy like you!
+
+Go ahead and
+choose, <NAME>!
+
+***LEAVE_BEFORE_CHOICE
+
+OAK: Hey! Don't
+go away yet!
+
+<<Picking your pokemon input>>
+
+<<Name your pokemon input>>
+
+***AFTER_CHOICE
+
+<RIVAL>: I'll take 
+this one, then!
+
+<RIVAL> received
+a <POKeMON>!
+
+***LAST_POKEBALL
+
+That's PROF.OAK's
+last POKeMON!
+
+***RIVAL_AFTER_CHOICE
+
+<RIVAL>: My
+POKeMON looks a
+lot stronger.
+
+***OAK_AFTER_CHOICE
+
+OAK: If a wild
+POKeMON appears,
+your POKeMON can
+fight against it!
+
+***LEAVING_OAK_LAB
+
+<RIVAL>: Wait
+<NAME>!
+Let's check out
+our POKeMON!
+
+Come on, I'll take
+you on!
+
+***AFTER_FIRST_RIVAL_BATTLE
+
+<RIVAL>: Okay!
+I'll make my
+POKeMON fight to
+toughen it up!
+
+<NAME>! Gramps!
+Smell you later!
+
+***OAK_AFTER_RIVAL_BATTLE
+
+OAK: MATT,
+raise your young
+POKeMON by making
+it fight!
+
+***MOM_STATIC
+
+MOM: <NAME>!
+You should take a 
+quick rest
+
+MOM: Oh good!
+You and your
+POKeMON are
+looking great!
+Take care now!
+
+--ROUTE 1--
+
+***SIGN1_ROUTE1
+
+ROUTE 1
+PALLET TOWN - 
+VIRIDIAN CITY
+
+***GUY1_ROUTE1
+
+Hi! I work at a
+POKeMON MART.
+
+It's a convenient
+shop, so please
+visit us in
+VIRIDIAN CITY.
+
+I know, I'll give
+you a sample!
+Here you go!
+
+<NAME> got
+POTION!
+
+We also carry
+POKe BALLs for
+catching POKeMON!
+
+***GUY2_ROUTE1
+
+See those ledges
+along the road?
+
+It's a bit scary,
+but you can jump
+from them.
+
+You can get back
+to PALLET TOWN
+quicker that way.
+
+--VIRIDIAN CITY--
+
+***SIGN1_VIRIDIAN
+
+TRAINER TIPS
+
+The battle moves 
+of POKeMON are
+limited by their
+POWER POINTs, PP.
+
+To replenish PP,
+rest your tired
+POKeMON at a
+POKeMON CENTER!
+
+***SIGN2_VIRIDIAN
+
+VIRIDIAN CITY
+The Eternally
+Green Paradise
+
+***GUY1_VIRIDIAN
+
+You want to know
+about the 2 kinds
+of caterpillar
+POKeMON?
+
+<<Input choice>>
+
+***GUY2_VIRIDIAN
+
+Those POKe BALLs
+at your waist!
+You have POKeMON!
+
+It's great that
+you can carry and
+use POKeMON any
+time, anywhere!
+
+--POKe CENTRE--
+
+***GUY_SITTING_POKECENTRE_VIRIDIAN
+
+POKeMON CENTERs
+heal your tired,
+hurt or fainted
+POKeMON!
+
+***GUY1_STANDING_POKECENTRE_VIRIDIAN
+
+There's a POKeMON
+CENTER in every
+town ahead.
+
+They don't charge 
+any money either!
+
+***GUY2_STANDING_POKECENTRE_VIRIDIAN
+
+You can use that 
+PC in the corner.
+
+The receptionist 
+told me. So kind!
+
+***POKECENTRE_NURSE
+
+Welcome to our
+POKeMON CENTER!
+
+We heal your 
+POKeMON back to
+perfect health!
+
+Shall we heal your
+POKeMON?
+
+<<Input choice>>
+
+***CABLE_CLUB
+
+Welcome to the 
+cable club!
+
+We're making
+preparations.
+Please wait.
+
+--POKEMART--
+
+***POKEMART_VIRIDIAN_CUTSCENE
+
+Hey! You came from
+PALLET TOWN?
+
+You know PORF. 
+OAK, right?
+
+His order came in.
+Will you take it
+to him?
+
+<NAME> got
+OAK's PARCEL!
+
+***ATTENDANT_POKEMART_VIRIDIAN
+
+Okay! Say hi to
+PROF. OAK for me!
+
+***GUY1_POKEMART_VIRIDIAN
+
+This shops sells
+many ANTIDOTEs.
+
+***GUY2_POKEMART_VIRIDIAN
+
+No! POTIONs are
+all sold out.
+
+***POKEMART_SHELF
+
+Wow! Tons of 
+POKeMON stuff!
+
+--SCHOOL VIRIDIAN--
+
+***STUDENT_SCHOOL
+
+Whew! I'm trying 
+to memorize all
+my notes.
+
+***NOTEBOOK_SCHOOL
+
+Looked at the 
+notebook!
+
+First page...
+
+POKe BALLs are
+used to catch
+POKeMON.
+
+Up to 6 POKeMON 
+can be carried.
+
+People who raise
+and make POKeMON
+fight are called
+POKeMON trainers.
+
+Turn the page?
+
+<<Input choice>>
+
+Second page...
+
+A healthy POKeMON
+may be hard to
+catch, so weaken
+it first!
+
+Poison, burns and
+other damage are
+effective!
+
+Turn the page?
+
+<<Input choice>>
+
+Third page...
+
+POKeMON trainers
+seek others to
+engage in POKeMON
+fights.
+
+Battles are 
+constantly fought
+at POKeMON GYMs.
+
+Turn the page?
+
+<<Input choice>>
+
+Fourth page...
+
+The goal for
+POKeMON trainers
+is to beat the
+top 8 POKeMON
+GYM LEADERs.
+
+Do so to earn the
+right to face...
+
+The ELITE FOUR of
+POKeMON LEAGUE!
+
+GIRL: Hey! Don't
+look at my notes!
+
+***TEACHER_SCHOOL
+
+Okay!
+
+Be sure to read 
+the blackboard 
+carefully!
+
+***BLACKBOARD
+
+The blackboard 
+describes POKeMON
+STATUS changes
+during battles.
+
+Which heading do 
+you want to read?
+
+<<Selecting a blackboard heading>>
+
+--People blocking path--
+
+***GIRL_BLOCKING_PATH_VIRIDIAN
+
+Oh Grandpa!
+Don't be so mean!
+
+He hasn't had 
+his coffee yet.
+
+***GRANDPA_BLOCKING_PATH_VIRIDIAN
+
+You can't go
+through here!
+This is private
+property!
+
+***RETURN_OAK_PARCEL
+
+Oak: oh, <NAME>!
+
+How is my old
+POKeMON?
+
+Well, it seems to
+like you a lot.
+
+You must be
+talented as a
+POKeMON trainer!
+
+What? You have
+something for me?
+
+<NAME> delivered
+OAK's PARCEL.
+
+ah! This is the
+custom POKe BALL
+I ordered!
+Thank you!
+
+<RIVAL>: Gramps!
+
+<RIVAL>: What did 
+you call me for?
+
+OAK: Oh right! I 
+have a request
+of you two.
+
+On the desk there
+is my invention, 
+POKeDEX!
+
+It automatically
+records data on
+POKeMON you've 
+seen of caught!
+
+It's a hi-tech
+encyclopedia!
+
+OAK: <NAME> and 
+<RIVAL>! take
+these with you!
+
+<NAME> got
+POKeDEX from OAK!
+
+To make a complete
+guide on all the
+POKeMON in the
+world...
+
+That was my dream!
+
+But, I'm too old!
+I can't do it!
+
+So, I want you two
+to fulfill my
+dream for me!
+
+Get moving, you
+two!
+
+This is a great
+undertaking in
+POKeMON history!
+
+<RIVAL>: Alright
+Gramps! Leave it
+all to me!
+
+<NAME>, I hate to
+say it, but I
+don't need you!
+
+I know! I'll
+borrow a TOWN MAP
+from my sis!
+
+I'll tell her not
+to lend you one,
+<NAME>! Hahaha!
+
+***OAK_AFTER_DELIVERY
+
+POKeMON around the
+world wait for
+you, <NAME>!
+
+***RIVAL_SISTER_AFTER_DELIVERY
+
+Grandpa asked you
+to run an errand?
+
+Here, this will
+help you!
+
+Use the TOWN MAP
+to find out where
+you are.
+
+***RIVAL_SISTER_AFTER_MAP
+
+POKeMON are living
+things! 
+
+If they get tired,
+give them a rest!
+
+***POKEMART_ATTENDANT
+
+Hi there!
+May I help you?
+
+<<Pokemart shopping screen>>
+
+***RIVAL_ROUTE22
+
+<RIVAL>: Hey!
+<NAME>!
+
+You're going to
+POKeMON LEAGUE?
+
+Forget it! You
+probably don't
+have any BADGEs!
+
+The guard won't 
+let you through!
+
+By the way, did
+your POKeMON
+get any stronger?
+
+***RIVAL_ROUTE22_AFTER_BATTLE
+
+I heard POKeMON 
+LEAGUE has many
+tough trainers!
+
+I have to figure
+out how to get
+past them!
+
+You should quit 
+dawdling and get
+a move on!
+
+***SIGN1_ROUTE22
+
+POKeMON LEAGUE
+Front Gate
+
+***GUARD_ROUTE22
+
+Only truly skilled
+trainers are
+allowed through.
+
+You don't have the
+BOULDERBADGE yet!
+
+The rules are 
+rules. I can't
+let you pass.
+
+***GIRL_HOUSE_VIRIDIAN
+
+My Daddy loves
+POKeMON too.
+
+***DAD_HOUSE_VIRIDIAN
+
+Coming up with
+nicknames is fun,
+but hard.
+
+Simple names are 
+the easiest to
+remember.
+
+***SPEAROW_HOUSE_VIRIDIAN
+
+SPEARY: Tetweet!
+
+***SIGN_HOUSE_VIRIDIAN
+
+SPEAROW
+Name: SPEARY
+
+***GIRL_BLOCKING_PATH_AFTER_OAK_DELIVERY
+
+When I go shop in
+PEWTER CITY, I
+have to take the
+winding trail in
+VIRIDIAN FOREST.
+
+***GRANDPA_BLOCKING_PATH_AFTER_OAK_DELIVERY
+
+ahh, I've had my
+coffee now and I
+feel great!
+
+Sure you can go 
+through!
+
+Are you in a
+hurry?
+
+<<Input choice>>
+
+***GUY_OUTSIDE_GYM_VIRIDIAN
+
+This POKeMON GYM
+is always closed.
+
+I wonder who the
+LEADER is?
+
+***GYM_DOOR_VIRIDIAN
+
+The GYM's doors 
+are locked...
+
+***SIGN3_VIRIDIAN
+
+TRAINER TIPS
+
+Catch POKeMON
+and expand your
+collection!
+
+The more you have,
+the easier it is
+to fight!
+
+***SIGN1_ROUTE2
+
+ROUTE 2
+VIRIDIAN CITY - 
+PEWTER CITY
+
+--Building going to Viridian forest--
+
+***GIRL1_BUILDING_ROUTE2
+
+RATTATA may be
+small, but its
+bite is wicked!
+Did you get one?
+
+***GIRL2_BUILDING_ROUTE2
+
+Are you going to
+VIRIDIAN FOREST?
+Be careful, it's
+a natural maze!
+
+--VIRIDIAN FOREST--
+
+***SIGN1_VIRIDIAN_FOREST
+
+TRAINER TIPS
+
+Weaken POKeMON
+before attempting
+capture!
+
+When healthy, 
+they may escape!
+
+***GUY1_VIRIDIAN_FOREST
+
+I came here with
+some friends!
+
+They're out for
+POKeMON fights!
+
+***GUY2_VIRIDIAN_FOREST
+
+I ran out of POKe
+BALLs to catch
+POKeMON with!
+
+You should carry 
+extras!
+
+***SIGN2_VIRIDIAN_FOREST
+
+TRAINER TIPS
+
+If you want to
+avoid battles,
+stay away from
+grassy areas!
+
+***TRAINER1_VIRIDIAN_FOREST_ENCOUNTER
+
+Hey! You have
+POKeMON! Come on!
+Let's battle'em!
+
+***TRAINER1_VIRIDIAN_FOREST_AFTER
+
+Ssh! You'll scare
+the bugs away!
+
+***TRAINER2_VIRIDIAN_FOREST_ENCOUNTER
+
+Yo! You can't jam
+out if you're a
+POKeMON trainer!
+
+***TRAINER2_VIRIDIAN_FOREST_AFTER
+
+Darn! I'm going 
+to catch some
+stronger ones!
+
+***SIGN3_VIRIDIAN_FOREST
+
+For poison, use
+ANTIDOTE! Get it
+at POKeMON MARTs!
+
+***SIGN4_VIRIDIAN_FOREST
+
+TRAINER TIPS
+
+Contact PROF. OAK
+via PC to get
+your POKeDEX
+evaluated!
+
+***SIGN5_VIRIDIAN_FOREST
+
+TRAINER TIPS
+
+No stealing of 
+POKeMON from
+other trainers!
+Catch only wild
+POKeMON!
+
+***TRAINER3_VIRIDIAN_FOREST_ENCOUNTER
+
+Hey, wait up!
+What's the hurry?
+
+***TRAINER3_VIRIDIAN_FOREST_AFTER
+
+Sometimes, you
+can find stuff on
+the ground!
+
+I'm looking for 
+the stuff I
+dropped!
+
+***SIGN6_VIRIDIAN_FOREST
+
+LEAVING
+VIRIDIAN FOREST
+PEWTER CITY AHEAD
+
+--Building after VIRIDIAN FOREST--
+
+***OLD_GUY_BUILDING_VIRIDIAN_FOREST
+
+Have you noticed
+the bushes on the
+roadside?
+
+They can be cut
+down by a special
+POKeMON move.
+
+***YOUNG_GUY_BUILDING_VIRIDIAN_FOREST
+
+Many POKeMON live
+only in forests
+and caves.
+
+You need to look 
+everywhere to get
+different kinds!
+
+--PEWTER CITY--
+
+***SIGN1_PEWTER
+
+Any POKeMON that
+takes part in
+battle, however
+short, earns EXP!
+
+***GUY1_PEWTER
+
+There aren't many
+serious POKeMON
+trainers here!
+
+They're all like
+BUG CATCHERs,
+but PEWTER GYM's
+BROCK is totally 
+into it!
+
+***SIGN2_PEWTER
+
+PEWTER CITY
+A Stone Gray
+City
+
+***GUY2_PEWTER
+
+Psssst!
+Do you know what
+I'm doing?
+
+<<Input choice>>
+
+***SIGN3_PEWTER
+
+NOTICE!
+
+Thieves have been 
+stealing POKeMON
+fossils at MT.
+MOON! Please call
+PEWTER POLICE
+with any info!
+
+***GUY_EAST_PEWTER
+
+You're a trainer
+right? BROCK's
+looking for new
+challengers!
+Follow me!
+
+<<Guy takes you to the gym>>
+
+If you have the
+right stuff, go
+take on BROCK!
+
+***GIRL1_PEWTER
+
+It's rumored that
+CLEFAIRYs came
+from the moon!
+
+They appeared 
+after MOON STONE
+fell on MT. MOON.
+
+***SIGN4_PEWTER
+
+PEWTER CITY
+POKeMON GYM
+LEADER: BROCK
+
+The Rock Solid 
+POKeMON Trainer!
+
+***SIGN5_PEWTER
+
+PEWTER MUSEUM
+OF SCIENCE
+
+--House1 PEWTER--
+
+***OLD_GUY_HOUSE1_PEWTER
+
+POKeMON learn new
+techniques as
+they grow!
+
+But, some moves
+must be taught by
+the trainer!
+
+***YOUNG_GUY_HOUSE1_PEWTER
+
+POKeMON become
+easier to catch
+when they are
+hurt or asleep!
+
+But, it's not a 
+sure thing!
+
+--Poke centre PEWTER--
+
+***GUY_SITTING_POKECENTRE_PEWTER
+
+Yawn!
+
+When JIGGLYPUFF
+sings, POKeMON
+get drowsy...
+
+...Me too...
+Snore...
+
+***JIGGLYPUFF_POKECENTRE_PEWTER
+
+JIGGLYPUFF: Puu
+pupuu!
+
+***GUY_STANDING_POKECENTRE_PEWTER
+
+What!?
+
+TEAM ROCKET is
+at MT. MOON? Huh?
+I'm on the phone!
+
+Scram!
+
+--Poke mart PEWTER--
+
+***GUY1_POKEMART_PEWTER
+
+Good things can
+happen if you
+raise POKeMON
+diligently, even
+the weak ones!
+
+***GUY2_POKEMART_PEWTER
+
+A shady, old man
+got me to buy
+this really weird
+fish POKeMON!
+
+It's totally weak
+and it cost $500!
+
+--House2 PEWTER--
+
+***KID_HOUSE2_PEWTER
+
+NIDORAN sit!
+
+***NIDORAN_HOUSE2_PEWTER
+
+NIDORAN: Bowbow!
+
+***DAD_HOUSE2_PEWTER
+
+Our POKeMON's an 
+outsider, so it's
+hard to handle.
+
+An outsider is a
+POKeMON that you
+get in a trade.
+
+It grows fast, but
+it may ignore an
+unskilled trainer
+in battle!
+
+If only we had
+some BADGEs...
+
+--Museum PEWTER--
+
+***ATTENDANT_MUSEUM
+
+It's $50 for a 
+child's ticket.
+
+Would you like to
+come in?
+
+<<Input choice>>
+
+***GUY1_MUSEUM_UPSTAIRS
+
+That is one
+magnificent
+fossil!
+
+***FOSSIL1_MUSEUM_UPSTAIRS
+
+AERODACTYL Fossil
+A primitive and
+rare POKeMON.
+
+***FOSSIL2_MUSEUM_UPSTAIRS
+
+KABUTOPS Fossil
+A primitive and
+rare POKeMON.
+
+***FOSSIL_MUSEUM_DOWNSTAIRS
+
+Meteorite that
+fell on MT. MOON.
+(MOON STONE?)
+
+
+***GUY1_MUSEUM_DOWNSTAIRS
+
+MOON STONE?
+
+What's so special 
+about it?
+
+***GUY2_MUSEUM_DOWNSTAIRS
+
+July 20, 1969!
+The 1st lunar
+landing!
+
+I bought a color 
+TV to watch it!
+
+***GUY3_MUSEUM_DOWNSTAIRS
+
+We have a space
+exhibit now.
+
+***SPACESHIP_MUSEUM
+
+SPACE SHUTTLE
+COLUMBIA
+
+***DAUGHTER_MUSEUM_DOWNSTAIRS
+
+I want a PIKACHU!
+It's so cute!
+
+I asked my Daddy
+to catch me one!
+
+***DAD_MUSEUM_DOWNSTAIRS
+
+Yeah, a PIKACHU
+soon, I promise!
+
+--Brocks gym--
+
+***STATUES_PEWTER_GYM
+
+PEWTER CITY
+POKeMON GYM
+LEADER: BROCK
+
+WINNING TRAINERS:
+<RIVAL>
+
+***GUY1_PEWTER_GYM
+
+Hiya! I can tell
+you have what it
+takes to become a
+POKeMON champ!
+
+I'm no trainer,
+but I can tell
+you how to win!
+
+Let me take you 
+to the top!
+
+<<Input choice>>
+
+***TRAINER1_PEWTER_GYM_ENCOUNTER
+
+Stop right there,
+kid!
+
+You're still light 
+years from facing
+BROCK!
+
+***TRAINER1_PEWTER_GYM_AFTER
+
+You're pretty hot,
+but not as hot
+as BROCK!
+
+***BROCK_ENCOUNTER
+
+I'm BROCK!
+I'm PEWTER's GYM
+LEADER!
+
+I believe in rock
+hard defense and 
+determination!
+
+That's why my
+POKeMON are all
+the rock-type!
+
+Do you still want
+to challenge me?
+Fine then! Show
+me your best!
+
+***BROCK_AFTER
+
+Wait! Take this
+with you!
+
+<NAME> received 
+TM34!
+
+A TM contains a
+technique that
+can be taught to
+POKeMON!
+
+A TM is good only 
+once! So when you
+use one to teach
+a new technique,
+pick the POKeMON
+carefully!
+
+TM34 contains 
+BIDE!
+
+Your POKeMON will
+absorb damage in 
+battle then pay
+it back double!
+
+***BROCK_FINAL
+
+There are all
+kinds of trainers
+in the world!
+
+You appear to be 
+very gifted as a
+POKeMON trainer!
+
+Go to the GYM in
+CERULEAN and test
+your abilities!

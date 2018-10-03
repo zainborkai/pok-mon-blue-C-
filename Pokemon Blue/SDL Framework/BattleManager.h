@@ -61,8 +61,12 @@ enum class CombatResult {
 enum class BattleAnimations {
 	None = 0,
 	PokeballAppear = 1,
+	ScreenShake = 2,
+	ScreenShudder = 3,
+	PokemonInjured = 4,
+	UpdateHP = 5,
 	//
-	Tackle = 2,
+	Tackle = 6,
 };
 
 enum class BattleEvents {
@@ -124,7 +128,10 @@ public:
 
 		Pokemon * _pokeData;
 		int GetStat(Stats stat) { return _pokeData->GetStat(stat); }
-		float GetHPStatus() { return _pokeData->GetHP() / (1.0f*GetStat(Stats::Health)); }
+		int GetHP() { return _pokeData->GetHP(); }
+		int GetMaxHP() { return GetStat(Stats::Health); }
+		std::string GetName() { return _pokeData->GetName(); }
+		float GetHPStatus() { return GetHP() / (1.0f*GetMaxHP()); }
 		
 		std::map<Stats, int> statChanges;
 
@@ -133,11 +140,11 @@ public:
 		CombatResult DoAttack(Battler* target, int power, int accuracy, int hitLuck = raffle(), int crtLuck = raffle(), int vryLuck = raffle()) {
 			if (hitLuck < accuracy) {
 				if (crtLuck < 12) { // ??? <-- This is NOT the crit chance rate!
-					target->_pokeData->damage += (2 * power) / 4 * (0.8f + 0.4*(vryLuck / 100.0f));
+					target->_pokeData->DoDamage((2 * power) / 4 * (0.8f + 0.4*(vryLuck / 100.0f)));
 					return CombatResult::Critical;
 				}
 				else {
-					target->_pokeData->damage += power / 4 * (0.8f + 0.4*(vryLuck / 100.0f));
+					target->_pokeData->DoDamage(power / 4 * (0.8f + 0.4*(vryLuck / 100.0f)));
 					return CombatResult::Hit;
 				}
 				// ??? <-- This is totally NOT how damage is calculated! (xP)
@@ -748,6 +755,7 @@ public:
 		TextArea* _pokeNames[GameSystem::MAXBENCHCOUNT];
 		HPGauge* _pokeGauges[GameSystem::MAXBENCHCOUNT];
 		TextArea* _pokeLevels[GameSystem::MAXBENCHCOUNT];
+		TextArea* _pokeStatus[GameSystem::MAXBENCHCOUNT];
 		TextArea* _pokeHPs[GameSystem::MAXBENCHCOUNT];
 		Actor* _cursor;
 
@@ -793,6 +801,8 @@ public:
 				_pokeGauges[i]->Translate(Vector2(32, 8 + (16)*i));
 				_pokeLevels[i] = new TextArea("");
 				_pokeLevels[i]->Translate(Vector2(104, 0 + (16)*i));
+				_pokeStatus[i] = new TextArea("");
+				_pokeStatus[i]->Translate(Vector2(136, 0 + (16)*i));
 				_pokeHPs[i] = new TextArea("");
 				_pokeHPs[i]->Translate(Vector2(104, 8 + (16)*i));
 				//
@@ -808,6 +818,8 @@ public:
 					_pokeGauges[i]->SetValue(poke->GetHP() / (1.0f*poke->GetStat(Stats::Health)));
 					_pokeLevels[i]->visible = true;
 					_pokeLevels[i]->FeedString("L" + std::to_string(poke->GetLevel())); // ??? <-- Wrong symbol for "L"...
+					_pokeStatus[i]->visible = true;
+					_pokeStatus[i]->FeedString(Database::statusEffectShorthand[poke->statusEff]);
 					_pokeHPs[i]->visible = true;
 					_pokeHPs[i]->FeedString(std::to_string(poke->GetHP()) + "/" + std::to_string(poke->GetStat(Stats::Health))); // ??? <-- Note to self: Pad these two 3 spaces per number...
 				}
@@ -816,6 +828,7 @@ public:
 					_pokeNames[i]->visible = false;
 					_pokeGauges[i]->visible = false;
 					_pokeLevels[i]->visible = false;
+					_pokeStatus[i]->visible = false;
 					_pokeHPs[i]->visible = false;
 				}
 			}
@@ -841,6 +854,8 @@ public:
 				_pokeGauges[i] = nullptr;
 				_pokeLevels[i]->Destroy();
 				_pokeLevels[i] = nullptr;
+				_pokeStatus[i]->Destroy();
+				_pokeStatus[i] = nullptr;
 				_pokeHPs[i]->Destroy();
 				_pokeHPs[i] = nullptr;
 			}
@@ -977,6 +992,8 @@ public:
 	int playerBattlerY = 144 - 48 - 64;
 	int enemyBattlerX = 160 - 64 - 8;
 	int enemyBattlerY = 0;
+	float playerHP = 0;
+	float enemyHP = 0;
 
 	Actor* playerSprite;
 	Actor* enemySprite;

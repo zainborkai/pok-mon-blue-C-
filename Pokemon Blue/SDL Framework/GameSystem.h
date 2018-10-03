@@ -3,6 +3,7 @@
 
 #include "Database.h"
 #include "InputManager.h"
+#include "Pokemon.h"
 
 
 class GameSystem {

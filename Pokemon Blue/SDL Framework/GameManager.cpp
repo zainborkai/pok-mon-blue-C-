@@ -1,6 +1,10 @@
 
 #include "GameManager.h"
 #include "BattleManager.h"
+#include "LevelManager.h"
+#include "Text.h"
+#include <stdlib.h>
+#include <ctime>
 
 GameManager* GameManager::sInstance = nullptr;
 
@@ -32,6 +36,11 @@ GameManager::GameManager() {
 	mInputMgr = InputManager::Instance();
 	mAudioMgr = AudioManager::Instance();
 	mTimer = Timer::Instance();
+
+
+	srand(time(0)); // *** Be random, dammit!
+	//
+	Database::Instance()->Initialize();
 }
 
 GameManager::~GameManager() {
@@ -89,6 +98,7 @@ void GameManager::Render() {
 
 void GameManager::Run() {
 
+	// LevelManager::Instance();
 	// BattleManager::Instance(); // To activate everything.
 
 

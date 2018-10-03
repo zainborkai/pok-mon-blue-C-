@@ -1,45 +1,48 @@
 ﻿  GameManager.cpp
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\mathhelper.h(19): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\helper.h(48): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\tiledtexture.h(59): warning C4018: '<': signed/unsigned mismatch
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\textarea.h(54): warning C4018: '<': signed/unsigned mismatch
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\textarea.h(56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\textarea.h(59): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\textarea.h(62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\textarea.h(98): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\textarea.h(98): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\textarea.h(112): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\textarea.h(115): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\pokemon.h(47): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\textarea.h(55): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\textarea.h(57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\textarea.h(60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\textarea.h(63): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\textarea.h(99): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\textarea.h(99): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\textarea.h(118): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\textarea.h(121): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\menubox.h(9): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\menubox.h(10): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\menubox.h(11): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\menubox.h(13): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\menubox.h(15): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\database.h(155): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(81): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(102): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(136): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(140): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(253): warning C4018: '<': signed/unsigned mismatch
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(327): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(425): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(495): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(574): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(575): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(601): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(603): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(651): warning C4018: '>': signed/unsigned mismatch
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(731): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(757): warning C4018: '<': signed/unsigned mismatch
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(789): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(791): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(793): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(795): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(85): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(106): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(143): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(147): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(260): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(334): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(432): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(502): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(581): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(582): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(608): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(610): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(658): warning C4018: '>': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(738): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(765): warning C4018: '<': signed/unsigned mismatch
 c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(797): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(800): warning C4018: '<': signed/unsigned mismatch
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(899): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(936): warning C4018: '<': signed/unsigned mismatch
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(939): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\gamemanager.cpp(60): warning C4018: '<': signed/unsigned mismatch
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\gamemanager.cpp(79): warning C4018: '<': signed/unsigned mismatch
-c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\gamemanager.cpp(146): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(799): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(801): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(803): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(805): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(807): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(810): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(914): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(951): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\battlemanager.h(954): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\gamemanager.cpp(41): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\gamemanager.cpp(69): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\gamemanager.cpp(88): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\gamemanager.cpp(160): warning C4018: '<': signed/unsigned mismatch
   SDL Framework.vcxproj -> C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\Debug\SDL Framework.exe

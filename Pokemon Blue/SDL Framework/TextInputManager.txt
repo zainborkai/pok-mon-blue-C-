@@ -1,0 +1,329 @@
+<<Name select input>>
+
+--NAME--
+NEW NAME
+BLUE
+GARY
+JOHN
+
+YOUR NAME?
+_ _ _ _ _ _ _
+A B C D E F G H I
+J K L M N O P Q R
+S T U V W X Y Z
+x ( ) : ; [ ] pk mn
+_ ? ! male female / . , ed
+  lower case
+
+<<Rival name select input>>
+
+--NAME--
+NEW NAME
+RED
+ASH
+JACK
+
+RIVAL'S NAME?
+_ _ _ _ _ _ _
+A B C D E F G H I
+J K L M N O P Q R
+S T U V W X Y Z
+x ( ) : ; [ ] pk mn
+_ ? ! male female / . , ed
+  lower case
+
+<<Picking your pokemon>>
+
+CHARMANDER  No.004
+LIZARD
+HT 2'00"
+WT 19.0lb
+
+Obviously prefers
+hot places. When
+it rains, steam
+
+is said to spout
+from the tip of
+its tail.
+
+So! You want the 
+fire POKeMON,
+CHARMANDER?
+YES
+NO
+
+SQUIRTLE  No.007
+TINYTURTLE
+HT 1'08"
+WT 20.0lb
+
+After birth, its
+back swells and
+hardens into a
+
+shell. Powerfully
+sprays foam from
+its mouth.
+
+So! You want the 
+water POKeMON,
+SQUIRTLE?
+YES
+NO
+
+BULBASAUR  No.001
+SEED
+HT 2'04"
+WT 15.0lb
+
+A strange seed was
+planted on its
+back at birth.
+
+The plant sprouts
+and grows with
+this POKeMON.
+
+So! You want the 
+plant POKeMON,
+BULBASAUR?
+YES
+NO
+
+--Once you pick--
+This POKeMON is
+really energetic!
+
+<NAME> received
+a <POKeMON>!
+
+<<Name your pokemon>>
+
+Do you want to 
+give a nickname
+to <POKeMON>?
+YES
+NO
+
+<<Yes/No inputs>>
+YES
+NO
+
+<<Selecting a blackboard heading>>
+SLP   BRN
+PSN   FRZ
+PAR   QUIT
+
+<<Pokemart shopping screen VIRIDIAN CITY>>
+
+BUY
+SELL
+QUIT
+
+--BUY--
+Take your time.
+
+POKe BALL $200
+ANTIDOTE $100
+PARLYZ HEAL $200
+BURN HEAL $250
+CANCEL
+
+--QUIT--
+Thank you!
+
+<<Pokemart shopping screen PEWTER CITY>>
+
+BUY
+SELL
+QUIT
+
+--BUY--
+Take your time.
+
+POKe BALL $200
+POTION $300
+ESCAPE ROPE $550
+ANTIDOTE $100
+BURN HEAL $250
+AWAKENING $200
+PARLYZ HEAL $200
+CANCEL
+
+--QUIT--
+Thank you!
+
+***Guy1_VIRIDIAN
+
+YES
+
+CATERPIE has no
+poison, but
+WEEDLE does.
+
+Watch out for its 
+POISON STING!
+
+NO
+
+Oh, OK then!
+
+***POKECENTRE_NURSE
+
+HEAL
+
+OK.We'll need
+your POKeMON.
+
+Thank you!
+Your POKeMON are
+fighting fit!
+
+We hope to see
+you again!
+
+CANCEL
+
+We hope to see
+you again!
+
+***BLACKBOARD
+
+--SLP--
+A POKeMON can't
+attack if it's
+asleep!
+
+POKeMON will stay
+asleep even after
+battles.
+
+Use AWAKENING to 
+wake them up!
+
+--PSN--
+When poisoned, a
+POKeMON's health
+steadily drops.
+
+Poison lingers
+after battles.
+
+Use an ANTIDOTE
+to cure poison!
+
+--PAR--
+Paralysis could
+make POKeMON
+moves misfire!
+
+Paralysis remains
+after battles.
+
+Use PARLYZ HEAL
+for treatment!
+
+--BRN--
+A burn reduces
+power and speed.
+It also causes
+ongoing damage.
+
+Burns remain
+after battles.
+
+Use BURN HEAL to
+cure a burn!
+
+--FRZ--
+If frozen, a 
+POKeMON becomes
+totally immobile!
+
+It stays frozen
+even after the
+battle ends.
+
+Use ICE HEAL to
+that out POKeMON!
+
+***GRANDPA_BLOCKING_PATH_AFTER_OAK_DELIVERY
+
+YES
+
+Time is money...
+Go along then.
+
+NO
+
+I see you're using
+a POKeDEX.
+
+When you catch a
+POKeMON, POKeDEX
+is automatically
+updated.
+
+What? Don't you 
+know how to catch 
+POKeMON?
+
+I'll show you
+how to then.
+
+First, you need
+to weaken the
+target POKeMON.
+
+***GUY2_PEWTER
+
+YES
+That's right!
+It's hard work!
+
+NO
+I'm spraying REPEL
+to keep POKeMON
+out of my garden!
+
+***ATTENDANT_MUSEUM
+
+YES
+Right, $50!
+Thank you!
+
+NO
+Come again!
+
+***GUY1_PEWTER_GYM
+
+YES
+All right! Let's
+get happening!
+
+The 1st POKeMON
+out in a match is
+at the top of the
+POKeMON LIST!
+
+By changing the 
+order of POKeMON,
+matches could be
+made easier!
+
+NO
+It's a free
+service! Let's
+get happening!
+
+The 1st POKeMON
+out in a match is
+at the top of the
+POKeMON LIST!
+
+By changing the 
+order of POKeMON,
+matches could be
+made easier!
+

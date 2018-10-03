@@ -38,6 +38,15 @@ public:
 	void AssignTexture(std::string filename, int x, int y, int w, int h);
 	void AssignTexture(std::string text, std::string fontpath, int size, SDL_Color colour);
 	void SetCenter(int x, int y);
+
+
+
+	void SetmRenderRectX(int n) { mRenderRect.x = n; }
+	void SetmRenderRectY(int n) { mRenderRect.y = n; }
+
+	SDL_Texture* GetmTex() { return mTex; }
+	SDL_Rect GetmRenderRect() { return mRenderRect; }
+	
 };
 
 

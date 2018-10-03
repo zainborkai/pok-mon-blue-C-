@@ -36,7 +36,7 @@ Texture::~Texture() {
 
 
 void Texture::Render() {
-	Vector2 pos = Pos(WORLD)*Graphics::GameScale;
+	Vector2 pos = (Pos(WORLD) + Graphics::GamePos)*Graphics::GameScale;
 	Vector2 scale = Scale(WORLD)*Graphics::GameScale;
 
 	mRenderRect.x = (int)(pos.x - mWidth * scale.x * centering.x);

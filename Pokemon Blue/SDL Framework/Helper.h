@@ -42,5 +42,11 @@ static std::string ToUppercase(std::string str) {
 	return str;
 }
 
+static int signOf(float num) {
+	if (num == 0) { return 0; }
+	//
+	return (num / abs(num));
+}
+
 
 #endif

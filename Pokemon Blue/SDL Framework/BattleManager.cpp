@@ -27,11 +27,77 @@ void BattleAnimation::Run() {
 		}
 		
 
+		// *** UpdateHP values
+		float rollRate = 10 / SECOND;
+		float diff;
+		Graphics* g = Graphics::Instance();
+		//
 		switch (animID) {
 		case BattleAnimations::PokeballAppear:
 			if (animTime > SECOND) {
 				attacker->visible = true;
 				//
+				finished = true;
+			}
+			break;
+		case BattleAnimations::ScreenShake:
+			g->GamePos.y = 8 * (1 - longevity(animTime, 0, SECOND)) * sin(PI*modsicle(animTime, SECOND / 8));
+
+			if (animTime > SECOND) {
+				g->GamePos.x = 0;
+				g->GamePos.y = 0;
+
+				finished = true;
+			}
+			break;
+		case BattleAnimations::ScreenShudder:
+			g->GamePos.x = 8 * sin(PI*modsicle(animTime, SECOND / 8));
+
+			if (animTime > SECOND / 1) {
+				g->GamePos.x = 0;
+				g->GamePos.y = 0;
+
+				finished = true;
+			}
+			break;
+		case BattleAnimations::PokemonInjured:
+			defender->visible = modsicle(animTime, SECOND / 8) < 0.5f;
+			//
+			if (animTime > SECOND / 1) {
+				defender->visible = true;
+				
+				finished = true;
+			}
+			break;
+		case BattleAnimations::UpdateHP:
+			if (who == PlayerSlot::PLAYER) {
+				float eHP = bm->enemyBattler->GetHP();
+				//
+				diff = eHP - bm->enemyHP;
+				//
+				bm->enemyHP += std::min(abs(diff), rollRate) * signOf(diff);
+				//
+				bm->enemyHealthDisp->SetValue(bm->enemyHP / bm->enemyBattler->GetMaxHP());
+				//
+				if (abs(diff) < 1) {
+					finished = true;
+				}
+			}
+			else if (who == PlayerSlot::OPPONENT) {
+				float pHP = bm->playerBattler->GetHP();
+				//
+				diff = pHP - bm->playerHP;
+				//
+				bm->playerHP += std::min(abs(diff), rollRate) * signOf(diff);
+				//
+				bm->playerHealthDisp->SetValue(bm->playerHP / bm->playerBattler->GetMaxHP());
+				bm->healthNumberDisplay->FeedString(std::to_string((int)bm->playerHP) + "/" + std::to_string(bm->playerBattler->GetMaxHP()));
+				//
+				if (abs(diff) < 1) {
+					finished = true;
+				}
+			}
+			else {
 				finished = true;
 			}
 			break;
@@ -128,7 +194,7 @@ BattleManager::BattleManager() : Actor() {
 	
 	//
 	messageText = new TextArea("");
-	messageText->textSpeed = 12;
+	messageText->textSpeed = 5;
 	messageText->Translate(Vector2(8, 112));
 	// --------------------------------------------------------------------------------------------------
 	statusBorders = new TiledTexture("battle/status_borders.png");
@@ -238,7 +304,7 @@ void BattleManager::ChangePhase(Phases phase) {
 void BattleManager::Update() {
 	
 	if (playerBattler != nullptr) {
-		healthNumberDisplay->FeedString(std::to_string(playerBattler->GetStat(Stats::Health) - playerBattler->_pokeData->damage) + "/" + std::to_string(playerBattler->GetStat(Stats::Health)));
+		// healthNumberDisplay->FeedString(std::to_string(playerBattler->GetStat(Stats::Health) - playerBattler->_pokeData->damage) + "/" + std::to_string(playerBattler->GetStat(Stats::Health)));
 	}
 
 
@@ -401,10 +467,14 @@ void BattleManager::Render() {
 void BattleManager::Battle_Prepare(bool forced) {
 	
 	if (enemyBattler != nullptr && enemyBattler->_pokeData->IsDead()) {
+		Battle_Message("Enemy "+ enemyBattler->_pokeData->GetName() + " fainted!", true);
+		//
 		Battle_Disengage(PlayerSlot::OPPONENT);
 	}
 	//
 	if (playerBattler != nullptr && playerBattler->_pokeData->IsDead()) {
+		Battle_Message(enemyBattler->_pokeData->GetName() + " fainted!", true);
+		//
 		Battle_Disengage(PlayerSlot::PLAYER);
 	}
 	
@@ -844,7 +914,10 @@ void BattleManager::_Battle_RefreshSprites() {
 
 		playerNameDisp->FeedString(playerBattler->_pokeData->GetName());
 		playerLevelDisp->FeedString("L" + std::to_string(playerBattler->_pokeData->GetLevel()));
-		playerHealthDisp->SetValue(playerBattler->GetHPStatus());
+		playerHP = playerBattler->GetHP();
+		//
+		playerHealthDisp->SetValue(playerHP/playerBattler->GetMaxHP());
+		healthNumberDisplay->FeedString(std::to_string((int)playerHP) + "/" + std::to_string(playerBattler->GetMaxHP()));
 	}
 	
 	if (enemyBattler == nullptr) {
@@ -861,7 +934,9 @@ void BattleManager::_Battle_RefreshSprites() {
 
 		enemyNameDisp->FeedString(enemyBattler->_pokeData->GetName());
 		enemyLevelDisp->FeedString("L" + std::to_string(enemyBattler->_pokeData->GetLevel()));
-		enemyHealthDisp->SetValue(enemyBattler->GetHPStatus());
+		enemyHP = enemyBattler->GetHP();
+		//
+		enemyHealthDisp->SetValue(enemyHP / enemyBattler->GetMaxHP());
 	}
 }
 
@@ -886,6 +961,15 @@ void BattleManager::Battle_Animate(ChoiceLog* Q) {
 		case CombatResult::Hit:
 		case CombatResult::Critical:
 			AddEvent(new BattleEvent(BattleEvents::Animation, BattleAnimations::Tackle, Q->who));
+			//
+			if (Q->who == PlayerSlot::PLAYER) {
+				AddEvent(new BattleEvent(BattleEvents::Animation, BattleAnimations::PokemonInjured, Q->who));
+			}
+			else {
+				AddEvent(new BattleEvent(BattleEvents::Animation, BattleAnimations::ScreenShake, Q->who));
+			}
+			//
+			AddEvent(new BattleEvent(BattleEvents::Animation, BattleAnimations::UpdateHP, Q->who));
 			break;
 		case CombatResult::Missed:
 			Battle_Message("The move missed.", true); // ??? <-- Wrong text...
@@ -923,15 +1007,20 @@ void BattleManager::Battle_Animate(ChoiceLog* Q) {
 		break;
 	case BattleActions::Switch:
 		if (Q->who == PlayerSlot::PLAYER) {
-			Battle_Message("Go! " + GetBattler(Q->who)->_pokeData->GetName() + "!", false);
-			//
-			battleAnim = new BattleAnimation(BattleAnimations::PokeballAppear, Q->who);
+			if (playerBattler != nullptr) {
+				Battle_Message("Go! " + GetBattler(Q->who)->_pokeData->GetName() + "!", false);
+				//
+				battleAnim = new BattleAnimation(BattleAnimations::PokeballAppear, Q->who);
+			}
 		}
 		else if (Q->who == PlayerSlot::OPPONENT) {
-			Battle_Message("<ENEMY> sent out " + GetBattler(Q->who)->_pokeData->GetName() + "!", false);
-			//
-			battleAnim = new BattleAnimation(BattleAnimations::PokeballAppear, Q->who);
+			if (enemyBattler != nullptr) {
+				Battle_Message("<ENEMY> sent out " + GetBattler(Q->who)->_pokeData->GetName() + "!", false);
+				//
+				battleAnim = new BattleAnimation(BattleAnimations::PokeballAppear, Q->who);
+			}
 		}
+		// ??? <--
 
 		
 		animating = false;

@@ -1,0 +1,14 @@
+﻿  Text.cpp
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\texture.h(37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(103): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(106): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(143): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(146): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(194): warning C4018: '<': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(276): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(277): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(284): warning C4018: '>=': signed/unsigned mismatch
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(289): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\_projects\gamedev\pok-mon-blue-c-\pokemon blue\sdl framework\text.cpp(290): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  SDL Framework.vcxproj -> C:\_Projects\GameDev\pok-mon-blue-C-\Pokemon Blue\Debug\SDL Framework.exe

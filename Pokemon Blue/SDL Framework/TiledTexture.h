@@ -63,7 +63,7 @@ public:
 
 				for (int yy = 0; yy < Q->repeatY; yy++) {
 					for (int xx = 0; xx < Q->repeatX; xx++) {
-						Vector2 pos = (Pos(WORLD))*Graphics::GameScale;
+						Vector2 pos = (Pos(WORLD) + Graphics::GamePos)*Graphics::GameScale;
 						Vector2 scale = (Scale(WORLD))*Graphics::GameScale;
 
 						mRenderRect.x = (int)(pos.x - mWidth * scale.x * centering.x + (Q->x * scale.x) + xx * Q->tw * scale.x);

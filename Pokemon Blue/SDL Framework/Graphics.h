@@ -10,11 +10,12 @@
 
 class Graphics {
 public:
-	const int SCREEN_WIDTH = 800; // 160; // 800
-	const int SCREEN_HEIGHT = 600; // 144; // 600
+	const int SCREEN_WIDTH = 160; // 160; // 800
+	const int SCREEN_HEIGHT = 144; // 144; // 600
 	const char* WINDOW_TITLE = "SDL2.0";
 
 	static const Vector2 GameScale;
+	static Vector2 GamePos;
 
 private:
 	static Graphics *sInstance;

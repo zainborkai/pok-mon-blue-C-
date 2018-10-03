@@ -58,7 +58,7 @@ public:
 			for (auto pairs : tiles) {
 				TileData* Q = pairs.second;
 				//
-				Vector2 pos = (Pos(WORLD))*Graphics::GameScale;
+				Vector2 pos = (Pos(WORLD) + Graphics::GamePos)*Graphics::GameScale;
 				Vector2 scale = (Scale(WORLD))*Graphics::GameScale;
 
 				mRenderRect.x = (int)(pos.x - mWidth * scale.x *Q->w * Q->cen.x + (Q->x * scale.x));
