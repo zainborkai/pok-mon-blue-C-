@@ -1,20 +1,46 @@
 #ifndef GROUNDMAP_H
 #define GROUNDMAP_H
 
-
+#include "Map.h"
 #include "Texture.h"
 #include <vector>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
-class GroundMap : public Texture {
+class GroundMap : public Map {
 public:
 	Texture* m_grass;
-	int m_Map[3][200][100];
+	Texture* m_ground;
+	Texture* currentLayer;
+	string m_Map[3][200][100];
 	GroundMap();
 	~GroundMap();
 	void Update();
-	//void Render();
+	void Render();
 	bool ReadCSVFile(string fname, string arrayName);
+	string EnteringHouse(int x, int y);
+	int mPlayerX;
+	int mPlayerY;
+
+	//Setters
+	void SetCurrentLayer(Texture* txt) {
+		currentLayer = txt;
+	};
+	void SetCurrentLayer2Grass() {
+		currentLayer = m_grass;
+	}
+	void SetCurrentLayer2Ground() {
+		currentLayer = m_ground;
+	}
+
+	// Getters
+	Texture* GetCurrentLayer() {
+		return currentLayer;
+	}
+
+
 };
 
 #endif

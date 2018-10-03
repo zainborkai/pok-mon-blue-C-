@@ -5,6 +5,8 @@
 #include "Buildings.h"
 #include "GroundMap.h"
 #include "Player.h"
+#include "GroundGrass.h"
+#include "BattleScreen.h"
 
 class LevelManager {
 public:
@@ -29,8 +31,22 @@ private:
 
 	Map* mMap;
 	GroundMap* mGroundMap;
+	GroundGrass* mGroundGrass;
+	BattleScreen* mBattleScreen;
 	Player* mPlayer;
 	Graphics* mGraphics;
+	int mStatus = 1;	//1:Ground	//2:house	//3:battle	//4:talk 
+
+	//Setters
+	void SetStatus(int status) {
+		mStatus = status;
+	};
+	//Getters
+	int GetStatus() {
+		return mStatus;
+	}
+
+
 };
 
 

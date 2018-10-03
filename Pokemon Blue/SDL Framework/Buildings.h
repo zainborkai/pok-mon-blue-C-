@@ -1,6 +1,7 @@
 #include "Map.h"
 #include <vector>
 #include "AssetManager.h"
+using namespace std;
 
 // ID Format: 
 // (City,Place,Type of Person, Number of Person)
@@ -128,6 +129,12 @@ public:
 	void SetCurrentBuilding(Texture* txt) {
 		currentBuilding = txt;
 	};
+	void SetCurrentBuilding(string txt) {
+		if (txt == "PlayerHouseFloor1") currentBuilding = PalletPlayerHouseFloor1;
+		if (txt == "PalletHouse1") currentBuilding = PalletHouse1;
+		if (txt == "PalletLab") currentBuilding = PalletLab;
+	};
+
 	void SetNextFloor(Texture* txt) {
 		nextFloor = txt;
 	}

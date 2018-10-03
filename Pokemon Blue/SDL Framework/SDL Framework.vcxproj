@@ -23,7 +23,7 @@
     <ProjectGuid>{07B508AF-C5B6-4454-9B67-29E8ADA1FB6B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>SDLFramework</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -152,10 +152,12 @@
     <ClInclude Include="AnimatedTexture.h" />
     <ClInclude Include="AssetManager.h" />
     <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="BattleScreen.h" />
     <ClInclude Include="Buildings.h" />
     <ClInclude Include="GameEntity.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Graphics.h" />
+    <ClInclude Include="GroundGrass.h" />
     <ClInclude Include="GroundMap.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="LevelManager.h" />
@@ -171,10 +173,12 @@
     <ClCompile Include="AnimatedTexture.cpp" />
     <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="BattleScreen.cpp" />
     <ClCompile Include="Buildings.cpp" />
     <ClCompile Include="GameEntity.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="GroundGrass.cpp" />
     <ClCompile Include="GroundMap.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="LevelManager.cpp" />

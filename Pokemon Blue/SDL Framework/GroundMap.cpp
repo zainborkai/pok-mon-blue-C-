@@ -4,17 +4,19 @@
 #include <fstream>
 #include <vector>
 
-GroundMap::GroundMap() :
+GroundMap::GroundMap() {
+	//Texture("CroppedMap.png", 0, 0, 1408, 3168) {
+	//centering = Vector2(0, 0);
 
 	//Texture("PokemonMasterMap.png", 1000, 2000, 1100, 2000) {
 	//	Pos(Vector2(2500, 2500));
 	//	centering = Vector2(0, 0);
-	//	m_grass = new Texture("grass.png", 0, 0, 16, 16);
-	Texture("CroppedMap.png", 0, 0, 1408, 3168) {
+	
 
-	centering = Vector2(0, 0);
 	// WrapMode(LOOP);
-
+	m_ground = new Texture("CroppedMap.png", 0, 0, 1408, 3168);
+	m_grass = new Texture("Grass.png", 48, 0, 16, 16);
+	SetCurrentLayer(m_ground);
 }
 
 
@@ -27,15 +29,28 @@ void GroundMap::Update() {
 }
 
 
-/*
-void GroundMap::Render() {
-	//Vector2 pos = Pos(WORLD);
 
-	//mRenderRect.x = pos.x;
-	//mRenderRect.y = pos.y;
+void GroundMap::Render() {
+	Vector2 pos = Pos(WORLD);
+	Vector2 scale = Scale(WORLD);
+
+	centering = Vector2(0, 0);
+	// Centers the texture on the texture's world position so that its position is not the top left
+	mRenderRect.x = (int)(pos.x - mWidth * scale.x * centering.x);
+	mRenderRect.y = (int)(pos.y - mWidth * scale.y * centering.y);
+
+	// Scales the width and height according to the scale of the GameEntity
+	mRenderRect.w = (int)(mWidth * scale.x);
+	mRenderRect.h = (int)(mHeight * scale.y);
+	//cout << "w:" << scale.x << " h:" << scale.y;
+	if (currentLayer == m_grass) {
+		mRenderRect.w = 16 * scale.x;
+		mRenderRect.h = 16 * scale.y;
+	}
 	
-	//mGraphics->DrawTexture(mTex, (mClipped) ? &mClipRect : NULL, &mRenderRect, Rotation(WORLD));
-}*/
+
+	mGraphics->DrawTexture(currentLayer->GetmTex(), (mClipped) ? &mClipRect : NULL, &mRenderRect, Rotation(WORLD));
+}
 
 
 bool GroundMap::ReadCSVFile(string fname, string arrayName) {
@@ -50,10 +65,10 @@ bool GroundMap::ReadCSVFile(string fname, string arrayName) {
 
 	bool result = true;
 
-	if (arrayName == "Space") currMap = 0;
-	if (arrayName == "Grass") currMap = 1;
-
-
+	if (arrayName == "Space")  currMap = 0;
+	if (arrayName == "Grass")  currMap = 1;
+	if (arrayName == "Houses") currMap = 2;
+	
 
 	if (!src.is_open()) {
 		cout << "Couldn't open file :" << fname << endl;
@@ -68,7 +83,9 @@ bool GroundMap::ReadCSVFile(string fname, string arrayName) {
 			cell_value = currentLine.substr(0, pos);
 
 			currentLine.erase(0, pos + delimiter.length());
-			m_Map[currMap][line_number][cell_number] = stoi(cell_value);
+			//m_Map[currMap][line_number][cell_number] = stoi(cell_value);
+			m_Map[currMap][line_number][cell_number] = cell_value;
+			//if( currMap == 2) 
 			//			std::cout << line_number << ":" << cell_number << ":" << m_Map[currMap][line_number][cell_number] << std::endl;
 			cell_number++;
 		}
@@ -78,4 +95,21 @@ bool GroundMap::ReadCSVFile(string fname, string arrayName) {
 	src.close();
 
 	return result;
+}
+
+string GroundMap::EnteringHouse(int x, int y) {
+	string houseName = "";
+//	cout << "name:" << m_Map[2][i+3][0] << "\n";
+	for (int i = 0; i < 99; ++i) {
+		//cout << "name:" << m_Map[2][i][0] << "\n";
+		if (x == stoi(m_Map[2][i][1]) && y ==stoi(m_Map[2][i][2])) {
+			houseName = m_Map[2][i][0];
+			break;
+		}
+		if (m_Map[2][i][0] == "") {
+			break;
+		}
+	}
+
+	return houseName;
 }

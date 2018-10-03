@@ -11,7 +11,6 @@ Texture(filename, x, y, w, h){
 	mFrameCount = frameCount;
 	mAnimationSpeed = animationSpeed;
 	mTimePerFrame = mAnimationSpeed / mFrameCount;
-	mAnimationTimer = 0.0f;
 
 	mAnimationDirection = animationDir;
 	mAnimationDone = false;
