@@ -1,6 +1,6 @@
 #include "PokemonBattle.h"
 
-void PokemonBattle::PokemonDamage(double damage, Pokemon* pokemon) {
+void PokemonBattle::PokemonDamage(double damage, TypeRelation* pokemon) {
 
 	damage = ((((2 * pokemon->GetLevel() / 5 + 2) * pokemon->GetSpecAttack() * pokemon->GetBaseAttack() / pokemon->GetDefense()) / 50 + 2) * mod);
 	pokemon->SetHP(pokemon->GetHp() - damage);

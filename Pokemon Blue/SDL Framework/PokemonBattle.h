@@ -21,12 +21,12 @@ protected:
 public:
 	PokemonBattle(){}
 	~PokemonBattle() {}
-	void PokemonDamage(double, Pokemon*);
-	void PokemonSTAB(float, Pokemon*);
-	void PokemonMovePriority(Pokemon*, Pokemon*);
-	void PokemonOHKO(Pokemon*, Pokemon*);
-	void PokemonResistance(Pokemon*, Pokemon*);
-	void Substitute(float, Pokemon*, Pokemon*);
+	void PokemonDamage(double, Database*);
+	void PokemonSTAB(float, TypeRelation*);
+	void PokemonMovePriority(DataPokeMove*, DataPokeMove*);
+	void PokemonOHKO(DataPokeMove*, Database*);
+	void PokemonResistance(TypeRelation*, TypeRelation*);
+	void Substitute(float, Database*, Database*);
 
 	//
 	/*
